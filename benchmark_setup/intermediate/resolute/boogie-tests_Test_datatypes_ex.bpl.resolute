@@ -1,0 +1,11 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (let ((.cse24 (ControlFlow 0 2))) (let ((.cse19 (= .cse24 (- 1))) (.cse1 (|Select__T@[Int]Bool_| (|dom#finite_map| arr) 0))) (let ((.cse0 (= .cse1 true)) (.cse2 (and .cse1 (= (ControlFlow 0 3) 2))) (.cse10 (=> .cse19 .cse1))) (let ((.cse3 (=> .cse2 .cse10)) (.cse5 (= .cse1 .cse0))) (let-proof ((.cse6 (res true true+ (res .cse0 (res .cse1 (=+1 .cse5) (=+2 .cse0)) (res .cse1 (=-1 .cse0) (=+2 .cse5))))) (.cse4 (let ((.cse25 (= (ControlFlow 0 0) 3))) (let ((.cse11 (=> .cse25 .cse3))) (res .cse11 (=>+ 1 .cse11) (let ((.cse20 (- 0 1))) (let ((.cse18 (= .cse24 .cse20))) (let ((.cse17 (=> .cse18 .cse1))) (let ((.cse16 (=> .cse2 .cse17))) (let ((.cse12 (=> .cse25 .cse16))) (let ((.cse14 (not .cse12))) (res .cse12 (let ((.cse13 (not .cse11))) (res .cse13 (res .cse14 (not+ .cse14) (let ((.cse15 (= .cse14 .cse13))) (res .cse15 (res (= .cse12 .cse11) (res (= .cse16 .cse3) (res (= .cse17 .cse10) (res (= .cse1 .cse1) (refl .cse1) (res (= .cse18 .cse19) (res (= .cse20 (- 1)) (let ((.cse21 (* (- 1) 1))) (res (= .cse21 (- 1)) (poly* .cse21 (- 1)) (res (= 0 0) (refl 0) (let ((.cse22 (+ 0 .cse21)) (.cse23 (+ 0 (- 1)))) (res (= .cse22 .cse23) (cong (+ 0 .cse21) (+ 0 (- 1))) (res (= .cse20 .cse22) (-def 0 1) (res (= .cse23 (- 1)) (poly+ .cse23 (- 1)) (trans .cse20 .cse22 .cse23 (- 1))))))))) (res (= .cse24 .cse24) (refl .cse24) (cong (= .cse24 .cse20) (= .cse24 (- 1))))) (cong (=> .cse18 .cse1) (=> .cse19 .cse1)))) (res (= .cse2 .cse2) (refl .cse2) (cong (=> .cse2 .cse17) (=> .cse2 .cse10)))) (res (= .cse25 .cse25) (refl .cse25) (cong (=> .cse25 .cse16) (=> .cse25 .cse3)))) (cong (not .cse12) (not .cse11))) (=-2 .cse15)))) (not- .cse13))) (res .cse14 (assume .cse14) (not- .cse14)))))))))))))) (res .cse0 (! (res .cse1 (res .cse2 (res .cse3 (=>+ 0 .cse3) .cse4) (and- 0 .cse2)) (res .cse5 .cse6 (=-2 .cse5))) :proves (+ .cse0) :input) (! (res .cse1 (let ((.cse7 (not .cse0))) (res .cse7 (let ((.cse8 (not .cse1))) (res .cse8 (not+ .cse8) (let ((.cse9 (= .cse8 .cse7))) (res .cse9 (res .cse5 .cse6 (cong (not .cse1) (not .cse0))) (=-2 .cse9))))) (not- .cse7))) (res .cse10 (=>+ 1 .cse10) (res .cse3 (=>+ 1 .cse3) .cse4))) :proves (- .cse0) :input))))))) :proves () :rup)
+unsupported

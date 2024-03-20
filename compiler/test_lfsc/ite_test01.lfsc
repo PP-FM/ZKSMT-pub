@@ -1,0 +1,42 @@
+unsat
+; WARNING: adding trust step for THEORY_REWRITE
+(define cvc.c (var 0 Bool))
+(define cvc.a (var 1 Bool))
+(define cvc.b (var 2 Bool))
+(check
+(@ t1 (not cvc.a)
+(@ t2 (not cvc.b)
+(@ t3 (= cvc.b false)
+(@ t4 (= cvc.a false)
+(# a0 (holds (ite cvc.c cvc.a cvc.b))
+(# a1 (holds t1)
+(# a2 (holds t2)
+(: (holds false)
+
+(plet _  _ 
+
+(and_intro2 _  _ 
+(eq_resolve _  _  a2
+(symm _  _ 
+(trust (= t3 t2)) ; from THEORY_REWRITE
+))
+(and_intro1 _ 
+(eq_resolve _  _  a1
+(symm _  _ 
+(trust (= t4 t1)) ; from THEORY_REWRITE
+))))
+(\ p1
+
+
+(eq_resolve _  _  a0
+(trans _  _  _ 
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_ite)
+(refl cvc.c))
+(and_elim _  _  1 p1))
+(and_elim _  _  0 p1))
+(trust (= (ite cvc.c false false) false)) ; from THEORY_REWRITE
+)))))))))))))
+

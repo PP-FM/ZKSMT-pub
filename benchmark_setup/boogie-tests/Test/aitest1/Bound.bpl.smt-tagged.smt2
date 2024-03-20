@@ -1,0 +1,32 @@
+(set-logic QF_LIA)
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(declare-fun i@0 () Int)
+(declare-fun N () Int)
+(set-info :boogie-vc-id P)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 6) (let ((AfterLoop_correct  (=> (and (not (< i@0 N)) (= (ControlFlow 0 3) (- 0 2))) (= i@0 N))))
+(let ((LoopBody_correct true))
+(let ((start_correct  (=> (>= N 0) (and (=> (= (ControlFlow 0 4) (- 0 5)) (<= 0 N)) (=> (<= 0 N) (and (=> (= (ControlFlow 0 4) 1) LoopBody_correct) (=> (= (ControlFlow 0 4) 3) AfterLoop_correct)))))))
+(let ((PreconditionGeneratedEntry_correct  (=> (= (ControlFlow 0 6) 4) start_correct)))
+PreconditionGeneratedEntry_correct)))))
+))
+(check-sat)
+(assert (not (= (ControlFlow 0 3) (- 2))))
+(check-sat)
+(pop 1)
+; Invalid
+(get-info :rlimit)

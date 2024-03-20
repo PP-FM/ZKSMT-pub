@@ -1,0 +1,82 @@
+; Added to create binary operators
+(declare not_est (! c1 term (! c2 term (! p1 (holds (= c1 c2))
+  (holds (= (not c1) (not c2)))))))
+
+(declare or_est
+  (! a1 term
+    (! a2 term
+      (! b1 term
+        (! b2 term
+          (! p1 (holds (= a1 a2))
+            (! p2 (holds (= b1 b2))
+              (holds (= (or a1 b1) (or a2 b2))))))))))
+
+(declare and_est
+  (! a1 term
+    (! a2 term
+      (! b1 term
+        (! b2 term
+          (! p1 (holds (= a1 a2))
+            (! p2 (holds (= b1 b2))
+              (holds (= (and a1 b1) (and a2 b2))))))))))
+
+(declare =_est
+  (! a1 term
+    (! a2 term
+      (! b1 term
+        (! b2 term
+          (! p1 (holds (= a1 a2))
+            (! p2 (holds (= b1 b2))
+              (holds (= (= a1 b1) (= a2 b2))))))))))
+
+(declare =>_est
+  (! a1 term
+    (! a2 term
+      (! b1 term
+        (! b2 term
+          (! p1 (holds (= a1 a2))
+            (! p2 (holds (= b1 b2))
+              (holds (= (=> a1 b1) (=> a2 b2))))))))))
+
+(declare xor_est
+  (! a1 term
+    (! a2 term
+      (! b1 term
+        (! b2 term
+          (! p1 (holds (= a1 a2))
+            (! p2 (holds (= b1 b2))
+              (holds (= (xor a1 b1) (xor a2 b2))))))))))
+
+(declare ite_est
+  (! a1 term
+    (! a2 term
+      (! b1 term
+        (! b2 term
+          (! c1 term
+            (! c2 term
+              (! p1 (holds (= a1 a2))
+                (! p2 (holds (= b1 b2))
+                  (! p3 (holds (= c1 c2))
+                    (holds (= (ite a1 b1 c1) (ite a2 b2 c2)))))))))))))
+
+(declare trust (! f term (holds f)))
+
+; Used to make ensure process_scope doesn't temporarily break the
+; Nary format.
+(declare or_single2
+  (! f term
+    (! p1 (holds f)
+      (holds (or f false))
+    )
+  )
+)
+
+(declare implies_single
+  (! f term
+    (! g term
+      (! p1 (holds (=> f (or g false)))
+        (holds (=> f g))
+      )
+    )
+  )
+)

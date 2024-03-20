@@ -1,0 +1,17 @@
+unsat
+(let-proof ((prem_a0 (assume (and (not (= (f x) (f y))) (and (= y z) (and (= (f x) (f (f z))) (= x y)))))))
+(let-proof ((step_0 (and- 1 (not (= (f x) (f y))) (and (= y z) (and (= (f x) (f (f z))) (= x y))))))
+(let-proof ((step_1 (res (and (not (= (f x) (f y))) (and (= y z) (and (= (f x) (f (f z))) (= x y)))) prem_a0 step_0)))
+(let-proof ((step_2 (and- 1 (= y z) (and (= (f x) (f (f z))) (= x y)))))
+(let-proof ((step_3 (res (and (= y z) (and (= (f x) (f (f z))) (= x y))) step_1 step_2)))
+(let-proof ((step_4 (and- 1 (= (f x) (f (f z))) (= x y))))
+(let-proof ((step_5 (res (and (= (f x) (f (f z))) (= x y)) step_3 step_4)))
+(let-proof ((step_6 (cong (f x) (f y))))
+(let-proof ((step_7 (and- 0 (not (= (f x) (f y))) (and (= y z) (and (= (f x) (f (f z))) (= x y))))))
+(let-proof ((step_8 (not- (= (f x) (f y)))))
+(let-proof ((step_9 (res (not (= (f x) (f y))) step_7 step_8)))
+(let-proof ((step_10 (res (and (not (= (f x) (f y))) (and (= y z) (and (= (f x) (f (f z))) (= x y)))) prem_a0 step_9)))
+(let-proof ((step_11 (res (= (f x) (f y)) step_6 step_10)))
+(let-proof ((step_12 (res (= x y) step_5 step_11)))
+step_12
+))))))))))))))

@@ -1,0 +1,15 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_BasicOperators.bpl.mod.smt2:17:19: Undeclared sort (String 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_BasicOperators.bpl.mod.smt2:18:19: Undeclared sort (String 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_BasicOperators.bpl.mod.smt2:19:19: Undeclared sort (String 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_BasicOperators.bpl.mod.smt2:24:68: Undeclared function symbol (s1)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_BasicOperators.bpl.mod.smt2:29:10: Logical context not inconsistent!")
+unsupported

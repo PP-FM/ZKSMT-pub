@@ -1,0 +1,10 @@
+compiler/_build/
+checkers/checker
+zkchecker/CMakeFiles/
+zkchecker/cmake_install.cmake
+zkchecker/CMakeCache.txt
+zkchecker/Makefile
+zkchecker/zkchecker
+zkchecker/data
+zkchecker/raw_out
+zkchecker/out

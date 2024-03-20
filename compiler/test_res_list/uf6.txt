@@ -1,0 +1,12 @@
+unsat
+(let-proof ((prem_a0 (assume (= x y))))
+(let-proof ((prem_a1 (assume (not (= (f z x) (f z y))))))
+(let-proof ((step_0 (refl z)))
+(let-proof ((step_1 (cong (f z x) (f z y))))
+(let-proof ((step_2 (res (= z z) step_0 step_1)))
+(let-proof ((step_3 (res (= x y) prem_a0 step_2)))
+(let-proof ((step_4 (not- (= (f z x) (f z y)))))
+(let-proof ((step_5 (res (not (= (f z x) (f z y))) prem_a1 step_4)))
+(let-proof ((step_6 (res (= (f z x) (f z y)) step_3 step_5)))
+step_6
+)))))))))

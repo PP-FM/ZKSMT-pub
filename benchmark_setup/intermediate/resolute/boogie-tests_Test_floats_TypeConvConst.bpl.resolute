@@ -1,0 +1,17 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:17:21: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:18:21: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:19:21: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:20:21: Undeclared sort ((_ FloatingPoint [11, 53]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:21:21: Undeclared sort ((_ FloatingPoint [11, 53]) 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:26:58: Undeclared function symbol (fc@0)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_TypeConvConst.bpl.mod.smt2:31:10: Logical context not inconsistent!")
+unsupported

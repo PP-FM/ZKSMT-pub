@@ -1,0 +1,14 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_datatypes_t1.bpl.mod.smt2:24:429: Undeclared function symbol (is-nil T@TreeList)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_datatypes_t1.bpl.mod.smt2:29:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_datatypes_t1.bpl.mod.smt2:32:10: Logical context not inconsistent!")
+unsupported

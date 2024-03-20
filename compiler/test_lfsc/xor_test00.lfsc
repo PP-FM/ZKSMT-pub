@@ -1,0 +1,18 @@
+unsat
+; WARNING: adding trust step for THEORY_REWRITE
+(define cvc.a (var 0 Bool))
+(define cvc.b (var 1 Bool))
+(check
+(# a0 (holds (xor cvc.a cvc.b))
+(# a1 (holds (= cvc.a cvc.b))
+(: (holds false)
+
+(eq_resolve _  _  a0
+(trans _  _  _ 
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_xor) a1)
+(refl cvc.b))
+(trust (= (xor cvc.b cvc.b) false)) ; from THEORY_REWRITE
+))))))
+

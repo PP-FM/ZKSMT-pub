@@ -1,0 +1,61 @@
+vars: f x y z
+premises:
+  a0: (= x y)
+  a1: (not (= (f z x) (f z y)))
+steps:
+  derived clause number: 0
+  rule: or_single
+  expr args: []
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (or (= x y))
+
+  derived clause number: 1
+  rule: or_single
+  expr args: []
+  clause args: [premise a1]
+  backptr: nil
+  conclusion: (or (not (= (f z x) (f z y))))
+
+  derived clause number: 2
+  rule: refl
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= z z))
+
+  derived clause number: 3
+  rule: cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (f z x) (f z y)) (not (= z z)) (not (= x y)))
+
+  derived clause number: 4
+  rule: resolution
+  expr args: [(not (= z z)), (or (= (f z x) (f z y)) (not (= x y))), (or )]
+  clause args: [derived 2, derived 3]
+  backptr: nil
+  conclusion: (or (= (f z x) (f z y)) (not (= x y)))
+
+  derived clause number: 5
+  rule: resolution
+  expr args: [(not (= x y)), (or (= (f z x) (f z y))), (or )]
+  clause args: [derived 0, derived 4]
+  backptr: nil
+  conclusion: (or (= (f z x) (f z y)))
+
+  derived clause number: 6
+  rule: resolution
+  expr args: [(not (= (f z x) (f z y))), (or ), (or )]
+  clause args: [derived 5, derived 1]
+  backptr: nil
+  conclusion: (or )
+
+  derived clause number: 7
+  rule: or_nil
+  expr args: []
+  clause args: [derived 6]
+  backptr: nil
+  conclusion: false
+

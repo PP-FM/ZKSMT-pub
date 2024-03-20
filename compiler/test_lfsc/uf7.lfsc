@@ -1,0 +1,21 @@
+unsat
+(declare cvc.U sort)
+(define cvc.P (var 0 (arrow cvc.U (arrow cvc.U Bool))))
+(define cvc.z (var 1 cvc.U))
+(define cvc.x (var 2 cvc.U))
+(define cvc.y (var 3 cvc.U))
+(check
+(@ t1 (apply cvc.P cvc.z)
+(@ t2 (apply t1 cvc.y)
+(# a0 (holds (= cvc.x cvc.y))
+(# a1 (holds (apply t1 cvc.x))
+(# a2 (holds (not t2))
+(: (holds false)
+
+(resolution _  _  _  a2
+(eq_resolve _  _  a1
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl cvc.P)
+(refl cvc.z)) a0)) ff t2))))))))
+

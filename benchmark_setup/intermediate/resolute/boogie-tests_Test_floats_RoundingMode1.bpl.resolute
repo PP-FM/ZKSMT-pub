@@ -1,0 +1,18 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:17:47: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:18:19: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:19:19: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:20:47: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:21:47: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:22:47: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:27:80: Undeclared function symbol (inline$roundingTest$1$rneSum@1)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundingMode1.bpl.mod.smt2:34:10: Logical context not inconsistent!")
+unsupported

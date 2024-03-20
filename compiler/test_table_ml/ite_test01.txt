@@ -1,0 +1,305 @@
+{
+  "num_vars": 3,
+  "max_list_len": 11,
+  "expr_table": [
+    {
+      "oper_id": 19,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 1,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 2,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 1,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 3,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 1,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 4,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 9,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 10,
+      "arg1": 2,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 10,
+      "arg1": 3,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 6,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 3,
+      "arg2": 7,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 8,
+      "arg2": 6,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 6,
+      "arg2": 8,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 2,
+      "arg2": 7,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 11,
+      "arg2": 5,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 5,
+      "arg2": 11,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 3,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 1,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 3,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 2,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 1,
+      "arg2": 1,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 11,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 1,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 11,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 9,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 3,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 4,
+      "arg2": 19,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 19,
+      "arg2": 7,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 2,
+      "arg1": 4,
+      "arg2": 7,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    }
+  ],
+  "list_table": [ [ 1, 2, 3 ], [ 11 ], [ 8, 11 ], [ 1, 7, 7 ] ],
+  "num_assumptions": 3,
+  "clause_list": [
+    { "result": 4, "is_assumption": false, "backptr": 99999 },
+    { "result": 5, "is_assumption": false, "backptr": 99999 },
+    { "result": 6, "is_assumption": false, "backptr": 99999 },
+    { "result": 9, "is_assumption": false, "backptr": 99999 },
+    { "result": 10, "is_assumption": false, "backptr": 99999 },
+    { "result": 8, "is_assumption": false, "backptr": 99999 },
+    { "result": 12, "is_assumption": false, "backptr": 99999 },
+    { "result": 13, "is_assumption": false, "backptr": 99999 },
+    { "result": 11, "is_assumption": false, "backptr": 99999 },
+    { "result": 14, "is_assumption": false, "backptr": 99999 },
+    { "result": 15, "is_assumption": false, "backptr": 99999 },
+    { "result": 16, "is_assumption": false, "backptr": 99999 },
+    { "result": 11, "is_assumption": false, "backptr": 99999 },
+    { "result": 8, "is_assumption": false, "backptr": 99999 },
+    { "result": 20, "is_assumption": false, "backptr": 99999 },
+    { "result": 21, "is_assumption": false, "backptr": 99999 },
+    { "result": 22, "is_assumption": false, "backptr": 99999 },
+    { "result": 7, "is_assumption": false, "backptr": 99999 }
+  ],
+  "step_list": [
+    { "rule_id": 85, "expr_args": [ 9 ], "clause_args": [], "clauseid": 3 },
+    { "rule_id": 15, "expr_args": [], "clause_args": [ 3 ], "clauseid": 4 },
+    { "rule_id": 0, "expr_args": [], "clause_args": [ 2, 4 ], "clauseid": 5 },
+    { "rule_id": 85, "expr_args": [ 12 ], "clause_args": [], "clauseid": 6 },
+    { "rule_id": 15, "expr_args": [], "clause_args": [ 6 ], "clauseid": 7 },
+    { "rule_id": 0, "expr_args": [], "clause_args": [ 1, 7 ], "clauseid": 8 },
+    { "rule_id": 6, "expr_args": [], "clause_args": [ 8 ], "clauseid": 9 },
+    {
+      "rule_id": 7,
+      "expr_args": [],
+      "clause_args": [ 5, 9 ],
+      "clauseid": 10
+    },
+    { "rule_id": 3, "expr_args": [ 1 ], "clause_args": [], "clauseid": 11 },
+    {
+      "rule_id": 5,
+      "expr_args": [ 17 ],
+      "clause_args": [ 10 ],
+      "clauseid": 12
+    },
+    {
+      "rule_id": 5,
+      "expr_args": [ 18 ],
+      "clause_args": [ 10 ],
+      "clauseid": 13
+    },
+    {
+      "rule_id": 63,
+      "expr_args": [],
+      "clause_args": [ 11, 12, 13 ],
+      "clauseid": 14
+    },
+    { "rule_id": 86, "expr_args": [ 21 ], "clause_args": [], "clauseid": 15 },
+    {
+      "rule_id": 1,
+      "expr_args": [],
+      "clause_args": [ 14, 15 ],
+      "clauseid": 16
+    },
+    {
+      "rule_id": 0,
+      "expr_args": [],
+      "clause_args": [ 0, 16 ],
+      "clauseid": 17
+    }
+  ]
+}

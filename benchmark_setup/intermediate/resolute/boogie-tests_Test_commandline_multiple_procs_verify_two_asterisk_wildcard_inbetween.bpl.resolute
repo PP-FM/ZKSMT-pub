@@ -1,0 +1,51 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_commandline_multiple_procs_verify_two_asterisk_wildcard_inbetween.bpl.mod.smt2:26:10: Logical context not inconsistent!")
+unsat
+(! (let ((.cse16 (ControlFlow 0 2))) (let ((.cse1 (= .cse16 (- 1))) (.cse0 (= (- 1) .cse16))) (let ((.cse19 (= .cse1 .cse0))) (let-proof ((.cse20 (res .cse0 (res .cse1 (=+1 .cse19) (symm (- 1) .cse16)) (res .cse1 (symm .cse16 (- 1)) (=+2 .cse19))))) (res .cse0 (! (res .cse1 (let ((.cse2 (=> .cse1 false))) (res .cse2 (=>+ 0 .cse2) (let ((.cse17 (= (ControlFlow 0 3) 2))) (let ((.cse3 (=> .cse17 .cse2))) (res .cse3 (=>+ 1 .cse3) (let ((.cse18 (= (ControlFlow 0 0) 3))) (let ((.cse4 (=> .cse18 .cse3))) (res .cse4 (=>+ 1 .cse4) (let ((.cse12 (- 0 1))) (let ((.cse11 (= .cse16 .cse12))) (let ((.cse10 (=> .cse11 false))) (let ((.cse9 (=> .cse17 .cse10))) (let ((.cse5 (=> .cse18 .cse9))) (let ((.cse7 (not .cse5))) (res .cse5 (let ((.cse6 (not .cse4))) (res .cse6 (res .cse7 (not+ .cse7) (let ((.cse8 (= .cse7 .cse6))) (res .cse8 (res (= .cse5 .cse4) (res (= .cse9 .cse3) (res (= .cse10 .cse2) (res (= false false) (refl false) (res (= .cse11 .cse1) (res (= .cse12 (- 1)) (let ((.cse13 (* (- 1) 1))) (res (= .cse13 (- 1)) (poly* .cse13 (- 1)) (res (= 0 0) (refl 0) (let ((.cse14 (+ 0 .cse13)) (.cse15 (+ 0 (- 1)))) (res (= .cse14 .cse15) (cong (+ 0 .cse13) (+ 0 (- 1))) (res (= .cse12 .cse14) (-def 0 1) (res (= .cse15 (- 1)) (poly+ .cse15 (- 1)) (trans .cse12 .cse14 .cse15 (- 1))))))))) (res (= .cse16 .cse16) (refl .cse16) (cong (= .cse16 .cse12) (= .cse16 (- 1))))) (cong (=> .cse11 false) (=> .cse1 false)))) (res (= .cse17 .cse17) (refl .cse17) (cong (=> .cse17 .cse10) (=> .cse17 .cse2)))) (res (= .cse18 .cse18) (refl .cse18) (cong (=> .cse18 .cse9) (=> .cse18 .cse3)))) (cong (not .cse5) (not .cse4))) (=-2 .cse8)))) (not- .cse6))) (res .cse7 (assume .cse7) (not- .cse7))))))))))))))))) (res .cse19 .cse20 (=-2 .cse19))) :proves (+ .cse0) :input) (! (let ((.cse22 (not .cse1))) (res .cse1 (let ((.cse21 (not .cse0))) (res .cse21 (res .cse22 (not+ .cse22) (let ((.cse23 (= .cse22 .cse21))) (res .cse23 (res .cse19 .cse20 (cong (not .cse1) (not .cse0))) (=-2 .cse23)))) (not- .cse21))) (res .cse22 (assume .cse22) (not- .cse22)))) :proves (- .cse0) :input)))))) :proves () :rup)
+unsupported
+success
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_commandline_multiple_procs_verify_two_asterisk_wildcard_inbetween.bpl.mod.smt2:61:10: Logical context not inconsistent!")
+unsat
+(! (let ((.cse16 (ControlFlow 0 2))) (let ((.cse1 (= .cse16 (- 1))) (.cse0 (= (- 1) .cse16))) (let ((.cse19 (= .cse1 .cse0))) (let-proof ((.cse20 (res .cse0 (res .cse1 (=+1 .cse19) (symm (- 1) .cse16)) (res .cse1 (symm .cse16 (- 1)) (=+2 .cse19))))) (res .cse0 (! (res .cse1 (let ((.cse2 (=> .cse1 false))) (res .cse2 (=>+ 0 .cse2) (let ((.cse17 (= (ControlFlow 0 3) 2))) (let ((.cse3 (=> .cse17 .cse2))) (res .cse3 (=>+ 1 .cse3) (let ((.cse18 (= (ControlFlow 0 0) 3))) (let ((.cse4 (=> .cse18 .cse3))) (res .cse4 (=>+ 1 .cse4) (let ((.cse12 (- 0 1))) (let ((.cse11 (= .cse16 .cse12))) (let ((.cse10 (=> .cse11 false))) (let ((.cse9 (=> .cse17 .cse10))) (let ((.cse5 (=> .cse18 .cse9))) (let ((.cse7 (not .cse5))) (res .cse5 (let ((.cse6 (not .cse4))) (res .cse6 (res .cse7 (not+ .cse7) (let ((.cse8 (= .cse7 .cse6))) (res .cse8 (res (= .cse5 .cse4) (res (= .cse9 .cse3) (res (= .cse10 .cse2) (res (= false false) (refl false) (res (= .cse11 .cse1) (res (= .cse12 (- 1)) (let ((.cse13 (* (- 1) 1))) (res (= .cse13 (- 1)) (poly* .cse13 (- 1)) (res (= 0 0) (refl 0) (let ((.cse14 (+ 0 .cse13)) (.cse15 (+ 0 (- 1)))) (res (= .cse14 .cse15) (cong (+ 0 .cse13) (+ 0 (- 1))) (res (= .cse12 .cse14) (-def 0 1) (res (= .cse15 (- 1)) (poly+ .cse15 (- 1)) (trans .cse12 .cse14 .cse15 (- 1))))))))) (res (= .cse16 .cse16) (refl .cse16) (cong (= .cse16 .cse12) (= .cse16 (- 1))))) (cong (=> .cse11 false) (=> .cse1 false)))) (res (= .cse17 .cse17) (refl .cse17) (cong (=> .cse17 .cse10) (=> .cse17 .cse2)))) (res (= .cse18 .cse18) (refl .cse18) (cong (=> .cse18 .cse9) (=> .cse18 .cse3)))) (cong (not .cse5) (not .cse4))) (=-2 .cse8)))) (not- .cse6))) (res .cse7 (assume .cse7) (not- .cse7))))))))))))))))) (res .cse19 .cse20 (=-2 .cse19))) :proves (+ .cse0) :input) (! (let ((.cse22 (not .cse1))) (res .cse1 (let ((.cse21 (not .cse0))) (res .cse21 (res .cse22 (not+ .cse22) (let ((.cse23 (= .cse22 .cse21))) (res .cse23 (res .cse19 .cse20 (cong (not .cse1) (not .cse0))) (=-2 .cse23)))) (not- .cse21))) (res .cse22 (assume .cse22) (not- .cse22)))) :proves (- .cse0) :input)))))) :proves () :rup)
+unsupported
+success
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (res true true+ (let ((.cse15 (ControlFlow 0 2))) (let ((.cse10 (= .cse15 (- 1)))) (let ((.cse0 (=> .cse10 true))) (res .cse0 (=>+ 1 .cse0) (let ((.cse16 (= (ControlFlow 0 3) 2))) (let ((.cse1 (=> .cse16 .cse0))) (res .cse1 (=>+ 1 .cse1) (let ((.cse17 (= (ControlFlow 0 0) 3))) (let ((.cse2 (=> .cse17 .cse1))) (res .cse2 (=>+ 1 .cse2) (let ((.cse11 (- 0 1))) (let ((.cse9 (= .cse15 .cse11))) (let ((.cse8 (=> .cse9 true))) (let ((.cse7 (=> .cse16 .cse8))) (let ((.cse3 (=> .cse17 .cse7))) (let ((.cse5 (not .cse3))) (res .cse3 (let ((.cse4 (not .cse2))) (res .cse4 (res .cse5 (not+ .cse5) (let ((.cse6 (= .cse5 .cse4))) (res .cse6 (res (= .cse3 .cse2) (res (= .cse7 .cse1) (res (= .cse8 .cse0) (res (= true true) (refl true) (res (= .cse9 .cse10) (res (= .cse11 (- 1)) (let ((.cse12 (* (- 1) 1))) (res (= .cse12 (- 1)) (poly* .cse12 (- 1)) (res (= 0 0) (refl 0) (let ((.cse13 (+ 0 .cse12)) (.cse14 (+ 0 (- 1)))) (res (= .cse13 .cse14) (cong (+ 0 .cse12) (+ 0 (- 1))) (res (= .cse11 .cse13) (-def 0 1) (res (= .cse14 (- 1)) (poly+ .cse14 (- 1)) (trans .cse11 .cse13 .cse14 (- 1))))))))) (res (= .cse15 .cse15) (refl .cse15) (cong (= .cse15 .cse11) (= .cse15 (- 1))))) (cong (=> .cse9 true) (=> .cse10 true)))) (res (= .cse16 .cse16) (refl .cse16) (cong (=> .cse16 .cse8) (=> .cse16 .cse0)))) (res (= .cse17 .cse17) (refl .cse17) (cong (=> .cse17 .cse7) (=> .cse17 .cse1)))) (cong (not .cse3) (not .cse2))) (=-2 .cse6)))) (not- .cse4))) (res .cse5 (assume .cse5) (not- .cse5)))))))))))))))))))) :proves () :input)
+unsupported
+success
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (res true true+ (let ((.cse15 (ControlFlow 0 2))) (let ((.cse10 (= .cse15 (- 1)))) (let ((.cse0 (=> .cse10 true))) (res .cse0 (=>+ 1 .cse0) (let ((.cse16 (= (ControlFlow 0 3) 2))) (let ((.cse1 (=> .cse16 .cse0))) (res .cse1 (=>+ 1 .cse1) (let ((.cse17 (= (ControlFlow 0 0) 3))) (let ((.cse2 (=> .cse17 .cse1))) (res .cse2 (=>+ 1 .cse2) (let ((.cse11 (- 0 1))) (let ((.cse9 (= .cse15 .cse11))) (let ((.cse8 (=> .cse9 true))) (let ((.cse7 (=> .cse16 .cse8))) (let ((.cse3 (=> .cse17 .cse7))) (let ((.cse5 (not .cse3))) (res .cse3 (let ((.cse4 (not .cse2))) (res .cse4 (res .cse5 (not+ .cse5) (let ((.cse6 (= .cse5 .cse4))) (res .cse6 (res (= .cse3 .cse2) (res (= .cse7 .cse1) (res (= .cse8 .cse0) (res (= true true) (refl true) (res (= .cse9 .cse10) (res (= .cse11 (- 1)) (let ((.cse12 (* (- 1) 1))) (res (= .cse12 (- 1)) (poly* .cse12 (- 1)) (res (= 0 0) (refl 0) (let ((.cse13 (+ 0 .cse12)) (.cse14 (+ 0 (- 1)))) (res (= .cse13 .cse14) (cong (+ 0 .cse12) (+ 0 (- 1))) (res (= .cse11 .cse13) (-def 0 1) (res (= .cse14 (- 1)) (poly+ .cse14 (- 1)) (trans .cse11 .cse13 .cse14 (- 1))))))))) (res (= .cse15 .cse15) (refl .cse15) (cong (= .cse15 .cse11) (= .cse15 (- 1))))) (cong (=> .cse9 true) (=> .cse10 true)))) (res (= .cse16 .cse16) (refl .cse16) (cong (=> .cse16 .cse8) (=> .cse16 .cse0)))) (res (= .cse17 .cse17) (refl .cse17) (cong (=> .cse17 .cse7) (=> .cse17 .cse1)))) (cong (not .cse3) (not .cse2))) (=-2 .cse6)))) (not- .cse4))) (res .cse5 (assume .cse5) (not- .cse5)))))))))))))))))))) :proves () :input)
+unsupported

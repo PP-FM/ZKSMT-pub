@@ -1,0 +1,11 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (res F (! (let ((.cse17 (ControlFlow 0 2))) (let ((.cse12 (= .cse17 (- 1)))) (let ((.cse0 (and F .cse12))) (res .cse0 (let ((.cse1 (=> .cse0 false))) (res .cse1 (=>+ 0 .cse1) (let ((.cse18 (= (ControlFlow 0 3) 2))) (let ((.cse2 (=> .cse18 .cse1))) (res .cse2 (=>+ 1 .cse2) (let ((.cse19 (= (ControlFlow 0 0) 3))) (let ((.cse3 (=> .cse19 .cse2))) (res .cse3 (=>+ 1 .cse3) (let ((.cse13 (- 0 1))) (let ((.cse11 (= .cse17 .cse13))) (let ((.cse10 (and F .cse11))) (let ((.cse9 (=> .cse10 false))) (let ((.cse8 (=> .cse18 .cse9))) (let ((.cse4 (=> .cse19 .cse8))) (let ((.cse6 (not .cse4))) (res .cse4 (let ((.cse5 (not .cse3))) (res .cse5 (res .cse6 (not+ .cse6) (let ((.cse7 (= .cse6 .cse5))) (res .cse7 (res (= .cse4 .cse3) (res (= .cse8 .cse2) (res (= .cse9 .cse1) (res (= false false) (refl false) (res (= .cse10 .cse0) (res (= .cse11 .cse12) (res (= .cse13 (- 1)) (let ((.cse14 (* (- 1) 1))) (res (= .cse14 (- 1)) (poly* .cse14 (- 1)) (res (= 0 0) (refl 0) (let ((.cse15 (+ 0 .cse14)) (.cse16 (+ 0 (- 1)))) (res (= .cse15 .cse16) (cong (+ 0 .cse14) (+ 0 (- 1))) (res (= .cse13 .cse15) (-def 0 1) (res (= .cse16 (- 1)) (poly+ .cse16 (- 1)) (trans .cse13 .cse15 .cse16 (- 1))))))))) (res (= .cse17 .cse17) (refl .cse17) (cong (= .cse17 .cse13) (= .cse17 (- 1))))) (res (= F F) (refl F) (cong (and F .cse11) (and F .cse12)))) (cong (=> .cse10 false) (=> .cse0 false)))) (res (= .cse18 .cse18) (refl .cse18) (cong (=> .cse18 .cse9) (=> .cse18 .cse1)))) (res (= .cse19 .cse19) (refl .cse19) (cong (=> .cse19 .cse8) (=> .cse19 .cse2)))) (cong (not .cse4) (not .cse3))) (=-2 .cse7)))) (not- .cse5))) (res .cse6 (assume .cse6) (not- .cse6)))))))))))))))))) (and- 0 .cse0))))) :proves (+ F) :input) (! (let ((.cse20 (= F false))) (res .cse20 (assume .cse20) (let ((.cse21 (not F))) (let-proof ((.cse23 (not- .cse21))) (res .cse21 (let ((.cse22 (= .cse20 .cse21))) (res .cse22 (res false (res .cse21 (res .cse20 (=+1 .cse22) (res F (not+ .cse21) (=-2 .cse20))) (res .cse20 (res F (=+1 .cse20) .cse23) (=+2 .cse22))) false-) (=-2 .cse22))) .cse23))))) :proves (- F) :input)) :proves () :rup)
+unsupported

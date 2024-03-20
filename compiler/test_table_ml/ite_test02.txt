@@ -1,0 +1,126 @@
+{
+  "num_vars": 3,
+  "max_list_len": 6,
+  "expr_table": [
+    {
+      "oper_id": 19,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 1,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 2,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 1,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 3,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 1,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 4,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 9,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 10,
+      "arg1": 2,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 10,
+      "arg1": 1,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 4,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 1,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 11,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "oper_id": 6,
+      "arg1": 0,
+      "arg2": 0,
+      "var_id": 0,
+      "list_arg": 0,
+      "num_arg": 0,
+      "numerator": 0,
+      "denominator": 1
+    }
+  ],
+  "list_table": [ [ 1, 2, 3 ], [ 6, 2 ] ],
+  "num_assumptions": 3,
+  "clause_list": [
+    { "result": 4, "is_assumption": false, "backptr": 99999 },
+    { "result": 5, "is_assumption": false, "backptr": 99999 },
+    { "result": 1, "is_assumption": false, "backptr": 99999 },
+    { "result": 7, "is_assumption": false, "backptr": 99999 },
+    { "result": 2, "is_assumption": false, "backptr": 99999 },
+    { "result": 9, "is_assumption": false, "backptr": 99999 }
+  ],
+  "step_list": [
+    { "rule_id": 81, "expr_args": [], "clause_args": [ 0 ], "clauseid": 3 },
+    {
+      "rule_id": 8,
+      "expr_args": [ 8, 1 ],
+      "clause_args": [ 3, 2 ],
+      "clauseid": 4
+    },
+    { "rule_id": 9, "expr_args": [], "clause_args": [ 4, 1 ], "clauseid": 5 }
+  ]
+}

@@ -1,0 +1,16 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal1.bpl.mod.smt2:17:21: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal1.bpl.mod.smt2:18:23: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal1.bpl.mod.smt2:23:65: Undeclared function symbol (nan1)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal1.bpl.mod.smt2:28:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal1.bpl.mod.smt2:31:10: Logical context not inconsistent!")
+unsupported

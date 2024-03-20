@@ -1,0 +1,11 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (let-proof ((.cse0 true+)) (res true .cse0 (let ((.cse19 (ControlFlow 0 2))) (let ((.cse14 (= .cse19 (- 1)))) (let ((.cse1 (=> .cse14 true))) (res .cse1 (=>+ 1 .cse1) (let ((.cse20 (= (ControlFlow 0 3) 2))) (let ((.cse2 (=> .cse20 .cse1))) (res .cse2 (=>+ 1 .cse2) (let ((.cse21 (= (ControlFlow 0 0) 3))) (let ((.cse3 (=> .cse21 .cse2))) (res .cse3 (=>+ 1 .cse3) (let ((.cse15 (- 0 1))) (let ((.cse13 (= .cse19 .cse15)) (.cse11 (= 0 0))) (let ((.cse9 (=> .cse13 .cse11))) (let ((.cse8 (=> .cse20 .cse9))) (let ((.cse4 (=> .cse21 .cse8))) (let ((.cse6 (not .cse4))) (res .cse4 (let ((.cse5 (not .cse3))) (res .cse5 (res .cse6 (not+ .cse6) (let ((.cse7 (= .cse6 .cse5))) (res .cse7 (res (= .cse4 .cse3) (res (= .cse8 .cse2) (res (= .cse9 .cse1) (let ((.cse10 (= .cse11 true))) (let-proof ((.cse12 (refl 0))) (res .cse10 (res true .cse0 (res .cse11 .cse12 (=+2 .cse10))) (res (= .cse13 .cse14) (res (= .cse15 (- 1)) (let ((.cse16 (* (- 1) 1))) (res (= .cse16 (- 1)) (poly* .cse16 (- 1)) (res .cse11 .cse12 (let ((.cse17 (+ 0 .cse16)) (.cse18 (+ 0 (- 1)))) (res (= .cse17 .cse18) (cong (+ 0 .cse16) (+ 0 (- 1))) (res (= .cse15 .cse17) (-def 0 1) (res (= .cse18 (- 1)) (poly+ .cse18 (- 1)) (trans .cse15 .cse17 .cse18 (- 1))))))))) (res (= .cse19 .cse19) (refl .cse19) (cong (= .cse19 .cse15) (= .cse19 (- 1))))) (cong (=> .cse13 .cse11) (=> .cse14 true)))))) (res (= .cse20 .cse20) (refl .cse20) (cong (=> .cse20 .cse9) (=> .cse20 .cse1)))) (res (= .cse21 .cse21) (refl .cse21) (cong (=> .cse21 .cse8) (=> .cse21 .cse2)))) (cong (not .cse4) (not .cse3))) (=-2 .cse7)))) (not- .cse5))) (res .cse6 (assume .cse6) (not- .cse6))))))))))))))))))))) :proves () :input)
+unsupported

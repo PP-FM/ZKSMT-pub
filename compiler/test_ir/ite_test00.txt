@@ -1,0 +1,49 @@
+vars: cvc.d cvc.a cvc.b cvc.c
+premises:
+  a0: (= cvc.d (ite cvc.a cvc.b cvc.c))
+  a1: (or cvc.a cvc.b)
+  a2: (not cvc.b)
+  a3: cvc.d
+steps:
+  derived clause number: 0
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a3, premise a0]
+  backptr: nil
+  conclusion: (ite cvc.a cvc.b cvc.c)
+
+  derived clause number: 1
+  rule: cnf_ite_pos1
+  expr args: [cvc.a, cvc.b, cvc.c]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (ite cvc.a cvc.b cvc.c)) (not cvc.a) cvc.b)
+
+  derived clause number: 2
+  rule: resolution
+  expr args: [tt, cvc.b]
+  clause args: [premise a1, premise a2]
+  backptr: nil
+  conclusion: cvc.a
+
+  derived clause number: 3
+  rule: resolution
+  expr args: [ff, cvc.a]
+  clause args: [derived 1, derived 2]
+  backptr: nil
+  conclusion: (or (not (ite cvc.a cvc.b cvc.c)) cvc.b)
+
+  derived clause number: 4
+  rule: resolution
+  expr args: [tt, cvc.b]
+  clause args: [derived 3, premise a2]
+  backptr: nil
+  conclusion: (not (ite cvc.a cvc.b cvc.c))
+
+  derived clause number: 5
+  rule: contra
+  expr args: []
+  clause args: [derived 0, derived 4]
+  backptr: nil
+  conclusion: false
+

@@ -1,0 +1,3114 @@
+vars: a1 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a2 a20 a3 a4 a5 a6 a7 a8 a9
+premises:
+  a0: (or a13 (or a14 (or a15 a16)))
+  a1: (or (not a10) (not a14))
+  a10: (or (not a11) (not a15))
+  a11: (or (not a8) (not a20))
+  a12: (or (not a6) (not a14))
+  a13: (or (not a8) (not a12))
+  a14: (or (not a6) (not a18))
+  a15: (or a5 (or a6 (or a7 a8)))
+  a16: (or (not a6) (not a10))
+  a17: (or (not a8) (not a16))
+  a18: (or (not a16) (not a20))
+  a19: (or (not a12) (not a16))
+  a2: (or (not a11) (not a19))
+  a20: (or (not a10) (not a18))
+  a21: (or (not a14) (not a18))
+  a22: (or (not a9) (not a13))
+  a23: (or (not a13) (not a17))
+  a24: (or (not a9) (not a17))
+  a25: (or (not a5) (not a13))
+  a26: (or (not a5) (not a9))
+  a27: (or (not a5) (not a17))
+  a28: (or a1 (or a2 (or a3 a4)))
+  a29: (or (not a2) (not a14))
+  a3: (or (not a15) (not a19))
+  a30: (or (not a2) (not a18))
+  a31: (or (not a2) (not a10))
+  a32: (or (not a4) (not a8))
+  a33: (or (not a4) (not a20))
+  a34: (or (not a4) (not a12))
+  a35: (or (not a4) (not a16))
+  a36: (or (not a2) (not a6))
+  a37: (or (not a3) (not a19))
+  a38: (or (not a3) (not a15))
+  a39: (or (not a3) (not a11))
+  a4: (or a9 (or a10 (or a11 a12)))
+  a40: (or (not a3) (not a7))
+  a41: (or (not a1) (not a5))
+  a42: (or (not a1) (not a9))
+  a43: (or (not a1) (not a17))
+  a44: (or (not a1) (not a13))
+  a5: (or a17 (or a18 (or a19 a20)))
+  a6: (or (not a12) (not a20))
+  a7: (or (not a7) (not a15))
+  a8: (or (not a7) (not a19))
+  a9: (or (not a7) (not a11))
+steps:
+  derived clause number: 0
+  rule: or_single
+  expr args: []
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (or (or a13 (or a14 (or a15 a16))))
+
+  derived clause number: 1
+  rule: or_single
+  expr args: []
+  clause args: [premise a1]
+  backptr: nil
+  conclusion: (or (or (not a10) (not a14)))
+
+  derived clause number: 2
+  rule: or_single
+  expr args: []
+  clause args: [premise a10]
+  backptr: nil
+  conclusion: (or (or (not a11) (not a15)))
+
+  derived clause number: 3
+  rule: or_single
+  expr args: []
+  clause args: [premise a11]
+  backptr: nil
+  conclusion: (or (or (not a8) (not a20)))
+
+  derived clause number: 4
+  rule: or_single
+  expr args: []
+  clause args: [premise a12]
+  backptr: nil
+  conclusion: (or (or (not a6) (not a14)))
+
+  derived clause number: 5
+  rule: or_single
+  expr args: []
+  clause args: [premise a13]
+  backptr: nil
+  conclusion: (or (or (not a8) (not a12)))
+
+  derived clause number: 6
+  rule: or_single
+  expr args: []
+  clause args: [premise a14]
+  backptr: nil
+  conclusion: (or (or (not a6) (not a18)))
+
+  derived clause number: 7
+  rule: or_single
+  expr args: []
+  clause args: [premise a15]
+  backptr: nil
+  conclusion: (or (or a5 (or a6 (or a7 a8))))
+
+  derived clause number: 8
+  rule: or_single
+  expr args: []
+  clause args: [premise a16]
+  backptr: nil
+  conclusion: (or (or (not a6) (not a10)))
+
+  derived clause number: 9
+  rule: or_single
+  expr args: []
+  clause args: [premise a17]
+  backptr: nil
+  conclusion: (or (or (not a8) (not a16)))
+
+  derived clause number: 10
+  rule: or_single
+  expr args: []
+  clause args: [premise a18]
+  backptr: nil
+  conclusion: (or (or (not a16) (not a20)))
+
+  derived clause number: 11
+  rule: or_single
+  expr args: []
+  clause args: [premise a19]
+  backptr: nil
+  conclusion: (or (or (not a12) (not a16)))
+
+  derived clause number: 12
+  rule: or_single
+  expr args: []
+  clause args: [premise a2]
+  backptr: nil
+  conclusion: (or (or (not a11) (not a19)))
+
+  derived clause number: 13
+  rule: or_single
+  expr args: []
+  clause args: [premise a20]
+  backptr: nil
+  conclusion: (or (or (not a10) (not a18)))
+
+  derived clause number: 14
+  rule: or_single
+  expr args: []
+  clause args: [premise a21]
+  backptr: nil
+  conclusion: (or (or (not a14) (not a18)))
+
+  derived clause number: 15
+  rule: or_single
+  expr args: []
+  clause args: [premise a22]
+  backptr: nil
+  conclusion: (or (or (not a9) (not a13)))
+
+  derived clause number: 16
+  rule: or_single
+  expr args: []
+  clause args: [premise a23]
+  backptr: nil
+  conclusion: (or (or (not a13) (not a17)))
+
+  derived clause number: 17
+  rule: or_single
+  expr args: []
+  clause args: [premise a24]
+  backptr: nil
+  conclusion: (or (or (not a9) (not a17)))
+
+  derived clause number: 18
+  rule: or_single
+  expr args: []
+  clause args: [premise a25]
+  backptr: nil
+  conclusion: (or (or (not a5) (not a13)))
+
+  derived clause number: 19
+  rule: or_single
+  expr args: []
+  clause args: [premise a26]
+  backptr: nil
+  conclusion: (or (or (not a5) (not a9)))
+
+  derived clause number: 20
+  rule: or_single
+  expr args: []
+  clause args: [premise a27]
+  backptr: nil
+  conclusion: (or (or (not a5) (not a17)))
+
+  derived clause number: 21
+  rule: or_single
+  expr args: []
+  clause args: [premise a28]
+  backptr: nil
+  conclusion: (or (or a1 (or a2 (or a3 a4))))
+
+  derived clause number: 22
+  rule: or_single
+  expr args: []
+  clause args: [premise a29]
+  backptr: nil
+  conclusion: (or (or (not a2) (not a14)))
+
+  derived clause number: 23
+  rule: or_single
+  expr args: []
+  clause args: [premise a3]
+  backptr: nil
+  conclusion: (or (or (not a15) (not a19)))
+
+  derived clause number: 24
+  rule: or_single
+  expr args: []
+  clause args: [premise a30]
+  backptr: nil
+  conclusion: (or (or (not a2) (not a18)))
+
+  derived clause number: 25
+  rule: or_single
+  expr args: []
+  clause args: [premise a31]
+  backptr: nil
+  conclusion: (or (or (not a2) (not a10)))
+
+  derived clause number: 26
+  rule: or_single
+  expr args: []
+  clause args: [premise a32]
+  backptr: nil
+  conclusion: (or (or (not a4) (not a8)))
+
+  derived clause number: 27
+  rule: or_single
+  expr args: []
+  clause args: [premise a33]
+  backptr: nil
+  conclusion: (or (or (not a4) (not a20)))
+
+  derived clause number: 28
+  rule: or_single
+  expr args: []
+  clause args: [premise a34]
+  backptr: nil
+  conclusion: (or (or (not a4) (not a12)))
+
+  derived clause number: 29
+  rule: or_single
+  expr args: []
+  clause args: [premise a35]
+  backptr: nil
+  conclusion: (or (or (not a4) (not a16)))
+
+  derived clause number: 30
+  rule: or_single
+  expr args: []
+  clause args: [premise a36]
+  backptr: nil
+  conclusion: (or (or (not a2) (not a6)))
+
+  derived clause number: 31
+  rule: or_single
+  expr args: []
+  clause args: [premise a37]
+  backptr: nil
+  conclusion: (or (or (not a3) (not a19)))
+
+  derived clause number: 32
+  rule: or_single
+  expr args: []
+  clause args: [premise a38]
+  backptr: nil
+  conclusion: (or (or (not a3) (not a15)))
+
+  derived clause number: 33
+  rule: or_single
+  expr args: []
+  clause args: [premise a39]
+  backptr: nil
+  conclusion: (or (or (not a3) (not a11)))
+
+  derived clause number: 34
+  rule: or_single
+  expr args: []
+  clause args: [premise a4]
+  backptr: nil
+  conclusion: (or (or a9 (or a10 (or a11 a12))))
+
+  derived clause number: 35
+  rule: or_single
+  expr args: []
+  clause args: [premise a40]
+  backptr: nil
+  conclusion: (or (or (not a3) (not a7)))
+
+  derived clause number: 36
+  rule: or_single
+  expr args: []
+  clause args: [premise a41]
+  backptr: nil
+  conclusion: (or (or (not a1) (not a5)))
+
+  derived clause number: 37
+  rule: or_single
+  expr args: []
+  clause args: [premise a42]
+  backptr: nil
+  conclusion: (or (or (not a1) (not a9)))
+
+  derived clause number: 38
+  rule: or_single
+  expr args: []
+  clause args: [premise a43]
+  backptr: nil
+  conclusion: (or (or (not a1) (not a17)))
+
+  derived clause number: 39
+  rule: or_single
+  expr args: []
+  clause args: [premise a44]
+  backptr: nil
+  conclusion: (or (or (not a1) (not a13)))
+
+  derived clause number: 40
+  rule: or_single
+  expr args: []
+  clause args: [premise a5]
+  backptr: nil
+  conclusion: (or (or a17 (or a18 (or a19 a20))))
+
+  derived clause number: 41
+  rule: or_single
+  expr args: []
+  clause args: [premise a6]
+  backptr: nil
+  conclusion: (or (or (not a12) (not a20)))
+
+  derived clause number: 42
+  rule: or_single
+  expr args: []
+  clause args: [premise a7]
+  backptr: nil
+  conclusion: (or (or (not a7) (not a15)))
+
+  derived clause number: 43
+  rule: or_single
+  expr args: []
+  clause args: [premise a8]
+  backptr: nil
+  conclusion: (or (or (not a7) (not a19)))
+
+  derived clause number: 44
+  rule: or_single
+  expr args: []
+  clause args: [premise a9]
+  backptr: nil
+  conclusion: (or (or (not a7) (not a11)))
+
+  derived clause number: 45
+  rule: or-
+  expr args: [(not (or a13 (or a14 (or a15 a16))))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a13 (or a14 (or a15 a16)))) a13 (or a14 (or a15 a16)))
+
+  derived clause number: 46
+  rule: resolution
+  expr args: [(not (or a13 (or a14 (or a15 a16)))), (or a13 (or a14 (or a15 a16))), (or )]
+  clause args: [derived 0, derived 45]
+  backptr: nil
+  conclusion: (or a13 (or a14 (or a15 a16)))
+
+  derived clause number: 47
+  rule: or-
+  expr args: [(not (or a14 (or a15 a16)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a14 (or a15 a16))) a14 (or a15 a16))
+
+  derived clause number: 48
+  rule: resolution
+  expr args: [(not (or a14 (or a15 a16))), (or a14 (or a15 a16)), (or a13)]
+  clause args: [derived 46, derived 47]
+  backptr: nil
+  conclusion: (or a13 a14 (or a15 a16))
+
+  derived clause number: 49
+  rule: or-
+  expr args: [(not (or a15 a16))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a15 a16)) a15 a16)
+
+  derived clause number: 50
+  rule: resolution
+  expr args: [(not (or a15 a16)), (or a15 a16), (or a13 a14)]
+  clause args: [derived 48, derived 49]
+  backptr: nil
+  conclusion: (or a13 a14 a15 a16)
+
+  derived clause number: 51
+  rule: or-
+  expr args: [(not (or (not a10) (not a14)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a10) (not a14))) (not a10) (not a14))
+
+  derived clause number: 52
+  rule: resolution
+  expr args: [(not (or (not a10) (not a14))), (or (not a10) (not a14)), (or )]
+  clause args: [derived 1, derived 51]
+  backptr: nil
+  conclusion: (or (not a10) (not a14))
+
+  derived clause number: 53
+  rule: or-
+  expr args: [(not (or (not a11) (not a19)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a11) (not a19))) (not a11) (not a19))
+
+  derived clause number: 54
+  rule: resolution
+  expr args: [(not (or (not a11) (not a19))), (or (not a11) (not a19)), (or )]
+  clause args: [derived 12, derived 53]
+  backptr: nil
+  conclusion: (or (not a11) (not a19))
+
+  derived clause number: 55
+  rule: or-
+  expr args: [(not (or (not a15) (not a19)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a15) (not a19))) (not a15) (not a19))
+
+  derived clause number: 56
+  rule: resolution
+  expr args: [(not (or (not a15) (not a19))), (or (not a15) (not a19)), (or )]
+  clause args: [derived 23, derived 55]
+  backptr: nil
+  conclusion: (or (not a15) (not a19))
+
+  derived clause number: 57
+  rule: or-
+  expr args: [(not (or a9 (or a10 (or a11 a12))))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a9 (or a10 (or a11 a12)))) a9 (or a10 (or a11 a12)))
+
+  derived clause number: 58
+  rule: resolution
+  expr args: [(not (or a9 (or a10 (or a11 a12)))), (or a9 (or a10 (or a11 a12))), (or )]
+  clause args: [derived 34, derived 57]
+  backptr: nil
+  conclusion: (or a9 (or a10 (or a11 a12)))
+
+  derived clause number: 59
+  rule: or-
+  expr args: [(not (or a10 (or a11 a12)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a10 (or a11 a12))) a10 (or a11 a12))
+
+  derived clause number: 60
+  rule: resolution
+  expr args: [(not (or a10 (or a11 a12))), (or a10 (or a11 a12)), (or a9)]
+  clause args: [derived 58, derived 59]
+  backptr: nil
+  conclusion: (or a9 a10 (or a11 a12))
+
+  derived clause number: 61
+  rule: or-
+  expr args: [(not (or a11 a12))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a11 a12)) a11 a12)
+
+  derived clause number: 62
+  rule: resolution
+  expr args: [(not (or a11 a12)), (or a11 a12), (or a9 a10)]
+  clause args: [derived 60, derived 61]
+  backptr: nil
+  conclusion: (or a9 a10 a11 a12)
+
+  derived clause number: 63
+  rule: or-
+  expr args: [(not (or a17 (or a18 (or a19 a20))))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a17 (or a18 (or a19 a20)))) a17 (or a18 (or a19 a20)))
+
+  derived clause number: 64
+  rule: resolution
+  expr args: [(not (or a17 (or a18 (or a19 a20)))), (or a17 (or a18 (or a19 a20))), (or )]
+  clause args: [derived 40, derived 63]
+  backptr: nil
+  conclusion: (or a17 (or a18 (or a19 a20)))
+
+  derived clause number: 65
+  rule: or-
+  expr args: [(not (or a18 (or a19 a20)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a18 (or a19 a20))) a18 (or a19 a20))
+
+  derived clause number: 66
+  rule: resolution
+  expr args: [(not (or a18 (or a19 a20))), (or a18 (or a19 a20)), (or a17)]
+  clause args: [derived 64, derived 65]
+  backptr: nil
+  conclusion: (or a17 a18 (or a19 a20))
+
+  derived clause number: 67
+  rule: or-
+  expr args: [(not (or a19 a20))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a19 a20)) a19 a20)
+
+  derived clause number: 68
+  rule: resolution
+  expr args: [(not (or a19 a20)), (or a19 a20), (or a17 a18)]
+  clause args: [derived 66, derived 67]
+  backptr: nil
+  conclusion: (or a17 a18 a19 a20)
+
+  derived clause number: 69
+  rule: or-
+  expr args: [(not (or (not a12) (not a20)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a12) (not a20))) (not a12) (not a20))
+
+  derived clause number: 70
+  rule: resolution
+  expr args: [(not (or (not a12) (not a20))), (or (not a12) (not a20)), (or )]
+  clause args: [derived 41, derived 69]
+  backptr: nil
+  conclusion: (or (not a12) (not a20))
+
+  derived clause number: 71
+  rule: or-
+  expr args: [(not (or (not a7) (not a15)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a7) (not a15))) (not a7) (not a15))
+
+  derived clause number: 72
+  rule: resolution
+  expr args: [(not (or (not a7) (not a15))), (or (not a7) (not a15)), (or )]
+  clause args: [derived 42, derived 71]
+  backptr: nil
+  conclusion: (or (not a7) (not a15))
+
+  derived clause number: 73
+  rule: or-
+  expr args: [(not (or (not a7) (not a19)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a7) (not a19))) (not a7) (not a19))
+
+  derived clause number: 74
+  rule: resolution
+  expr args: [(not (or (not a7) (not a19))), (or (not a7) (not a19)), (or )]
+  clause args: [derived 43, derived 73]
+  backptr: nil
+  conclusion: (or (not a7) (not a19))
+
+  derived clause number: 75
+  rule: or-
+  expr args: [(not (or (not a7) (not a11)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a7) (not a11))) (not a7) (not a11))
+
+  derived clause number: 76
+  rule: resolution
+  expr args: [(not (or (not a7) (not a11))), (or (not a7) (not a11)), (or )]
+  clause args: [derived 44, derived 75]
+  backptr: nil
+  conclusion: (or (not a7) (not a11))
+
+  derived clause number: 77
+  rule: resolution
+  expr args: [(not a20), (or (not a12)), (or a17 a18 a19)]
+  clause args: [derived 68, derived 70]
+  backptr: nil
+  conclusion: (or a17 a18 a19 (not a12))
+
+  derived clause number: 78
+  rule: resolution
+  expr args: [(not a12), (or a17 a18 a19), (or a9 a10 a11)]
+  clause args: [derived 62, derived 77]
+  backptr: nil
+  conclusion: (or a9 a10 a11 a17 a18 a19)
+
+  derived clause number: 79
+  rule: resolution
+  expr args: [(not a10), (or (not a14)), (or a9 a11 a12)]
+  clause args: [derived 62, derived 52]
+  backptr: nil
+  conclusion: (or a9 a11 a12 (not a14))
+
+  derived clause number: 80
+  rule: resolution
+  expr args: [(not a14), (or a9 a11 a12), (or a13 a15 a16)]
+  clause args: [derived 50, derived 79]
+  backptr: nil
+  conclusion: (or a13 a15 a16 a9 a11 a12)
+
+  derived clause number: 81
+  rule: resolution
+  expr args: [(not a11), (or (not a19)), (or a13 a15 a16 a9 a12)]
+  clause args: [derived 80, derived 54]
+  backptr: nil
+  conclusion: (or a13 a15 a16 a9 a12 (not a19))
+
+  derived clause number: 82
+  rule: resolution
+  expr args: [(not a15), (or (not a19)), (or a13 a16 a9 a12 (not a19))]
+  clause args: [derived 81, derived 56]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a12 (not a19) (not a19))
+
+  derived clause number: 83
+  rule: or-
+  expr args: [(not (or (not a11) (not a15)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a11) (not a15))) (not a11) (not a15))
+
+  derived clause number: 84
+  rule: resolution
+  expr args: [(not (or (not a11) (not a15))), (or (not a11) (not a15)), (or )]
+  clause args: [derived 2, derived 83]
+  backptr: nil
+  conclusion: (or (not a11) (not a15))
+
+  derived clause number: 85
+  rule: or-
+  expr args: [(not (or (not a8) (not a20)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a8) (not a20))) (not a8) (not a20))
+
+  derived clause number: 86
+  rule: resolution
+  expr args: [(not (or (not a8) (not a20))), (or (not a8) (not a20)), (or )]
+  clause args: [derived 3, derived 85]
+  backptr: nil
+  conclusion: (or (not a8) (not a20))
+
+  derived clause number: 87
+  rule: or-
+  expr args: [(not (or (not a6) (not a14)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a6) (not a14))) (not a6) (not a14))
+
+  derived clause number: 88
+  rule: resolution
+  expr args: [(not (or (not a6) (not a14))), (or (not a6) (not a14)), (or )]
+  clause args: [derived 4, derived 87]
+  backptr: nil
+  conclusion: (or (not a6) (not a14))
+
+  derived clause number: 89
+  rule: or-
+  expr args: [(not (or (not a8) (not a12)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a8) (not a12))) (not a8) (not a12))
+
+  derived clause number: 90
+  rule: resolution
+  expr args: [(not (or (not a8) (not a12))), (or (not a8) (not a12)), (or )]
+  clause args: [derived 5, derived 89]
+  backptr: nil
+  conclusion: (or (not a8) (not a12))
+
+  derived clause number: 91
+  rule: or-
+  expr args: [(not (or (not a6) (not a18)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a6) (not a18))) (not a6) (not a18))
+
+  derived clause number: 92
+  rule: resolution
+  expr args: [(not (or (not a6) (not a18))), (or (not a6) (not a18)), (or )]
+  clause args: [derived 6, derived 91]
+  backptr: nil
+  conclusion: (or (not a6) (not a18))
+
+  derived clause number: 93
+  rule: or-
+  expr args: [(not (or a5 (or a6 (or a7 a8))))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a5 (or a6 (or a7 a8)))) a5 (or a6 (or a7 a8)))
+
+  derived clause number: 94
+  rule: resolution
+  expr args: [(not (or a5 (or a6 (or a7 a8)))), (or a5 (or a6 (or a7 a8))), (or )]
+  clause args: [derived 7, derived 93]
+  backptr: nil
+  conclusion: (or a5 (or a6 (or a7 a8)))
+
+  derived clause number: 95
+  rule: or-
+  expr args: [(not (or a6 (or a7 a8)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a6 (or a7 a8))) a6 (or a7 a8))
+
+  derived clause number: 96
+  rule: resolution
+  expr args: [(not (or a6 (or a7 a8))), (or a6 (or a7 a8)), (or a5)]
+  clause args: [derived 94, derived 95]
+  backptr: nil
+  conclusion: (or a5 a6 (or a7 a8))
+
+  derived clause number: 97
+  rule: or-
+  expr args: [(not (or a7 a8))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a7 a8)) a7 a8)
+
+  derived clause number: 98
+  rule: resolution
+  expr args: [(not (or a7 a8)), (or a7 a8), (or a5 a6)]
+  clause args: [derived 96, derived 97]
+  backptr: nil
+  conclusion: (or a5 a6 a7 a8)
+
+  derived clause number: 99
+  rule: or-
+  expr args: [(not (or (not a6) (not a10)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a6) (not a10))) (not a6) (not a10))
+
+  derived clause number: 100
+  rule: resolution
+  expr args: [(not (or (not a6) (not a10))), (or (not a6) (not a10)), (or )]
+  clause args: [derived 8, derived 99]
+  backptr: nil
+  conclusion: (or (not a6) (not a10))
+
+  derived clause number: 101
+  rule: or-
+  expr args: [(not (or (not a8) (not a16)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a8) (not a16))) (not a8) (not a16))
+
+  derived clause number: 102
+  rule: resolution
+  expr args: [(not (or (not a8) (not a16))), (or (not a8) (not a16)), (or )]
+  clause args: [derived 9, derived 101]
+  backptr: nil
+  conclusion: (or (not a8) (not a16))
+
+  derived clause number: 103
+  rule: or-
+  expr args: [(not (or (not a16) (not a20)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a16) (not a20))) (not a16) (not a20))
+
+  derived clause number: 104
+  rule: resolution
+  expr args: [(not (or (not a16) (not a20))), (or (not a16) (not a20)), (or )]
+  clause args: [derived 10, derived 103]
+  backptr: nil
+  conclusion: (or (not a16) (not a20))
+
+  derived clause number: 105
+  rule: or-
+  expr args: [(not (or (not a12) (not a16)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a12) (not a16))) (not a12) (not a16))
+
+  derived clause number: 106
+  rule: resolution
+  expr args: [(not (or (not a12) (not a16))), (or (not a12) (not a16)), (or )]
+  clause args: [derived 11, derived 105]
+  backptr: nil
+  conclusion: (or (not a12) (not a16))
+
+  derived clause number: 107
+  rule: or-
+  expr args: [(not (or (not a10) (not a18)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a10) (not a18))) (not a10) (not a18))
+
+  derived clause number: 108
+  rule: resolution
+  expr args: [(not (or (not a10) (not a18))), (or (not a10) (not a18)), (or )]
+  clause args: [derived 13, derived 107]
+  backptr: nil
+  conclusion: (or (not a10) (not a18))
+
+  derived clause number: 109
+  rule: or-
+  expr args: [(not (or (not a14) (not a18)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a14) (not a18))) (not a14) (not a18))
+
+  derived clause number: 110
+  rule: resolution
+  expr args: [(not (or (not a14) (not a18))), (or (not a14) (not a18)), (or )]
+  clause args: [derived 14, derived 109]
+  backptr: nil
+  conclusion: (or (not a14) (not a18))
+
+  derived clause number: 111
+  rule: or-
+  expr args: [(not (or (not a9) (not a13)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a9) (not a13))) (not a9) (not a13))
+
+  derived clause number: 112
+  rule: resolution
+  expr args: [(not (or (not a9) (not a13))), (or (not a9) (not a13)), (or )]
+  clause args: [derived 15, derived 111]
+  backptr: nil
+  conclusion: (or (not a9) (not a13))
+
+  derived clause number: 113
+  rule: or-
+  expr args: [(not (or (not a13) (not a17)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a13) (not a17))) (not a13) (not a17))
+
+  derived clause number: 114
+  rule: resolution
+  expr args: [(not (or (not a13) (not a17))), (or (not a13) (not a17)), (or )]
+  clause args: [derived 16, derived 113]
+  backptr: nil
+  conclusion: (or (not a13) (not a17))
+
+  derived clause number: 115
+  rule: or-
+  expr args: [(not (or (not a9) (not a17)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a9) (not a17))) (not a9) (not a17))
+
+  derived clause number: 116
+  rule: resolution
+  expr args: [(not (or (not a9) (not a17))), (or (not a9) (not a17)), (or )]
+  clause args: [derived 17, derived 115]
+  backptr: nil
+  conclusion: (or (not a9) (not a17))
+
+  derived clause number: 117
+  rule: resolution
+  expr args: [(not a14), (or (not a10)), (or a13 a15 a16)]
+  clause args: [derived 50, derived 52]
+  backptr: nil
+  conclusion: (or a13 a15 a16 (not a10))
+
+  derived clause number: 118
+  rule: resolution
+  expr args: [(not a10), (or a13 a15 a16), (or a9 a11 a12)]
+  clause args: [derived 62, derived 117]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a13 a15 a16)
+
+  derived clause number: 119
+  rule: resolution
+  expr args: [(not a13), (or (not a17)), (or a9 a11 a12 a15 a16)]
+  clause args: [derived 118, derived 114]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a15 a16 (not a17))
+
+  derived clause number: 120
+  rule: resolution
+  expr args: [(not a9), (or (not a17)), (or a11 a12 a15 a16 (not a17))]
+  clause args: [derived 119, derived 116]
+  backptr: nil
+  conclusion: (or a11 a12 a15 a16 (not a17) (not a17))
+
+  derived clause number: 121
+  rule: factoring
+  expr args: []
+  clause args: [derived 120]
+  backptr: nil
+  conclusion: (or a11 a12 a15 a16 (not a17))
+
+  derived clause number: 122
+  rule: resolution
+  expr args: [(not a17), (or a11 a12 a15 a16), (or a18 a19 a20)]
+  clause args: [derived 68, derived 121]
+  backptr: nil
+  conclusion: (or a18 a19 a20 a11 a12 a15 a16)
+
+  derived clause number: 123
+  rule: resolution
+  expr args: [(not a9), (or (not a13)), (or a10 a11 a12)]
+  clause args: [derived 62, derived 112]
+  backptr: nil
+  conclusion: (or a10 a11 a12 (not a13))
+
+  derived clause number: 124
+  rule: resolution
+  expr args: [(not a13), (or a10 a11 a12), (or a14 a15 a16)]
+  clause args: [derived 50, derived 123]
+  backptr: nil
+  conclusion: (or a14 a15 a16 a10 a11 a12)
+
+  derived clause number: 125
+  rule: resolution
+  expr args: [(not a10), (or (not a18)), (or a14 a15 a16 a11 a12)]
+  clause args: [derived 124, derived 108]
+  backptr: nil
+  conclusion: (or a14 a15 a16 a11 a12 (not a18))
+
+  derived clause number: 126
+  rule: resolution
+  expr args: [(not a14), (or (not a18)), (or a15 a16 a11 a12 (not a18))]
+  clause args: [derived 125, derived 110]
+  backptr: nil
+  conclusion: (or a15 a16 a11 a12 (not a18) (not a18))
+
+  derived clause number: 127
+  rule: or-
+  expr args: [(not (or (not a5) (not a13)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a5) (not a13))) (not a5) (not a13))
+
+  derived clause number: 128
+  rule: resolution
+  expr args: [(not (or (not a5) (not a13))), (or (not a5) (not a13)), (or )]
+  clause args: [derived 18, derived 127]
+  backptr: nil
+  conclusion: (or (not a5) (not a13))
+
+  derived clause number: 129
+  rule: or-
+  expr args: [(not (or (not a5) (not a9)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a5) (not a9))) (not a5) (not a9))
+
+  derived clause number: 130
+  rule: resolution
+  expr args: [(not (or (not a5) (not a9))), (or (not a5) (not a9)), (or )]
+  clause args: [derived 19, derived 129]
+  backptr: nil
+  conclusion: (or (not a5) (not a9))
+
+  derived clause number: 131
+  rule: or-
+  expr args: [(not (or (not a5) (not a17)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a5) (not a17))) (not a5) (not a17))
+
+  derived clause number: 132
+  rule: resolution
+  expr args: [(not (or (not a5) (not a17))), (or (not a5) (not a17)), (or )]
+  clause args: [derived 20, derived 131]
+  backptr: nil
+  conclusion: (or (not a5) (not a17))
+
+  derived clause number: 133
+  rule: or-
+  expr args: [(not (or a1 (or a2 (or a3 a4))))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a1 (or a2 (or a3 a4)))) a1 (or a2 (or a3 a4)))
+
+  derived clause number: 134
+  rule: resolution
+  expr args: [(not (or a1 (or a2 (or a3 a4)))), (or a1 (or a2 (or a3 a4))), (or )]
+  clause args: [derived 21, derived 133]
+  backptr: nil
+  conclusion: (or a1 (or a2 (or a3 a4)))
+
+  derived clause number: 135
+  rule: or-
+  expr args: [(not (or a2 (or a3 a4)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a2 (or a3 a4))) a2 (or a3 a4))
+
+  derived clause number: 136
+  rule: resolution
+  expr args: [(not (or a2 (or a3 a4))), (or a2 (or a3 a4)), (or a1)]
+  clause args: [derived 134, derived 135]
+  backptr: nil
+  conclusion: (or a1 a2 (or a3 a4))
+
+  derived clause number: 137
+  rule: or-
+  expr args: [(not (or a3 a4))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or a3 a4)) a3 a4)
+
+  derived clause number: 138
+  rule: resolution
+  expr args: [(not (or a3 a4)), (or a3 a4), (or a1 a2)]
+  clause args: [derived 136, derived 137]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a4)
+
+  derived clause number: 139
+  rule: resolution
+  expr args: [(not a11), (or (not a15)), (or a9 a10 a12)]
+  clause args: [derived 62, derived 84]
+  backptr: nil
+  conclusion: (or a9 a10 a12 (not a15))
+
+  derived clause number: 140
+  rule: resolution
+  expr args: [(not a13), (or (not a9)), (or a14 a15 a16)]
+  clause args: [derived 50, derived 112]
+  backptr: nil
+  conclusion: (or a14 a15 a16 (not a9))
+
+  derived clause number: 141
+  rule: resolution
+  expr args: [(not a9), (or a14 a15 a16), (or a10 a11 a12)]
+  clause args: [derived 62, derived 140]
+  backptr: nil
+  conclusion: (or a10 a11 a12 a14 a15 a16)
+
+  derived clause number: 142
+  rule: resolution
+  expr args: [(not a15), (or (not a19)), (or a10 a11 a12 a14 a16)]
+  clause args: [derived 141, derived 56]
+  backptr: nil
+  conclusion: (or a10 a11 a12 a14 a16 (not a19))
+
+  derived clause number: 143
+  rule: resolution
+  expr args: [(not a11), (or (not a19)), (or a10 a12 a14 a16 (not a19))]
+  clause args: [derived 142, derived 54]
+  backptr: nil
+  conclusion: (or a10 a12 a14 a16 (not a19) (not a19))
+
+  derived clause number: 144
+  rule: or-
+  expr args: [(not (or (not a2) (not a14)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a2) (not a14))) (not a2) (not a14))
+
+  derived clause number: 145
+  rule: resolution
+  expr args: [(not (or (not a2) (not a14))), (or (not a2) (not a14)), (or )]
+  clause args: [derived 22, derived 144]
+  backptr: nil
+  conclusion: (or (not a2) (not a14))
+
+  derived clause number: 146
+  rule: or-
+  expr args: [(not (or (not a2) (not a18)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a2) (not a18))) (not a2) (not a18))
+
+  derived clause number: 147
+  rule: resolution
+  expr args: [(not (or (not a2) (not a18))), (or (not a2) (not a18)), (or )]
+  clause args: [derived 24, derived 146]
+  backptr: nil
+  conclusion: (or (not a2) (not a18))
+
+  derived clause number: 148
+  rule: or-
+  expr args: [(not (or (not a2) (not a10)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a2) (not a10))) (not a2) (not a10))
+
+  derived clause number: 149
+  rule: resolution
+  expr args: [(not (or (not a2) (not a10))), (or (not a2) (not a10)), (or )]
+  clause args: [derived 25, derived 148]
+  backptr: nil
+  conclusion: (or (not a2) (not a10))
+
+  derived clause number: 150
+  rule: resolution
+  expr args: [(not a15), (or a9 a10 a12), (or a13 a14 a16)]
+  clause args: [derived 50, derived 139]
+  backptr: nil
+  conclusion: (or a13 a14 a16 a9 a10 a12)
+
+  derived clause number: 151
+  rule: resolution
+  expr args: [(not a9), (or (not a17)), (or a13 a14 a16 a10 a12)]
+  clause args: [derived 150, derived 116]
+  backptr: nil
+  conclusion: (or a13 a14 a16 a10 a12 (not a17))
+
+  derived clause number: 152
+  rule: resolution
+  expr args: [(not a13), (or (not a17)), (or a14 a16 a10 a12 (not a17))]
+  clause args: [derived 151, derived 114]
+  backptr: nil
+  conclusion: (or a14 a16 a10 a12 (not a17) (not a17))
+
+  derived clause number: 153
+  rule: factoring
+  expr args: []
+  clause args: [derived 152]
+  backptr: nil
+  conclusion: (or a14 a16 a10 a12 (not a17))
+
+  derived clause number: 154
+  rule: resolution
+  expr args: [(not a17), (or a14 a16 a10 a12), (or a18 a19 a20)]
+  clause args: [derived 68, derived 153]
+  backptr: nil
+  conclusion: (or a18 a19 a20 a14 a16 a10 a12)
+
+  derived clause number: 155
+  rule: factoring
+  expr args: []
+  clause args: [derived 143]
+  backptr: nil
+  conclusion: (or a10 a12 a14 a16 (not a19))
+
+  derived clause number: 156
+  rule: resolution
+  expr args: [(not a19), (or a10 a12 a14 a16), (or a18 a20 a10 a12 a14 a16)]
+  clause args: [derived 154, derived 155]
+  backptr: nil
+  conclusion: (or a18 a20 a14 a16 a10 a12 a10 a12 a14 a16)
+
+  derived clause number: 157
+  rule: factoring
+  expr args: []
+  clause args: [derived 156]
+  backptr: nil
+  conclusion: (or a18 a20 a14 a16 a10 a12)
+
+  derived clause number: 158
+  rule: resolution
+  expr args: [(not a14), (or (not a2)), (or a18 a20 a16 a10 a12)]
+  clause args: [derived 157, derived 145]
+  backptr: nil
+  conclusion: (or a18 a20 a16 a10 a12 (not a2))
+
+  derived clause number: 159
+  rule: resolution
+  expr args: [(not a18), (or (not a2)), (or a20 a16 a10 a12 (not a2))]
+  clause args: [derived 158, derived 147]
+  backptr: nil
+  conclusion: (or a20 a16 a10 a12 (not a2) (not a2))
+
+  derived clause number: 160
+  rule: resolution
+  expr args: [(not a10), (or (not a2)), (or a20 a16 a12 (not a2) (not a2))]
+  clause args: [derived 159, derived 149]
+  backptr: nil
+  conclusion: (or a20 a16 a12 (not a2) (not a2) (not a2))
+
+  derived clause number: 161
+  rule: factoring
+  expr args: []
+  clause args: [derived 160]
+  backptr: nil
+  conclusion: (or a20 a16 a12 (not a2))
+
+  derived clause number: 162
+  rule: resolution
+  expr args: [(not a2), (or a20 a16 a12), (or a1 a3 a4)]
+  clause args: [derived 138, derived 161]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a20 a16 a12)
+
+  derived clause number: 163
+  rule: resolution
+  expr args: [(not a20), (or (not a8)), (or a1 a3 a4 a16 a12)]
+  clause args: [derived 162, derived 86]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a16 a12 (not a8))
+
+  derived clause number: 164
+  rule: resolution
+  expr args: [(not a16), (or (not a8)), (or a1 a3 a4 a12 (not a8))]
+  clause args: [derived 163, derived 102]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a12 (not a8) (not a8))
+
+  derived clause number: 165
+  rule: resolution
+  expr args: [(not a12), (or (not a8)), (or a1 a3 a4 (not a8) (not a8))]
+  clause args: [derived 164, derived 90]
+  backptr: nil
+  conclusion: (or a1 a3 a4 (not a8) (not a8) (not a8))
+
+  derived clause number: 166
+  rule: or-
+  expr args: [(not (or (not a4) (not a8)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a4) (not a8))) (not a4) (not a8))
+
+  derived clause number: 167
+  rule: resolution
+  expr args: [(not (or (not a4) (not a8))), (or (not a4) (not a8)), (or )]
+  clause args: [derived 26, derived 166]
+  backptr: nil
+  conclusion: (or (not a4) (not a8))
+
+  derived clause number: 168
+  rule: resolution
+  expr args: [(not a4), (or (not a8)), (or a1 a3 (not a8) (not a8) (not a8))]
+  clause args: [derived 165, derived 167]
+  backptr: nil
+  conclusion: (or a1 a3 (not a8) (not a8) (not a8) (not a8))
+
+  derived clause number: 169
+  rule: or-
+  expr args: [(not (or (not a4) (not a20)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a4) (not a20))) (not a4) (not a20))
+
+  derived clause number: 170
+  rule: resolution
+  expr args: [(not (or (not a4) (not a20))), (or (not a4) (not a20)), (or )]
+  clause args: [derived 27, derived 169]
+  backptr: nil
+  conclusion: (or (not a4) (not a20))
+
+  derived clause number: 171
+  rule: or-
+  expr args: [(not (or (not a4) (not a12)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a4) (not a12))) (not a4) (not a12))
+
+  derived clause number: 172
+  rule: resolution
+  expr args: [(not (or (not a4) (not a12))), (or (not a4) (not a12)), (or )]
+  clause args: [derived 28, derived 171]
+  backptr: nil
+  conclusion: (or (not a4) (not a12))
+
+  derived clause number: 173
+  rule: or-
+  expr args: [(not (or (not a4) (not a16)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a4) (not a16))) (not a4) (not a16))
+
+  derived clause number: 174
+  rule: resolution
+  expr args: [(not (or (not a4) (not a16))), (or (not a4) (not a16)), (or )]
+  clause args: [derived 29, derived 173]
+  backptr: nil
+  conclusion: (or (not a4) (not a16))
+
+  derived clause number: 175
+  rule: or-
+  expr args: [(not (or (not a2) (not a6)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a2) (not a6))) (not a2) (not a6))
+
+  derived clause number: 176
+  rule: resolution
+  expr args: [(not (or (not a2) (not a6))), (or (not a2) (not a6)), (or )]
+  clause args: [derived 30, derived 175]
+  backptr: nil
+  conclusion: (or (not a2) (not a6))
+
+  derived clause number: 177
+  rule: resolution
+  expr args: [(not a19), (or (not a15)), (or a9 a10 a11 a17 a18)]
+  clause args: [derived 78, derived 56]
+  backptr: nil
+  conclusion: (or a9 a10 a11 a17 a18 (not a15))
+
+  derived clause number: 178
+  rule: resolution
+  expr args: [(not a11), (or (not a15)), (or a9 a10 a17 a18 (not a15))]
+  clause args: [derived 177, derived 84]
+  backptr: nil
+  conclusion: (or a9 a10 a17 a18 (not a15) (not a15))
+
+  derived clause number: 179
+  rule: factoring
+  expr args: []
+  clause args: [derived 178]
+  backptr: nil
+  conclusion: (or a9 a10 a17 a18 (not a15))
+
+  derived clause number: 180
+  rule: resolution
+  expr args: [(not a15), (or a9 a10 a17 a18), (or a13 a14 a16)]
+  clause args: [derived 50, derived 179]
+  backptr: nil
+  conclusion: (or a13 a14 a16 a9 a10 a17 a18)
+
+  derived clause number: 181
+  rule: resolution
+  expr args: [(not a18), (or (not a2)), (or a13 a14 a16 a9 a10 a17)]
+  clause args: [derived 180, derived 147]
+  backptr: nil
+  conclusion: (or a13 a14 a16 a9 a10 a17 (not a2))
+
+  derived clause number: 182
+  rule: resolution
+  expr args: [(not a14), (or (not a2)), (or a13 a16 a9 a10 a17 (not a2))]
+  clause args: [derived 181, derived 145]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a10 a17 (not a2) (not a2))
+
+  derived clause number: 183
+  rule: resolution
+  expr args: [(not a10), (or (not a2)), (or a13 a16 a9 a17 (not a2) (not a2))]
+  clause args: [derived 182, derived 149]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a17 (not a2) (not a2) (not a2))
+
+  derived clause number: 184
+  rule: factoring
+  expr args: []
+  clause args: [derived 183]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a17 (not a2))
+
+  derived clause number: 185
+  rule: resolution
+  expr args: [(not a2), (or a13 a16 a9 a17), (or a1 a3 a4)]
+  clause args: [derived 138, derived 184]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a13 a16 a9 a17)
+
+  derived clause number: 186
+  rule: resolution
+  expr args: [(not a15), (or (not a11)), (or a13 a14 a16)]
+  clause args: [derived 50, derived 84]
+  backptr: nil
+  conclusion: (or a13 a14 a16 (not a11))
+
+  derived clause number: 187
+  rule: resolution
+  expr args: [(not a11), (or a13 a14 a16), (or a9 a10 a12)]
+  clause args: [derived 62, derived 186]
+  backptr: nil
+  conclusion: (or a9 a10 a12 a13 a14 a16)
+
+  derived clause number: 188
+  rule: resolution
+  expr args: [(not a14), (or (not a18)), (or a9 a10 a12 a13 a16)]
+  clause args: [derived 187, derived 110]
+  backptr: nil
+  conclusion: (or a9 a10 a12 a13 a16 (not a18))
+
+  derived clause number: 189
+  rule: resolution
+  expr args: [(not a10), (or (not a18)), (or a9 a12 a13 a16 (not a18))]
+  clause args: [derived 188, derived 108]
+  backptr: nil
+  conclusion: (or a9 a12 a13 a16 (not a18) (not a18))
+
+  derived clause number: 190
+  rule: factoring
+  expr args: []
+  clause args: [derived 189]
+  backptr: nil
+  conclusion: (or a9 a12 a13 a16 (not a18))
+
+  derived clause number: 191
+  rule: resolution
+  expr args: [(not a18), (or a9 a12 a13 a16), (or a17 a19 a20)]
+  clause args: [derived 68, derived 190]
+  backptr: nil
+  conclusion: (or a17 a19 a20 a9 a12 a13 a16)
+
+  derived clause number: 192
+  rule: factoring
+  expr args: []
+  clause args: [derived 82]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a12 (not a19))
+
+  derived clause number: 193
+  rule: resolution
+  expr args: [(not a19), (or a13 a16 a9 a12), (or a17 a20 a13 a16 a9 a12)]
+  clause args: [derived 191, derived 192]
+  backptr: nil
+  conclusion: (or a17 a20 a9 a12 a13 a16 a13 a16 a9 a12)
+
+  derived clause number: 194
+  rule: factoring
+  expr args: []
+  clause args: [derived 193]
+  backptr: nil
+  conclusion: (or a17 a20 a9 a12 a13 a16)
+
+  derived clause number: 195
+  rule: resolution
+  expr args: [(not a12), (or (not a4)), (or a17 a20 a9 a13 a16)]
+  clause args: [derived 194, derived 172]
+  backptr: nil
+  conclusion: (or a17 a20 a9 a13 a16 (not a4))
+
+  derived clause number: 196
+  rule: resolution
+  expr args: [(not a20), (or (not a4)), (or a17 a9 a13 a16 (not a4))]
+  clause args: [derived 195, derived 170]
+  backptr: nil
+  conclusion: (or a17 a9 a13 a16 (not a4) (not a4))
+
+  derived clause number: 197
+  rule: factoring
+  expr args: []
+  clause args: [derived 196]
+  backptr: nil
+  conclusion: (or a17 a9 a13 a16 (not a4))
+
+  derived clause number: 198
+  rule: resolution
+  expr args: [(not a4), (or a17 a9 a13 a16), (or a1 a3 a17 a9 a13 a16)]
+  clause args: [derived 185, derived 197]
+  backptr: nil
+  conclusion: (or a1 a3 a13 a16 a9 a17 a17 a9 a13 a16)
+
+  derived clause number: 199
+  rule: factoring
+  expr args: []
+  clause args: [derived 198]
+  backptr: nil
+  conclusion: (or a1 a3 a13 a16 a9 a17)
+
+  derived clause number: 200
+  rule: resolution
+  expr args: [(not a13), (or (not a5)), (or a1 a3 a16 a9 a17)]
+  clause args: [derived 199, derived 128]
+  backptr: nil
+  conclusion: (or a1 a3 a16 a9 a17 (not a5))
+
+  derived clause number: 201
+  rule: resolution
+  expr args: [(not a9), (or (not a5)), (or a1 a3 a16 a17 (not a5))]
+  clause args: [derived 200, derived 130]
+  backptr: nil
+  conclusion: (or a1 a3 a16 a17 (not a5) (not a5))
+
+  derived clause number: 202
+  rule: factoring
+  expr args: []
+  clause args: [derived 201]
+  backptr: nil
+  conclusion: (or a1 a3 a16 a17 (not a5))
+
+  derived clause number: 203
+  rule: resolution
+  expr args: [(not a5), (or a1 a3 a16 a17), (or a6 a7 a8)]
+  clause args: [derived 98, derived 202]
+  backptr: nil
+  conclusion: (or a6 a7 a8 a1 a3 a16 a17)
+
+  derived clause number: 204
+  rule: resolution
+  expr args: [(not a19), (or a10 a12 a14 a16), (or a17 a18 a20)]
+  clause args: [derived 68, derived 155]
+  backptr: nil
+  conclusion: (or a17 a18 a20 a10 a12 a14 a16)
+
+  derived clause number: 205
+  rule: resolution
+  expr args: [(not a20), (or (not a4)), (or a17 a18 a10 a12 a14 a16)]
+  clause args: [derived 204, derived 170]
+  backptr: nil
+  conclusion: (or a17 a18 a10 a12 a14 a16 (not a4))
+
+  derived clause number: 206
+  rule: resolution
+  expr args: [(not a12), (or (not a4)), (or a17 a18 a10 a14 a16 (not a4))]
+  clause args: [derived 205, derived 172]
+  backptr: nil
+  conclusion: (or a17 a18 a10 a14 a16 (not a4) (not a4))
+
+  derived clause number: 207
+  rule: factoring
+  expr args: []
+  clause args: [derived 206]
+  backptr: nil
+  conclusion: (or a17 a18 a10 a14 a16 (not a4))
+
+  derived clause number: 208
+  rule: resolution
+  expr args: [(not a4), (or a17 a18 a10 a14 a16), (or a1 a2 a3)]
+  clause args: [derived 138, derived 207]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a17 a18 a10 a14 a16)
+
+  derived clause number: 209
+  rule: resolution
+  expr args: [(not a18), (or (not a6)), (or a1 a2 a3 a17 a10 a14 a16)]
+  clause args: [derived 208, derived 92]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a17 a10 a14 a16 (not a6))
+
+  derived clause number: 210
+  rule: resolution
+  expr args: [(not a2), (or (not a6)), (or a1 a3 a17 a10 a14 a16 (not a6))]
+  clause args: [derived 209, derived 176]
+  backptr: nil
+  conclusion: (or a1 a3 a17 a10 a14 a16 (not a6) (not a6))
+
+  derived clause number: 211
+  rule: resolution
+  expr args: [(not a10), (or (not a6)), (or a1 a3 a17 a14 a16 (not a6) (not a6))]
+  clause args: [derived 210, derived 100]
+  backptr: nil
+  conclusion: (or a1 a3 a17 a14 a16 (not a6) (not a6) (not a6))
+
+  derived clause number: 212
+  rule: resolution
+  expr args: [(not a14), (or (not a6)), (or a1 a3 a17 a16 (not a6) (not a6) (not a6))]
+  clause args: [derived 211, derived 88]
+  backptr: nil
+  conclusion: (or a1 a3 a17 a16 (not a6) (not a6) (not a6) (not a6))
+
+  derived clause number: 213
+  rule: factoring
+  expr args: []
+  clause args: [derived 212]
+  backptr: nil
+  conclusion: (or a1 a3 a17 a16 (not a6))
+
+  derived clause number: 214
+  rule: resolution
+  expr args: [(not a6), (or a1 a3 a17 a16), (or a7 a8 a1 a3 a17 a16)]
+  clause args: [derived 203, derived 213]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a16 a17 a1 a3 a17 a16)
+
+  derived clause number: 215
+  rule: resolution
+  expr args: [(not a12), (or (not a4)), (or a9 a10 (not a15))]
+  clause args: [derived 139, derived 172]
+  backptr: nil
+  conclusion: (or a9 a10 (not a15) (not a4))
+
+  derived clause number: 216
+  rule: resolution
+  expr args: [(not a15), (or a9 a10 (not a4)), (or a13 a14 a16)]
+  clause args: [derived 50, derived 215]
+  backptr: nil
+  conclusion: (or a13 a14 a16 a9 a10 (not a4))
+
+  derived clause number: 217
+  rule: resolution
+  expr args: [(not a4), (or a13 a14 a16 a9 a10), (or a1 a2 a3)]
+  clause args: [derived 138, derived 216]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a13 a14 a16 a9 a10)
+
+  derived clause number: 218
+  rule: resolution
+  expr args: [(not a14), (or (not a6)), (or a1 a2 a3 a13 a16 a9 a10)]
+  clause args: [derived 217, derived 88]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a13 a16 a9 a10 (not a6))
+
+  derived clause number: 219
+  rule: resolution
+  expr args: [(not a10), (or (not a6)), (or a1 a2 a3 a13 a16 a9 (not a6))]
+  clause args: [derived 218, derived 100]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a13 a16 a9 (not a6) (not a6))
+
+  derived clause number: 220
+  rule: resolution
+  expr args: [(not a2), (or (not a6)), (or a1 a3 a13 a16 a9 (not a6) (not a6))]
+  clause args: [derived 219, derived 176]
+  backptr: nil
+  conclusion: (or a1 a3 a13 a16 a9 (not a6) (not a6) (not a6))
+
+  derived clause number: 221
+  rule: factoring
+  expr args: []
+  clause args: [derived 220]
+  backptr: nil
+  conclusion: (or a1 a3 a13 a16 a9 (not a6))
+
+  derived clause number: 222
+  rule: resolution
+  expr args: [(not a6), (or a1 a3 a13 a16 a9), (or a5 a7 a8)]
+  clause args: [derived 98, derived 221]
+  backptr: nil
+  conclusion: (or a5 a7 a8 a1 a3 a13 a16 a9)
+
+  derived clause number: 223
+  rule: resolution
+  expr args: [(not a13), (or (not a17)), (or a5 a7 a8 a1 a3 a16 a9)]
+  clause args: [derived 222, derived 114]
+  backptr: nil
+  conclusion: (or a5 a7 a8 a1 a3 a16 a9 (not a17))
+
+  derived clause number: 224
+  rule: resolution
+  expr args: [(not a9), (or (not a17)), (or a5 a7 a8 a1 a3 a16 (not a17))]
+  clause args: [derived 223, derived 116]
+  backptr: nil
+  conclusion: (or a5 a7 a8 a1 a3 a16 (not a17) (not a17))
+
+  derived clause number: 225
+  rule: resolution
+  expr args: [(not a5), (or (not a17)), (or a7 a8 a1 a3 a16 (not a17) (not a17))]
+  clause args: [derived 224, derived 132]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a16 (not a17) (not a17) (not a17))
+
+  derived clause number: 226
+  rule: factoring
+  expr args: []
+  clause args: [derived 214]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a16 a17)
+
+  derived clause number: 227
+  rule: factoring
+  expr args: []
+  clause args: [derived 225]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a16 (not a17))
+
+  derived clause number: 228
+  rule: resolution
+  expr args: [(not a17), (or a7 a8 a1 a3 a16), (or a7 a8 a1 a3 a16)]
+  clause args: [derived 226, derived 227]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a16 a7 a8 a1 a3 a16)
+
+  derived clause number: 229
+  rule: resolution
+  expr args: [(not a19), (or (not a11)), (or a17 a18 a20)]
+  clause args: [derived 68, derived 54]
+  backptr: nil
+  conclusion: (or a17 a18 a20 (not a11))
+
+  derived clause number: 230
+  rule: resolution
+  expr args: [(not a11), (or a17 a18 a20), (or a9 a10 a12)]
+  clause args: [derived 62, derived 229]
+  backptr: nil
+  conclusion: (or a9 a10 a12 a17 a18 a20)
+
+  derived clause number: 231
+  rule: resolution
+  expr args: [(not a17), (or (not a5)), (or a9 a10 a12 a18 a20)]
+  clause args: [derived 230, derived 132]
+  backptr: nil
+  conclusion: (or a9 a10 a12 a18 a20 (not a5))
+
+  derived clause number: 232
+  rule: resolution
+  expr args: [(not a9), (or (not a5)), (or a10 a12 a18 a20 (not a5))]
+  clause args: [derived 231, derived 130]
+  backptr: nil
+  conclusion: (or a10 a12 a18 a20 (not a5) (not a5))
+
+  derived clause number: 233
+  rule: factoring
+  expr args: []
+  clause args: [derived 232]
+  backptr: nil
+  conclusion: (or a10 a12 a18 a20 (not a5))
+
+  derived clause number: 234
+  rule: resolution
+  expr args: [(not a5), (or a10 a12 a18 a20), (or a6 a7 a8)]
+  clause args: [derived 98, derived 233]
+  backptr: nil
+  conclusion: (or a6 a7 a8 a10 a12 a18 a20)
+
+  derived clause number: 235
+  rule: resolution
+  expr args: [(not a6), (or (not a2)), (or a7 a8 a10 a12 a18 a20)]
+  clause args: [derived 234, derived 176]
+  backptr: nil
+  conclusion: (or a7 a8 a10 a12 a18 a20 (not a2))
+
+  derived clause number: 236
+  rule: resolution
+  expr args: [(not a10), (or (not a2)), (or a7 a8 a12 a18 a20 (not a2))]
+  clause args: [derived 235, derived 149]
+  backptr: nil
+  conclusion: (or a7 a8 a12 a18 a20 (not a2) (not a2))
+
+  derived clause number: 237
+  rule: resolution
+  expr args: [(not a18), (or (not a2)), (or a7 a8 a12 a20 (not a2) (not a2))]
+  clause args: [derived 236, derived 147]
+  backptr: nil
+  conclusion: (or a7 a8 a12 a20 (not a2) (not a2) (not a2))
+
+  derived clause number: 238
+  rule: factoring
+  expr args: []
+  clause args: [derived 237]
+  backptr: nil
+  conclusion: (or a7 a8 a12 a20 (not a2))
+
+  derived clause number: 239
+  rule: resolution
+  expr args: [(not a2), (or a7 a8 a12 a20), (or a1 a3 a4)]
+  clause args: [derived 138, derived 238]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a7 a8 a12 a20)
+
+  derived clause number: 240
+  rule: resolution
+  expr args: [(not a20), (or (not a16)), (or a1 a3 a4 a7 a8 a12)]
+  clause args: [derived 239, derived 104]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a7 a8 a12 (not a16))
+
+  derived clause number: 241
+  rule: resolution
+  expr args: [(not a12), (or (not a16)), (or a1 a3 a4 a7 a8 (not a16))]
+  clause args: [derived 240, derived 106]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a7 a8 (not a16) (not a16))
+
+  derived clause number: 242
+  rule: resolution
+  expr args: [(not a4), (or (not a16)), (or a1 a3 a7 a8 (not a16) (not a16))]
+  clause args: [derived 241, derived 174]
+  backptr: nil
+  conclusion: (or a1 a3 a7 a8 (not a16) (not a16) (not a16))
+
+  derived clause number: 243
+  rule: factoring
+  expr args: []
+  clause args: [derived 228]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a16)
+
+  derived clause number: 244
+  rule: factoring
+  expr args: []
+  clause args: [derived 242]
+  backptr: nil
+  conclusion: (or a1 a3 a7 a8 (not a16))
+
+  derived clause number: 245
+  rule: resolution
+  expr args: [(not a16), (or a1 a3 a7 a8), (or a1 a3 a7 a8)]
+  clause args: [derived 243, derived 244]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3 a1 a3 a7 a8)
+
+  derived clause number: 246
+  rule: factoring
+  expr args: []
+  clause args: [derived 126]
+  backptr: nil
+  conclusion: (or a15 a16 a11 a12 (not a18))
+
+  derived clause number: 247
+  rule: resolution
+  expr args: [(not a18), (or a15 a16 a11 a12), (or a19 a20 a15 a16 a11 a12)]
+  clause args: [derived 122, derived 246]
+  backptr: nil
+  conclusion: (or a19 a20 a11 a12 a15 a16 a15 a16 a11 a12)
+
+  derived clause number: 248
+  rule: resolution
+  expr args: [(not a20), (or (not a4)), (or a19 a11 a12 a15 a16 a15 a16 a11 a12)]
+  clause args: [derived 247, derived 170]
+  backptr: nil
+  conclusion: (or a19 a11 a12 a15 a16 a15 a16 a11 a12 (not a4))
+
+  derived clause number: 249
+  rule: factoring
+  expr args: []
+  clause args: [derived 248]
+  backptr: nil
+  conclusion: (or a19 a11 a12 a15 a16 (not a4))
+
+  derived clause number: 250
+  rule: resolution
+  expr args: [(not a12), (or (not a4)), (or a19 a11 a15 a16 (not a4))]
+  clause args: [derived 249, derived 172]
+  backptr: nil
+  conclusion: (or a19 a11 a15 a16 (not a4) (not a4))
+
+  derived clause number: 251
+  rule: factoring
+  expr args: []
+  clause args: [derived 250]
+  backptr: nil
+  conclusion: (or a19 a11 a15 a16 (not a4))
+
+  derived clause number: 252
+  rule: resolution
+  expr args: [(not a4), (or a19 a11 a15 a16), (or a1 a2 a3)]
+  clause args: [derived 138, derived 251]
+  backptr: nil
+  conclusion: (or a1 a2 a3 a19 a11 a15 a16)
+
+  derived clause number: 253
+  rule: resolution
+  expr args: [(not a17), (or (not a13)), (or a9 a10 a11 a18 a19)]
+  clause args: [derived 78, derived 114]
+  backptr: nil
+  conclusion: (or a9 a10 a11 a18 a19 (not a13))
+
+  derived clause number: 254
+  rule: resolution
+  expr args: [(not a9), (or (not a13)), (or a10 a11 a18 a19 (not a13))]
+  clause args: [derived 253, derived 112]
+  backptr: nil
+  conclusion: (or a10 a11 a18 a19 (not a13) (not a13))
+
+  derived clause number: 255
+  rule: factoring
+  expr args: []
+  clause args: [derived 254]
+  backptr: nil
+  conclusion: (or a10 a11 a18 a19 (not a13))
+
+  derived clause number: 256
+  rule: resolution
+  expr args: [(not a13), (or a10 a11 a18 a19), (or a14 a15 a16)]
+  clause args: [derived 50, derived 255]
+  backptr: nil
+  conclusion: (or a14 a15 a16 a10 a11 a18 a19)
+
+  derived clause number: 257
+  rule: resolution
+  expr args: [(not a10), (or (not a2)), (or a14 a15 a16 a11 a18 a19)]
+  clause args: [derived 256, derived 149]
+  backptr: nil
+  conclusion: (or a14 a15 a16 a11 a18 a19 (not a2))
+
+  derived clause number: 258
+  rule: resolution
+  expr args: [(not a18), (or (not a2)), (or a14 a15 a16 a11 a19 (not a2))]
+  clause args: [derived 257, derived 147]
+  backptr: nil
+  conclusion: (or a14 a15 a16 a11 a19 (not a2) (not a2))
+
+  derived clause number: 259
+  rule: resolution
+  expr args: [(not a14), (or (not a2)), (or a15 a16 a11 a19 (not a2) (not a2))]
+  clause args: [derived 258, derived 145]
+  backptr: nil
+  conclusion: (or a15 a16 a11 a19 (not a2) (not a2) (not a2))
+
+  derived clause number: 260
+  rule: factoring
+  expr args: []
+  clause args: [derived 259]
+  backptr: nil
+  conclusion: (or a15 a16 a11 a19 (not a2))
+
+  derived clause number: 261
+  rule: resolution
+  expr args: [(not a2), (or a15 a16 a11 a19), (or a1 a3 a15 a16 a11 a19)]
+  clause args: [derived 252, derived 260]
+  backptr: nil
+  conclusion: (or a1 a3 a19 a11 a15 a16 a15 a16 a11 a19)
+
+  derived clause number: 262
+  rule: factoring
+  expr args: []
+  clause args: [derived 261]
+  backptr: nil
+  conclusion: (or a1 a3 a19 a11 a15 a16)
+
+  derived clause number: 263
+  rule: resolution
+  expr args: [(not a19), (or (not a7)), (or a1 a3 a11 a15 a16)]
+  clause args: [derived 262, derived 74]
+  backptr: nil
+  conclusion: (or a1 a3 a11 a15 a16 (not a7))
+
+  derived clause number: 264
+  rule: resolution
+  expr args: [(not a15), (or (not a7)), (or a1 a3 a11 a16 (not a7))]
+  clause args: [derived 263, derived 72]
+  backptr: nil
+  conclusion: (or a1 a3 a11 a16 (not a7) (not a7))
+
+  derived clause number: 265
+  rule: resolution
+  expr args: [(not a11), (or (not a7)), (or a1 a3 a16 (not a7) (not a7))]
+  clause args: [derived 264, derived 76]
+  backptr: nil
+  conclusion: (or a1 a3 a16 (not a7) (not a7) (not a7))
+
+  derived clause number: 266
+  rule: factoring
+  expr args: []
+  clause args: [derived 245]
+  backptr: nil
+  conclusion: (or a7 a8 a1 a3)
+
+  derived clause number: 267
+  rule: factoring
+  expr args: []
+  clause args: [derived 265]
+  backptr: nil
+  conclusion: (or a1 a3 a16 (not a7))
+
+  derived clause number: 268
+  rule: resolution
+  expr args: [(not a7), (or a1 a3 a16), (or a8 a1 a3)]
+  clause args: [derived 266, derived 267]
+  backptr: nil
+  conclusion: (or a8 a1 a3 a1 a3 a16)
+
+  derived clause number: 269
+  rule: factoring
+  expr args: []
+  clause args: [derived 168]
+  backptr: nil
+  conclusion: (or a1 a3 (not a8))
+
+  derived clause number: 270
+  rule: resolution
+  expr args: [(not a8), (or a1 a3), (or a1 a3 a16 a1 a3)]
+  clause args: [derived 268, derived 269]
+  backptr: nil
+  conclusion: (or a1 a3 a1 a3 a16 a1 a3)
+
+  derived clause number: 271
+  rule: resolution
+  expr args: [(not a17), (or (not a9)), (or a18 a19 a20)]
+  clause args: [derived 68, derived 116]
+  backptr: nil
+  conclusion: (or a18 a19 a20 (not a9))
+
+  derived clause number: 272
+  rule: resolution
+  expr args: [(not a9), (or a18 a19 a20), (or a10 a11 a12)]
+  clause args: [derived 62, derived 271]
+  backptr: nil
+  conclusion: (or a10 a11 a12 a18 a19 a20)
+
+  derived clause number: 273
+  rule: resolution
+  expr args: [(not a18), (or (not a2)), (or a10 a11 a12 a19 a20)]
+  clause args: [derived 272, derived 147]
+  backptr: nil
+  conclusion: (or a10 a11 a12 a19 a20 (not a2))
+
+  derived clause number: 274
+  rule: resolution
+  expr args: [(not a10), (or (not a2)), (or a11 a12 a19 a20 (not a2))]
+  clause args: [derived 273, derived 149]
+  backptr: nil
+  conclusion: (or a11 a12 a19 a20 (not a2) (not a2))
+
+  derived clause number: 275
+  rule: factoring
+  expr args: []
+  clause args: [derived 274]
+  backptr: nil
+  conclusion: (or a11 a12 a19 a20 (not a2))
+
+  derived clause number: 276
+  rule: resolution
+  expr args: [(not a2), (or a11 a12 a19 a20), (or a1 a3 a4)]
+  clause args: [derived 138, derived 275]
+  backptr: nil
+  conclusion: (or a1 a3 a4 a11 a12 a19 a20)
+
+  derived clause number: 277
+  rule: resolution
+  expr args: [(not a4), (or (not a16)), (or a1 a3 a11 a12 a19 a20)]
+  clause args: [derived 276, derived 174]
+  backptr: nil
+  conclusion: (or a1 a3 a11 a12 a19 a20 (not a16))
+
+  derived clause number: 278
+  rule: resolution
+  expr args: [(not a12), (or (not a16)), (or a1 a3 a11 a19 a20 (not a16))]
+  clause args: [derived 277, derived 106]
+  backptr: nil
+  conclusion: (or a1 a3 a11 a19 a20 (not a16) (not a16))
+
+  derived clause number: 279
+  rule: resolution
+  expr args: [(not a20), (or (not a16)), (or a1 a3 a11 a19 (not a16) (not a16))]
+  clause args: [derived 278, derived 104]
+  backptr: nil
+  conclusion: (or a1 a3 a11 a19 (not a16) (not a16) (not a16))
+
+  derived clause number: 280
+  rule: factoring
+  expr args: []
+  clause args: [derived 279]
+  backptr: nil
+  conclusion: (or a1 a3 a11 a19 (not a16))
+
+  derived clause number: 281
+  rule: resolution
+  expr args: [(not a16), (or a1 a3 a11 a19), (or a1 a3 a1 a3 a1 a3)]
+  clause args: [derived 270, derived 280]
+  backptr: nil
+  conclusion: (or a1 a3 a1 a3 a1 a3 a1 a3 a11 a19)
+
+  derived clause number: 282
+  rule: resolution
+  expr args: [(not a19), (or (not a7)), (or a1 a3 a1 a3 a1 a3 a1 a3 a11)]
+  clause args: [derived 281, derived 74]
+  backptr: nil
+  conclusion: (or a1 a3 a1 a3 a1 a3 a1 a3 a11 (not a7))
+
+  derived clause number: 283
+  rule: resolution
+  expr args: [(not a11), (or (not a7)), (or a1 a3 a1 a3 a1 a3 a1 a3 (not a7))]
+  clause args: [derived 282, derived 76]
+  backptr: nil
+  conclusion: (or a1 a3 a1 a3 a1 a3 a1 a3 (not a7) (not a7))
+
+  derived clause number: 284
+  rule: factoring
+  expr args: []
+  clause args: [derived 283]
+  backptr: nil
+  conclusion: (or a1 a3 (not a7))
+
+  derived clause number: 285
+  rule: resolution
+  expr args: [(not a7), (or a1 a3), (or a8 a1 a3)]
+  clause args: [derived 266, derived 284]
+  backptr: nil
+  conclusion: (or a8 a1 a3 a1 a3)
+
+  derived clause number: 286
+  rule: resolution
+  expr args: [(not a8), (or a1 a3), (or a1 a3 a1 a3)]
+  clause args: [derived 285, derived 269]
+  backptr: nil
+  conclusion: (or a1 a3 a1 a3 a1 a3)
+
+  derived clause number: 287
+  rule: resolution
+  expr args: [(not a5), (or (not a9)), (or a6 a7 a8)]
+  clause args: [derived 98, derived 130]
+  backptr: nil
+  conclusion: (or a6 a7 a8 (not a9))
+
+  derived clause number: 288
+  rule: resolution
+  expr args: [(not a9), (or a6 a7 a8), (or a10 a11 a12)]
+  clause args: [derived 62, derived 287]
+  backptr: nil
+  conclusion: (or a10 a11 a12 a6 a7 a8)
+
+  derived clause number: 289
+  rule: resolution
+  expr args: [(not a6), (or (not a18)), (or a10 a11 a12 a7 a8)]
+  clause args: [derived 288, derived 92]
+  backptr: nil
+  conclusion: (or a10 a11 a12 a7 a8 (not a18))
+
+  derived clause number: 290
+  rule: resolution
+  expr args: [(not a10), (or (not a18)), (or a11 a12 a7 a8 (not a18))]
+  clause args: [derived 289, derived 108]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a8 (not a18) (not a18))
+
+  derived clause number: 291
+  rule: factoring
+  expr args: []
+  clause args: [derived 290]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a8 (not a18))
+
+  derived clause number: 292
+  rule: resolution
+  expr args: [(not a18), (or a11 a12 a7 a8), (or a17 a19 a20)]
+  clause args: [derived 68, derived 291]
+  backptr: nil
+  conclusion: (or a17 a19 a20 a11 a12 a7 a8)
+
+  derived clause number: 293
+  rule: resolution
+  expr args: [(not a6), (or (not a10)), (or a5 a7 a8)]
+  clause args: [derived 98, derived 100]
+  backptr: nil
+  conclusion: (or a5 a7 a8 (not a10))
+
+  derived clause number: 294
+  rule: resolution
+  expr args: [(not a10), (or a5 a7 a8), (or a9 a11 a12)]
+  clause args: [derived 62, derived 293]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a5 a7 a8)
+
+  derived clause number: 295
+  rule: resolution
+  expr args: [(not a5), (or (not a17)), (or a9 a11 a12 a7 a8)]
+  clause args: [derived 294, derived 132]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a7 a8 (not a17))
+
+  derived clause number: 296
+  rule: resolution
+  expr args: [(not a9), (or (not a17)), (or a11 a12 a7 a8 (not a17))]
+  clause args: [derived 295, derived 116]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a8 (not a17) (not a17))
+
+  derived clause number: 297
+  rule: factoring
+  expr args: []
+  clause args: [derived 296]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a8 (not a17))
+
+  derived clause number: 298
+  rule: resolution
+  expr args: [(not a17), (or a11 a12 a7 a8), (or a19 a20 a11 a12 a7 a8)]
+  clause args: [derived 292, derived 297]
+  backptr: nil
+  conclusion: (or a19 a20 a11 a12 a7 a8 a11 a12 a7 a8)
+
+  derived clause number: 299
+  rule: factoring
+  expr args: []
+  clause args: [derived 298]
+  backptr: nil
+  conclusion: (or a19 a20 a11 a12 a7 a8)
+
+  derived clause number: 300
+  rule: resolution
+  expr args: [(not a8), (or (not a16)), (or a19 a20 a11 a12 a7)]
+  clause args: [derived 299, derived 102]
+  backptr: nil
+  conclusion: (or a19 a20 a11 a12 a7 (not a16))
+
+  derived clause number: 301
+  rule: resolution
+  expr args: [(not a20), (or (not a16)), (or a19 a11 a12 a7 (not a16))]
+  clause args: [derived 300, derived 104]
+  backptr: nil
+  conclusion: (or a19 a11 a12 a7 (not a16) (not a16))
+
+  derived clause number: 302
+  rule: resolution
+  expr args: [(not a12), (or (not a16)), (or a19 a11 a7 (not a16) (not a16))]
+  clause args: [derived 301, derived 106]
+  backptr: nil
+  conclusion: (or a19 a11 a7 (not a16) (not a16) (not a16))
+
+  derived clause number: 303
+  rule: resolution
+  expr args: [(not a13), (or (not a5)), (or a14 a15 a16)]
+  clause args: [derived 50, derived 128]
+  backptr: nil
+  conclusion: (or a14 a15 a16 (not a5))
+
+  derived clause number: 304
+  rule: resolution
+  expr args: [(not a5), (or a14 a15 a16), (or a6 a7 a8)]
+  clause args: [derived 98, derived 303]
+  backptr: nil
+  conclusion: (or a6 a7 a8 a14 a15 a16)
+
+  derived clause number: 305
+  rule: resolution
+  expr args: [(not a14), (or (not a10)), (or a6 a7 a8 a15 a16)]
+  clause args: [derived 304, derived 52]
+  backptr: nil
+  conclusion: (or a6 a7 a8 a15 a16 (not a10))
+
+  derived clause number: 306
+  rule: resolution
+  expr args: [(not a6), (or (not a10)), (or a7 a8 a15 a16 (not a10))]
+  clause args: [derived 305, derived 100]
+  backptr: nil
+  conclusion: (or a7 a8 a15 a16 (not a10) (not a10))
+
+  derived clause number: 307
+  rule: factoring
+  expr args: []
+  clause args: [derived 306]
+  backptr: nil
+  conclusion: (or a7 a8 a15 a16 (not a10))
+
+  derived clause number: 308
+  rule: resolution
+  expr args: [(not a10), (or a7 a8 a15 a16), (or a9 a11 a12)]
+  clause args: [derived 62, derived 307]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a7 a8 a15 a16)
+
+  derived clause number: 309
+  rule: resolution
+  expr args: [(not a14), (or (not a6)), (or a13 a15 a16)]
+  clause args: [derived 50, derived 88]
+  backptr: nil
+  conclusion: (or a13 a15 a16 (not a6))
+
+  derived clause number: 310
+  rule: resolution
+  expr args: [(not a6), (or a13 a15 a16), (or a5 a7 a8)]
+  clause args: [derived 98, derived 309]
+  backptr: nil
+  conclusion: (or a5 a7 a8 a13 a15 a16)
+
+  derived clause number: 311
+  rule: resolution
+  expr args: [(not a13), (or (not a9)), (or a5 a7 a8 a15 a16)]
+  clause args: [derived 310, derived 112]
+  backptr: nil
+  conclusion: (or a5 a7 a8 a15 a16 (not a9))
+
+  derived clause number: 312
+  rule: resolution
+  expr args: [(not a5), (or (not a9)), (or a7 a8 a15 a16 (not a9))]
+  clause args: [derived 311, derived 130]
+  backptr: nil
+  conclusion: (or a7 a8 a15 a16 (not a9) (not a9))
+
+  derived clause number: 313
+  rule: factoring
+  expr args: []
+  clause args: [derived 312]
+  backptr: nil
+  conclusion: (or a7 a8 a15 a16 (not a9))
+
+  derived clause number: 314
+  rule: resolution
+  expr args: [(not a9), (or a7 a8 a15 a16), (or a11 a12 a7 a8 a15 a16)]
+  clause args: [derived 308, derived 313]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a8 a15 a16 a7 a8 a15 a16)
+
+  derived clause number: 315
+  rule: resolution
+  expr args: [(not a20), (or (not a8)), (or a18 a19 a11 a12 a15 a16)]
+  clause args: [derived 122, derived 86]
+  backptr: nil
+  conclusion: (or a18 a19 a11 a12 a15 a16 (not a8))
+
+  derived clause number: 316
+  rule: factoring
+  expr args: []
+  clause args: [derived 314]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a8 a15 a16)
+
+  derived clause number: 317
+  rule: resolution
+  expr args: [(not a8), (or a18 a19 a11 a12 a15 a16), (or a7 a11 a12 a15 a16)]
+  clause args: [derived 316, derived 315]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a15 a16 a18 a19 a11 a12 a15 a16)
+
+  derived clause number: 318
+  rule: resolution
+  expr args: [(not a18), (or a15 a16 a11 a12), (or a7 a19 a11 a12 a15 a16 a15 a16 a11 a12)]
+  clause args: [derived 317, derived 246]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a15 a16 a19 a11 a12 a15 a16 a15 a16 a11 a12)
+
+  derived clause number: 319
+  rule: factoring
+  expr args: []
+  clause args: [derived 318]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a15 a16 a19)
+
+  derived clause number: 320
+  rule: factoring
+  expr args: []
+  clause args: [derived 302]
+  backptr: nil
+  conclusion: (or a19 a11 a7 (not a16))
+
+  derived clause number: 321
+  rule: resolution
+  expr args: [(not a16), (or a19 a11 a7), (or a12 a15 a19 a11 a7)]
+  clause args: [derived 319, derived 320]
+  backptr: nil
+  conclusion: (or a11 a12 a7 a15 a19 a19 a11 a7)
+
+  derived clause number: 322
+  rule: resolution
+  expr args: [(not a14), (or (not a18)), (or a6 a7 a8 a15 a16)]
+  clause args: [derived 304, derived 110]
+  backptr: nil
+  conclusion: (or a6 a7 a8 a15 a16 (not a18))
+
+  derived clause number: 323
+  rule: resolution
+  expr args: [(not a6), (or (not a18)), (or a7 a8 a15 a16 (not a18))]
+  clause args: [derived 322, derived 92]
+  backptr: nil
+  conclusion: (or a7 a8 a15 a16 (not a18) (not a18))
+
+  derived clause number: 324
+  rule: factoring
+  expr args: []
+  clause args: [derived 323]
+  backptr: nil
+  conclusion: (or a7 a8 a15 a16 (not a18))
+
+  derived clause number: 325
+  rule: resolution
+  expr args: [(not a18), (or a7 a8 a15 a16), (or a17 a19 a20)]
+  clause args: [derived 68, derived 324]
+  backptr: nil
+  conclusion: (or a17 a19 a20 a7 a8 a15 a16)
+
+  derived clause number: 326
+  rule: resolution
+  expr args: [(not a6), (or (not a14)), (or a5 a7 a8)]
+  clause args: [derived 98, derived 88]
+  backptr: nil
+  conclusion: (or a5 a7 a8 (not a14))
+
+  derived clause number: 327
+  rule: resolution
+  expr args: [(not a14), (or a5 a7 a8), (or a13 a15 a16)]
+  clause args: [derived 50, derived 326]
+  backptr: nil
+  conclusion: (or a13 a15 a16 a5 a7 a8)
+
+  derived clause number: 328
+  rule: resolution
+  expr args: [(not a5), (or (not a17)), (or a13 a15 a16 a7 a8)]
+  clause args: [derived 327, derived 132]
+  backptr: nil
+  conclusion: (or a13 a15 a16 a7 a8 (not a17))
+
+  derived clause number: 329
+  rule: resolution
+  expr args: [(not a13), (or (not a17)), (or a15 a16 a7 a8 (not a17))]
+  clause args: [derived 328, derived 114]
+  backptr: nil
+  conclusion: (or a15 a16 a7 a8 (not a17) (not a17))
+
+  derived clause number: 330
+  rule: factoring
+  expr args: []
+  clause args: [derived 329]
+  backptr: nil
+  conclusion: (or a15 a16 a7 a8 (not a17))
+
+  derived clause number: 331
+  rule: resolution
+  expr args: [(not a17), (or a15 a16 a7 a8), (or a19 a20 a15 a16 a7 a8)]
+  clause args: [derived 325, derived 330]
+  backptr: nil
+  conclusion: (or a19 a20 a7 a8 a15 a16 a15 a16 a7 a8)
+
+  derived clause number: 332
+  rule: resolution
+  expr args: [(not a20), (or (not a12)), (or a19 a7 a8 a15 a16 a15 a16 a7 a8)]
+  clause args: [derived 331, derived 70]
+  backptr: nil
+  conclusion: (or a19 a7 a8 a15 a16 a15 a16 a7 a8 (not a12))
+
+  derived clause number: 333
+  rule: factoring
+  expr args: []
+  clause args: [derived 332]
+  backptr: nil
+  conclusion: (or a19 a7 a8 a15 a16 (not a12))
+
+  derived clause number: 334
+  rule: resolution
+  expr args: [(not a8), (or (not a12)), (or a19 a7 a15 a16 (not a12))]
+  clause args: [derived 333, derived 90]
+  backptr: nil
+  conclusion: (or a19 a7 a15 a16 (not a12) (not a12))
+
+  derived clause number: 335
+  rule: factoring
+  expr args: []
+  clause args: [derived 334]
+  backptr: nil
+  conclusion: (or a19 a7 a15 a16 (not a12))
+
+  derived clause number: 336
+  rule: resolution
+  expr args: [(not a12), (or a19 a7 a15 a16), (or a11 a19 a11 a7 a19 a7 a15)]
+  clause args: [derived 321, derived 335]
+  backptr: nil
+  conclusion: (or a11 a7 a15 a19 a19 a11 a7 a19 a7 a15 a16)
+
+  derived clause number: 337
+  rule: resolution
+  expr args: [(not a16), (or a19 a11 a7), (or a15 a19 a11 a7 a19 a7 a15 a19 a11 a7)]
+  clause args: [derived 336, derived 320]
+  backptr: nil
+  conclusion: (or a11 a7 a15 a19 a19 a11 a7 a19 a7 a15 a19 a11 a7)
+
+  derived clause number: 338
+  rule: or-
+  expr args: [(not (or (not a3) (not a19)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a3) (not a19))) (not a3) (not a19))
+
+  derived clause number: 339
+  rule: resolution
+  expr args: [(not (or (not a3) (not a19))), (or (not a3) (not a19)), (or )]
+  clause args: [derived 31, derived 338]
+  backptr: nil
+  conclusion: (or (not a3) (not a19))
+
+  derived clause number: 340
+  rule: factoring
+  expr args: []
+  clause args: [derived 337]
+  backptr: nil
+  conclusion: (or a11 a7 a15 a19)
+
+  derived clause number: 341
+  rule: resolution
+  expr args: [(not a19), (or (not a3)), (or a11 a7 a15)]
+  clause args: [derived 340, derived 339]
+  backptr: nil
+  conclusion: (or a11 a7 a15 (not a3))
+
+  derived clause number: 342
+  rule: or-
+  expr args: [(not (or (not a3) (not a15)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a3) (not a15))) (not a3) (not a15))
+
+  derived clause number: 343
+  rule: resolution
+  expr args: [(not (or (not a3) (not a15))), (or (not a3) (not a15)), (or )]
+  clause args: [derived 32, derived 342]
+  backptr: nil
+  conclusion: (or (not a3) (not a15))
+
+  derived clause number: 344
+  rule: resolution
+  expr args: [(not a15), (or (not a3)), (or a11 a7 (not a3))]
+  clause args: [derived 341, derived 343]
+  backptr: nil
+  conclusion: (or a11 a7 (not a3) (not a3))
+
+  derived clause number: 345
+  rule: or-
+  expr args: [(not (or (not a3) (not a11)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a3) (not a11))) (not a3) (not a11))
+
+  derived clause number: 346
+  rule: resolution
+  expr args: [(not (or (not a3) (not a11))), (or (not a3) (not a11)), (or )]
+  clause args: [derived 33, derived 345]
+  backptr: nil
+  conclusion: (or (not a3) (not a11))
+
+  derived clause number: 347
+  rule: resolution
+  expr args: [(not a11), (or (not a3)), (or a7 (not a3) (not a3))]
+  clause args: [derived 344, derived 346]
+  backptr: nil
+  conclusion: (or a7 (not a3) (not a3) (not a3))
+
+  derived clause number: 348
+  rule: or-
+  expr args: [(not (or (not a3) (not a7)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a3) (not a7))) (not a3) (not a7))
+
+  derived clause number: 349
+  rule: resolution
+  expr args: [(not (or (not a3) (not a7))), (or (not a3) (not a7)), (or )]
+  clause args: [derived 35, derived 348]
+  backptr: nil
+  conclusion: (or (not a3) (not a7))
+
+  derived clause number: 350
+  rule: resolution
+  expr args: [(not a7), (or (not a3)), (or (not a3) (not a3) (not a3))]
+  clause args: [derived 347, derived 349]
+  backptr: nil
+  conclusion: (or (not a3) (not a3) (not a3) (not a3))
+
+  derived clause number: 351
+  rule: factoring
+  expr args: []
+  clause args: [derived 286]
+  backptr: nil
+  conclusion: (or a1 a3)
+
+  derived clause number: 352
+  rule: factoring
+  expr args: []
+  clause args: [derived 350]
+  backptr: nil
+  conclusion: (or (not a3))
+
+  derived clause number: 353
+  rule: resolution
+  expr args: [(not a3), (or ), (or a1)]
+  clause args: [derived 351, derived 352]
+  backptr: nil
+  conclusion: (or a1)
+
+  derived clause number: 354
+  rule: resolution
+  expr args: [(not a18), (or (not a10)), (or a17 a19 a20)]
+  clause args: [derived 68, derived 108]
+  backptr: nil
+  conclusion: (or a17 a19 a20 (not a10))
+
+  derived clause number: 355
+  rule: resolution
+  expr args: [(not a10), (or a17 a19 a20), (or a9 a11 a12)]
+  clause args: [derived 62, derived 354]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a17 a19 a20)
+
+  derived clause number: 356
+  rule: or-
+  expr args: [(not (or (not a1) (not a5)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a1) (not a5))) (not a1) (not a5))
+
+  derived clause number: 357
+  rule: resolution
+  expr args: [(not (or (not a1) (not a5))), (or (not a1) (not a5)), (or )]
+  clause args: [derived 36, derived 356]
+  backptr: nil
+  conclusion: (or (not a1) (not a5))
+
+  derived clause number: 358
+  rule: resolution
+  expr args: [(not a1), (or (not a5)), (or )]
+  clause args: [derived 353, derived 357]
+  backptr: nil
+  conclusion: (or (not a5))
+
+  derived clause number: 359
+  rule: or-
+  expr args: [(not (or (not a1) (not a9)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a1) (not a9))) (not a1) (not a9))
+
+  derived clause number: 360
+  rule: resolution
+  expr args: [(not (or (not a1) (not a9))), (or (not a1) (not a9)), (or )]
+  clause args: [derived 37, derived 359]
+  backptr: nil
+  conclusion: (or (not a1) (not a9))
+
+  derived clause number: 361
+  rule: resolution
+  expr args: [(not a1), (or (not a9)), (or )]
+  clause args: [derived 353, derived 360]
+  backptr: nil
+  conclusion: (or (not a9))
+
+  derived clause number: 362
+  rule: or-
+  expr args: [(not (or (not a1) (not a17)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a1) (not a17))) (not a1) (not a17))
+
+  derived clause number: 363
+  rule: resolution
+  expr args: [(not (or (not a1) (not a17))), (or (not a1) (not a17)), (or )]
+  clause args: [derived 38, derived 362]
+  backptr: nil
+  conclusion: (or (not a1) (not a17))
+
+  derived clause number: 364
+  rule: resolution
+  expr args: [(not a1), (or (not a17)), (or )]
+  clause args: [derived 353, derived 363]
+  backptr: nil
+  conclusion: (or (not a17))
+
+  derived clause number: 365
+  rule: or-
+  expr args: [(not (or (not a1) (not a13)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (not a1) (not a13))) (not a1) (not a13))
+
+  derived clause number: 366
+  rule: resolution
+  expr args: [(not (or (not a1) (not a13))), (or (not a1) (not a13)), (or )]
+  clause args: [derived 39, derived 365]
+  backptr: nil
+  conclusion: (or (not a1) (not a13))
+
+  derived clause number: 367
+  rule: resolution
+  expr args: [(not a1), (or (not a13)), (or )]
+  clause args: [derived 353, derived 366]
+  backptr: nil
+  conclusion: (or (not a13))
+
+  derived clause number: 368
+  rule: resolution
+  expr args: [(not a18), (or (not a6)), (or a9 a10 a11 a17 a19)]
+  clause args: [derived 78, derived 92]
+  backptr: nil
+  conclusion: (or a9 a10 a11 a17 a19 (not a6))
+
+  derived clause number: 369
+  rule: resolution
+  expr args: [(not a10), (or (not a6)), (or a9 a11 a17 a19 (not a6))]
+  clause args: [derived 368, derived 100]
+  backptr: nil
+  conclusion: (or a9 a11 a17 a19 (not a6) (not a6))
+
+  derived clause number: 370
+  rule: factoring
+  expr args: []
+  clause args: [derived 369]
+  backptr: nil
+  conclusion: (or a9 a11 a17 a19 (not a6))
+
+  derived clause number: 371
+  rule: resolution
+  expr args: [(not a6), (or a9 a11 a17 a19), (or a5 a7 a8)]
+  clause args: [derived 98, derived 370]
+  backptr: nil
+  conclusion: (or a5 a7 a8 a9 a11 a17 a19)
+
+  derived clause number: 372
+  rule: resolution
+  expr args: [(not a20), (or (not a8)), (or a9 a11 a12 a17 a19)]
+  clause args: [derived 355, derived 86]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a17 a19 (not a8))
+
+  derived clause number: 373
+  rule: resolution
+  expr args: [(not a12), (or (not a8)), (or a9 a11 a17 a19 (not a8))]
+  clause args: [derived 372, derived 90]
+  backptr: nil
+  conclusion: (or a9 a11 a17 a19 (not a8) (not a8))
+
+  derived clause number: 374
+  rule: resolution
+  expr args: [(not a9), (or ), (or a11 a17 a19 (not a8) (not a8))]
+  clause args: [derived 373, derived 361]
+  backptr: nil
+  conclusion: (or a11 a17 a19 (not a8) (not a8))
+
+  derived clause number: 375
+  rule: resolution
+  expr args: [(not a17), (or ), (or a11 a19 (not a8) (not a8))]
+  clause args: [derived 374, derived 364]
+  backptr: nil
+  conclusion: (or a11 a19 (not a8) (not a8))
+
+  derived clause number: 376
+  rule: factoring
+  expr args: []
+  clause args: [derived 375]
+  backptr: nil
+  conclusion: (or a11 a19 (not a8))
+
+  derived clause number: 377
+  rule: resolution
+  expr args: [(not a8), (or a11 a19), (or a5 a7 a9 a17 a11 a19)]
+  clause args: [derived 371, derived 376]
+  backptr: nil
+  conclusion: (or a5 a7 a9 a11 a17 a19 a11 a19)
+
+  derived clause number: 378
+  rule: factoring
+  expr args: []
+  clause args: [derived 377]
+  backptr: nil
+  conclusion: (or a5 a7 a9 a11 a17 a19)
+
+  derived clause number: 379
+  rule: resolution
+  expr args: [(not a19), (or (not a15)), (or a5 a7 a9 a11 a17)]
+  clause args: [derived 378, derived 56]
+  backptr: nil
+  conclusion: (or a5 a7 a9 a11 a17 (not a15))
+
+  derived clause number: 380
+  rule: resolution
+  expr args: [(not a11), (or (not a15)), (or a5 a7 a9 a17 (not a15))]
+  clause args: [derived 379, derived 84]
+  backptr: nil
+  conclusion: (or a5 a7 a9 a17 (not a15) (not a15))
+
+  derived clause number: 381
+  rule: factoring
+  expr args: []
+  clause args: [derived 380]
+  backptr: nil
+  conclusion: (or a5 a7 a9 a17 (not a15))
+
+  derived clause number: 382
+  rule: resolution
+  expr args: [(not a15), (or a5 a7 a9 a17), (or a13 a14 a16)]
+  clause args: [derived 50, derived 381]
+  backptr: nil
+  conclusion: (or a13 a14 a16 a5 a7 a9 a17)
+
+  derived clause number: 383
+  rule: resolution
+  expr args: [(not a19), (or a13 a16 a9 a12), (or a17 a18 a20)]
+  clause args: [derived 68, derived 192]
+  backptr: nil
+  conclusion: (or a17 a18 a20 a13 a16 a9 a12)
+
+  derived clause number: 384
+  rule: resolution
+  expr args: [(not a12), (or (not a8)), (or a17 a18 a20 a13 a16 a9)]
+  clause args: [derived 383, derived 90]
+  backptr: nil
+  conclusion: (or a17 a18 a20 a13 a16 a9 (not a8))
+
+  derived clause number: 385
+  rule: resolution
+  expr args: [(not a20), (or (not a8)), (or a17 a18 a13 a16 a9 (not a8))]
+  clause args: [derived 384, derived 86]
+  backptr: nil
+  conclusion: (or a17 a18 a13 a16 a9 (not a8) (not a8))
+
+  derived clause number: 386
+  rule: factoring
+  expr args: []
+  clause args: [derived 385]
+  backptr: nil
+  conclusion: (or a17 a18 a13 a16 a9 (not a8))
+
+  derived clause number: 387
+  rule: resolution
+  expr args: [(not a8), (or a17 a18 a13 a16 a9), (or a5 a6 a7)]
+  clause args: [derived 98, derived 386]
+  backptr: nil
+  conclusion: (or a5 a6 a7 a17 a18 a13 a16 a9)
+
+  derived clause number: 388
+  rule: resolution
+  expr args: [(not a18), (or (not a14)), (or a5 a6 a7 a17 a13 a16 a9)]
+  clause args: [derived 387, derived 110]
+  backptr: nil
+  conclusion: (or a5 a6 a7 a17 a13 a16 a9 (not a14))
+
+  derived clause number: 389
+  rule: resolution
+  expr args: [(not a6), (or (not a14)), (or a5 a7 a17 a13 a16 a9 (not a14))]
+  clause args: [derived 388, derived 88]
+  backptr: nil
+  conclusion: (or a5 a7 a17 a13 a16 a9 (not a14) (not a14))
+
+  derived clause number: 390
+  rule: resolution
+  expr args: [(not a13), (or ), (or a5 a7 a17 a16 a9 (not a14) (not a14))]
+  clause args: [derived 389, derived 367]
+  backptr: nil
+  conclusion: (or a5 a7 a17 a16 a9 (not a14) (not a14))
+
+  derived clause number: 391
+  rule: resolution
+  expr args: [(not a9), (or ), (or a5 a7 a17 a16 (not a14) (not a14))]
+  clause args: [derived 390, derived 361]
+  backptr: nil
+  conclusion: (or a5 a7 a17 a16 (not a14) (not a14))
+
+  derived clause number: 392
+  rule: resolution
+  expr args: [(not a17), (or ), (or a5 a7 a16 (not a14) (not a14))]
+  clause args: [derived 391, derived 364]
+  backptr: nil
+  conclusion: (or a5 a7 a16 (not a14) (not a14))
+
+  derived clause number: 393
+  rule: resolution
+  expr args: [(not a5), (or ), (or a7 a16 (not a14) (not a14))]
+  clause args: [derived 392, derived 358]
+  backptr: nil
+  conclusion: (or a7 a16 (not a14) (not a14))
+
+  derived clause number: 394
+  rule: factoring
+  expr args: []
+  clause args: [derived 393]
+  backptr: nil
+  conclusion: (or a7 a16 (not a14))
+
+  derived clause number: 395
+  rule: resolution
+  expr args: [(not a14), (or a7 a16), (or a13 a5 a9 a17 a7 a16)]
+  clause args: [derived 382, derived 394]
+  backptr: nil
+  conclusion: (or a13 a16 a5 a7 a9 a17 a7 a16)
+
+  derived clause number: 396
+  rule: resolution
+  expr args: [(not a13), (or ), (or a16 a5 a7 a9 a17 a7 a16)]
+  clause args: [derived 395, derived 367]
+  backptr: nil
+  conclusion: (or a16 a5 a7 a9 a17 a7 a16)
+
+  derived clause number: 397
+  rule: resolution
+  expr args: [(not a9), (or ), (or a16 a5 a7 a17 a7 a16)]
+  clause args: [derived 396, derived 361]
+  backptr: nil
+  conclusion: (or a16 a5 a7 a17 a7 a16)
+
+  derived clause number: 398
+  rule: resolution
+  expr args: [(not a17), (or ), (or a16 a5 a7 a7 a16)]
+  clause args: [derived 397, derived 364]
+  backptr: nil
+  conclusion: (or a16 a5 a7 a7 a16)
+
+  derived clause number: 399
+  rule: resolution
+  expr args: [(not a5), (or ), (or a16 a7 a7 a16)]
+  clause args: [derived 398, derived 358]
+  backptr: nil
+  conclusion: (or a16 a7 a7 a16)
+
+  derived clause number: 400
+  rule: resolution
+  expr args: [(not a18), (or (not a14)), (or a9 a10 a11 a17 a19)]
+  clause args: [derived 78, derived 110]
+  backptr: nil
+  conclusion: (or a9 a10 a11 a17 a19 (not a14))
+
+  derived clause number: 401
+  rule: resolution
+  expr args: [(not a10), (or (not a14)), (or a9 a11 a17 a19 (not a14))]
+  clause args: [derived 400, derived 52]
+  backptr: nil
+  conclusion: (or a9 a11 a17 a19 (not a14) (not a14))
+
+  derived clause number: 402
+  rule: factoring
+  expr args: []
+  clause args: [derived 401]
+  backptr: nil
+  conclusion: (or a9 a11 a17 a19 (not a14))
+
+  derived clause number: 403
+  rule: resolution
+  expr args: [(not a14), (or a9 a11 a17 a19), (or a13 a15 a16)]
+  clause args: [derived 50, derived 402]
+  backptr: nil
+  conclusion: (or a13 a15 a16 a9 a11 a17 a19)
+
+  derived clause number: 404
+  rule: resolution
+  expr args: [(not a11), (or (not a7)), (or a13 a15 a16 a9 a17 a19)]
+  clause args: [derived 403, derived 76]
+  backptr: nil
+  conclusion: (or a13 a15 a16 a9 a17 a19 (not a7))
+
+  derived clause number: 405
+  rule: resolution
+  expr args: [(not a15), (or (not a7)), (or a13 a16 a9 a17 a19 (not a7))]
+  clause args: [derived 404, derived 72]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a17 a19 (not a7) (not a7))
+
+  derived clause number: 406
+  rule: resolution
+  expr args: [(not a19), (or (not a7)), (or a13 a16 a9 a17 (not a7) (not a7))]
+  clause args: [derived 405, derived 74]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a17 (not a7) (not a7) (not a7))
+
+  derived clause number: 407
+  rule: factoring
+  expr args: []
+  clause args: [derived 399]
+  backptr: nil
+  conclusion: (or a16 a7)
+
+  derived clause number: 408
+  rule: factoring
+  expr args: []
+  clause args: [derived 406]
+  backptr: nil
+  conclusion: (or a13 a16 a9 a17 (not a7))
+
+  derived clause number: 409
+  rule: resolution
+  expr args: [(not a7), (or a13 a16 a9 a17), (or a16)]
+  clause args: [derived 407, derived 408]
+  backptr: nil
+  conclusion: (or a16 a13 a16 a9 a17)
+
+  derived clause number: 410
+  rule: resolution
+  expr args: [(not a13), (or ), (or a16 a16 a9 a17)]
+  clause args: [derived 409, derived 367]
+  backptr: nil
+  conclusion: (or a16 a16 a9 a17)
+
+  derived clause number: 411
+  rule: resolution
+  expr args: [(not a9), (or ), (or a16 a16 a17)]
+  clause args: [derived 410, derived 361]
+  backptr: nil
+  conclusion: (or a16 a16 a17)
+
+  derived clause number: 412
+  rule: resolution
+  expr args: [(not a17), (or ), (or a16 a16)]
+  clause args: [derived 411, derived 364]
+  backptr: nil
+  conclusion: (or a16 a16)
+
+  derived clause number: 413
+  rule: factoring
+  expr args: []
+  clause args: [derived 412]
+  backptr: nil
+  conclusion: (or a16)
+
+  derived clause number: 414
+  rule: resolution
+  expr args: [(not a16), (or (not a12)), (or )]
+  clause args: [derived 413, derived 106]
+  backptr: nil
+  conclusion: (or (not a12))
+
+  derived clause number: 415
+  rule: resolution
+  expr args: [(not a16), (or (not a20)), (or )]
+  clause args: [derived 413, derived 104]
+  backptr: nil
+  conclusion: (or (not a20))
+
+  derived clause number: 416
+  rule: resolution
+  expr args: [(not a19), (or (not a7)), (or a9 a11 a12 a17 a20)]
+  clause args: [derived 355, derived 74]
+  backptr: nil
+  conclusion: (or a9 a11 a12 a17 a20 (not a7))
+
+  derived clause number: 417
+  rule: resolution
+  expr args: [(not a11), (or (not a7)), (or a9 a12 a17 a20 (not a7))]
+  clause args: [derived 416, derived 76]
+  backptr: nil
+  conclusion: (or a9 a12 a17 a20 (not a7) (not a7))
+
+  derived clause number: 418
+  rule: resolution
+  expr args: [(not a9), (or ), (or a12 a17 a20 (not a7) (not a7))]
+  clause args: [derived 417, derived 361]
+  backptr: nil
+  conclusion: (or a12 a17 a20 (not a7) (not a7))
+
+  derived clause number: 419
+  rule: resolution
+  expr args: [(not a12), (or ), (or a17 a20 (not a7) (not a7))]
+  clause args: [derived 418, derived 414]
+  backptr: nil
+  conclusion: (or a17 a20 (not a7) (not a7))
+
+  derived clause number: 420
+  rule: resolution
+  expr args: [(not a17), (or ), (or a20 (not a7) (not a7))]
+  clause args: [derived 419, derived 364]
+  backptr: nil
+  conclusion: (or a20 (not a7) (not a7))
+
+  derived clause number: 421
+  rule: resolution
+  expr args: [(not a20), (or ), (or (not a7) (not a7))]
+  clause args: [derived 420, derived 415]
+  backptr: nil
+  conclusion: (or (not a7) (not a7))
+
+  derived clause number: 422
+  rule: factoring
+  expr args: []
+  clause args: [derived 421]
+  backptr: nil
+  conclusion: (or (not a7))
+
+  derived clause number: 423
+  rule: resolution
+  expr args: [(not a7), (or ), (or a5 a6 a8)]
+  clause args: [derived 98, derived 422]
+  backptr: nil
+  conclusion: (or a5 a6 a8)
+
+  derived clause number: 424
+  rule: resolution
+  expr args: [(not a16), (or (not a8)), (or )]
+  clause args: [derived 413, derived 102]
+  backptr: nil
+  conclusion: (or (not a8))
+
+  derived clause number: 425
+  rule: resolution
+  expr args: [(not a8), (or ), (or a5 a6)]
+  clause args: [derived 423, derived 424]
+  backptr: nil
+  conclusion: (or a5 a6)
+
+  derived clause number: 426
+  rule: resolution
+  expr args: [(not a5), (or ), (or a6)]
+  clause args: [derived 425, derived 358]
+  backptr: nil
+  conclusion: (or a6)
+
+  derived clause number: 427
+  rule: resolution
+  expr args: [(not a6), (or (not a18)), (or )]
+  clause args: [derived 426, derived 92]
+  backptr: nil
+  conclusion: (or (not a18))
+
+  derived clause number: 428
+  rule: resolution
+  expr args: [(not a18), (or ), (or a17 a19 a20)]
+  clause args: [derived 68, derived 427]
+  backptr: nil
+  conclusion: (or a17 a19 a20)
+
+  derived clause number: 429
+  rule: resolution
+  expr args: [(not a20), (or ), (or a17 a19)]
+  clause args: [derived 428, derived 415]
+  backptr: nil
+  conclusion: (or a17 a19)
+
+  derived clause number: 430
+  rule: resolution
+  expr args: [(not a17), (or ), (or a19)]
+  clause args: [derived 429, derived 364]
+  backptr: nil
+  conclusion: (or a19)
+
+  derived clause number: 431
+  rule: resolution
+  expr args: [(not a6), (or (not a10)), (or )]
+  clause args: [derived 426, derived 100]
+  backptr: nil
+  conclusion: (or (not a10))
+
+  derived clause number: 432
+  rule: resolution
+  expr args: [(not a10), (or ), (or a9 a11 a12)]
+  clause args: [derived 62, derived 431]
+  backptr: nil
+  conclusion: (or a9 a11 a12)
+
+  derived clause number: 433
+  rule: resolution
+  expr args: [(not a12), (or ), (or a9 a11)]
+  clause args: [derived 432, derived 414]
+  backptr: nil
+  conclusion: (or a9 a11)
+
+  derived clause number: 434
+  rule: resolution
+  expr args: [(not a9), (or ), (or a11)]
+  clause args: [derived 433, derived 361]
+  backptr: nil
+  conclusion: (or a11)
+
+  derived clause number: 435
+  rule: resolution
+  expr args: [(not a11), (or (not a19)), (or )]
+  clause args: [derived 434, derived 54]
+  backptr: nil
+  conclusion: (or (not a19))
+
+  derived clause number: 436
+  rule: resolution
+  expr args: [(not a19), (or ), (or )]
+  clause args: [derived 430, derived 435]
+  backptr: nil
+  conclusion: (or )
+
+  derived clause number: 437
+  rule: or_nil
+  expr args: []
+  clause args: [derived 436]
+  backptr: nil
+  conclusion: false
+

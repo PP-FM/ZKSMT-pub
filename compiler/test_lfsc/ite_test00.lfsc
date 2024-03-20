@@ -1,0 +1,19 @@
+unsat
+(define cvc.d (var 0 Bool))
+(define cvc.a (var 1 Bool))
+(define cvc.b (var 2 Bool))
+(define cvc.c (var 3 Bool))
+(check
+(# a0 (holds (= cvc.d (ite cvc.a cvc.b cvc.c)))
+(# a1 (holds (or cvc.a (or cvc.b false)))
+(# a2 (holds (not cvc.b))
+(# a3 (holds cvc.d)
+(: (holds false)
+
+(contra _ 
+(eq_resolve _  _  a3 a0)
+(resolution _  _  _ 
+(resolution _  _  _ 
+(cnf_ite_pos1 cvc.a cvc.b cvc.c)
+(resolution _  _  _  a1 a2 tt cvc.b) ff cvc.a) a2 tt cvc.b))))))))
+

@@ -1,0 +1,15 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_issue110.bpl.mod.smt2:18:92: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_issue110.bpl.mod.smt2:24:93: Undeclared function symbol (Select__T@[Int](_ FloatingPoint 8 24)_ |T@[Int](_ FloatingPoint 8 24)| Int)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_issue110.bpl.mod.smt2:29:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_issue110.bpl.mod.smt2:32:10: Logical context not inconsistent!")
+unsupported

@@ -1,0 +1,22 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:17:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:18:18: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:19:18: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:20:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:21:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:22:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:23:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:24:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:25:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:26:20: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:31:63: Undeclared function symbol (z@0)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_BasicOperators1.bpl.mod.smt2:36:10: Logical context not inconsistent!")
+unsupported

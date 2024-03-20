@@ -1,0 +1,3162 @@
+vars: ControlFlow ONE x y
+premises:
+  a0: (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))
+  a1: (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))))
+steps:
+  derived clause number: 0
+  rule: or_single
+  expr args: []
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (or (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))))
+
+  derived clause number: 1
+  rule: or_single
+  expr args: []
+  clause args: [premise a1]
+  backptr: nil
+  conclusion: (or (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))))
+
+  derived clause number: 2
+  rule: =+1
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 3
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))) (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))))
+
+  derived clause number: 4
+  rule: resolution
+  expr args: [(not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))), (or (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))]
+  clause args: [derived 2, derived 3]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 5
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 6
+  rule: =+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 7
+  rule: resolution
+  expr args: [(not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))), (or (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))]
+  clause args: [derived 5, derived 6]
+  backptr: nil
+  conclusion: (or (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 8
+  rule: factoring
+  expr args: []
+  clause args: [derived 4]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 9
+  rule: factoring
+  expr args: []
+  clause args: [derived 7]
+  backptr: nil
+  conclusion: (or (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 10
+  rule: resolution
+  expr args: [(not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))]
+  clause args: [derived 8, derived 9]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 11
+  rule: =>+1
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))))
+
+  derived clause number: 12
+  rule: =-2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))) (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 13
+  rule: factoring
+  expr args: []
+  clause args: [derived 10]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 14
+  rule: resolution
+  expr args: [(not (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))), (or (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or )]
+  clause args: [derived 13, derived 12]
+  backptr: nil
+  conclusion: (or (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 15
+  rule: resolution
+  expr args: [(not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))), (or (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))))]
+  clause args: [derived 11, derived 14]
+  backptr: nil
+  conclusion: (or (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 16
+  rule: true+
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or true)
+
+  derived clause number: 17
+  rule: =>+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true) (not true))
+
+  derived clause number: 18
+  rule: resolution
+  expr args: [(not true), (or (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)), (or )]
+  clause args: [derived 16, derived 17]
+  backptr: nil
+  conclusion: (or (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))
+
+  derived clause number: 19
+  rule: =>+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)) (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))
+
+  derived clause number: 20
+  rule: resolution
+  expr args: [(not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)), (or (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))), (or )]
+  clause args: [derived 18, derived 19]
+  backptr: nil
+  conclusion: (or (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))
+
+  derived clause number: 21
+  rule: and+
+  expr args: [(and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))), (and (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))) (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))
+
+  derived clause number: 22
+  rule: =>+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))) (not (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))
+
+  derived clause number: 23
+  rule: =>+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))) (not (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))
+
+  derived clause number: 24
+  rule: not+
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))
+
+  derived clause number: 25
+  rule: =+1
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))
+
+  derived clause number: 26
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x)) (* 1 x))
+
+  derived clause number: 27
+  rule: or_single
+  expr args: []
+  clause args: [derived 26]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x)) (* 1 x)))
+
+  derived clause number: 28
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 x) (+ (* 1 x))) (not (= (+ (* 1 x)) (* 1 x))))
+
+  derived clause number: 29
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x)) (* 1 x))), (or (= (* 1 x) (+ (* 1 x)))), (or )]
+  clause args: [derived 27, derived 28]
+  backptr: nil
+  conclusion: (or (= (* 1 x) (+ (* 1 x))))
+
+  derived clause number: 30
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* -1 y)) (* -1 y))
+
+  derived clause number: 31
+  rule: or_single
+  expr args: []
+  clause args: [derived 30]
+  backptr: nil
+  conclusion: (or (= (+ (* -1 y)) (* -1 y)))
+
+  derived clause number: 32
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 y) (+ (* -1 y))) (not (= (+ (* -1 y)) (* -1 y))))
+
+  derived clause number: 33
+  rule: resolution
+  expr args: [(not (= (+ (* -1 y)) (* -1 y))), (or (= (* -1 y) (+ (* -1 y)))), (or )]
+  clause args: [derived 31, derived 32]
+  backptr: nil
+  conclusion: (or (= (* -1 y) (+ (* -1 y))))
+
+  derived clause number: 34
+  rule: mul_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* 1 y) y)
+
+  derived clause number: 35
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y)) (* 1 y))
+
+  derived clause number: 36
+  rule: or_single
+  expr args: []
+  clause args: [derived 35]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y)) (* 1 y)))
+
+  derived clause number: 37
+  rule: or_single
+  expr args: []
+  clause args: [derived 34]
+  backptr: nil
+  conclusion: (or (= (* 1 y) y))
+
+  derived clause number: 38
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y)) y) (not (= (+ (* 1 y)) (* 1 y))) (not (= (* 1 y) y)))
+
+  derived clause number: 39
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y)) (* 1 y))), (or (= (+ (* 1 y)) y) (not (= (* 1 y) y))), (or )]
+  clause args: [derived 36, derived 38]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y)) y) (not (= (* 1 y) y)))
+
+  derived clause number: 40
+  rule: resolution
+  expr args: [(not (= (* 1 y) y)), (or (= (+ (* 1 y)) y)), (or )]
+  clause args: [derived 37, derived 39]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y)) y))
+
+  derived clause number: 41
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= y (+ (* 1 y))) (not (= (+ (* 1 y)) y)))
+
+  derived clause number: 42
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y)) y)), (or (= y (+ (* 1 y)))), (or )]
+  clause args: [derived 40, derived 41]
+  backptr: nil
+  conclusion: (or (= y (+ (* 1 y))))
+
+  derived clause number: 43
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* -1 x)) (* -1 x))
+
+  derived clause number: 44
+  rule: or_single
+  expr args: []
+  clause args: [derived 43]
+  backptr: nil
+  conclusion: (or (= (+ (* -1 x)) (* -1 x)))
+
+  derived clause number: 45
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 x) (+ (* -1 x))) (not (= (+ (* -1 x)) (* -1 x))))
+
+  derived clause number: 46
+  rule: resolution
+  expr args: [(not (= (+ (* -1 x)) (* -1 x))), (or (= (* -1 x) (+ (* -1 x)))), (or )]
+  clause args: [derived 44, derived 45]
+  backptr: nil
+  conclusion: (or (= (* -1 x) (+ (* -1 x))))
+
+  derived clause number: 47
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x)))) (not (= y (+ (* 1 y)))) (not (= (* -1 x) (+ (* -1 x)))))
+
+  derived clause number: 48
+  rule: resolution
+  expr args: [(not (= y (+ (* 1 y)))), (or (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x)))) (not (= (* -1 x) (+ (* -1 x))))), (or )]
+  clause args: [derived 42, derived 47]
+  backptr: nil
+  conclusion: (or (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x)))) (not (= (* -1 x) (+ (* -1 x)))))
+
+  derived clause number: 49
+  rule: resolution
+  expr args: [(not (= (* -1 x) (+ (* -1 x)))), (or (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x))))), (or )]
+  clause args: [derived 46, derived 48]
+  backptr: nil
+  conclusion: (or (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x)))))
+
+  derived clause number: 50
+  rule: flatten
+  expr args: [(+ (+ (* -1 x))), (+ (+ (* 1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (+ (* -1 x))))
+
+  derived clause number: 51
+  rule: or_single
+  expr args: []
+  clause args: [derived 50]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (+ (* -1 x)))))
+
+  derived clause number: 52
+  rule: flatten
+  expr args: [(+ (* 1 y)), (+ (+ (* -1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))
+
+  derived clause number: 53
+  rule: or_single
+  expr args: []
+  clause args: [derived 52]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (+ (* -1 x))) (+ (* 1 y) (* -1 x))))
+
+  derived clause number: 54
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x))) (not (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (+ (* -1 x))))) (not (= (+ (* 1 y) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 55
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (+ (* -1 x))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x))) (not (= (+ (* 1 y) (+ (* -1 x))) (+ (* 1 y) (* -1 x))))), (or )]
+  clause args: [derived 51, derived 54]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x))) (not (= (+ (* 1 y) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 56
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))), (or (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))), (or )]
+  clause args: [derived 53, derived 55]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x))))
+
+  derived clause number: 57
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x))) (not (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x))))) (not (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 58
+  rule: resolution
+  expr args: [(not (= (+ y (* -1 x)) (+ (+ (* 1 y)) (+ (* -1 x))))), (or (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x))) (not (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x))))), (or )]
+  clause args: [derived 49, derived 57]
+  backptr: nil
+  conclusion: (or (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x))) (not (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 59
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x))) (+ (* 1 y) (* -1 x)))), (or (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x)))), (or )]
+  clause args: [derived 56, derived 58]
+  backptr: nil
+  conclusion: (or (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x))))
+
+  derived clause number: 60
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 (+ y (* -1 x))) (* 1 (+ (* 1 y) (* -1 x)))) (not (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 61
+  rule: resolution
+  expr args: [(not (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x)))), (or (= (* 1 (+ y (* -1 x))) (* 1 (+ (* 1 y) (* -1 x))))), (or )]
+  clause args: [derived 59, derived 60]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ y (* -1 x))) (* 1 (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 62
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* 1 (+ (* 1 y) (* -1 x))) (+ (* 1 y) (* -1 x)))
+
+  derived clause number: 63
+  rule: or_single
+  expr args: []
+  clause args: [derived 62]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ (* 1 y) (* -1 x))) (+ (* 1 y) (* -1 x))))
+
+  derived clause number: 64
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x))) (not (= (* 1 (+ y (* -1 x))) (* 1 (+ (* 1 y) (* -1 x))))) (not (= (* 1 (+ (* 1 y) (* -1 x))) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 65
+  rule: resolution
+  expr args: [(not (= (* 1 (+ y (* -1 x))) (* 1 (+ (* 1 y) (* -1 x))))), (or (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x))) (not (= (* 1 (+ (* 1 y) (* -1 x))) (+ (* 1 y) (* -1 x))))), (or )]
+  clause args: [derived 61, derived 64]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x))) (not (= (* 1 (+ (* 1 y) (* -1 x))) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 66
+  rule: resolution
+  expr args: [(not (= (* 1 (+ (* 1 y) (* -1 x))) (+ (* 1 y) (* -1 x)))), (or (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))), (or )]
+  clause args: [derived 63, derived 65]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x))))
+
+  derived clause number: 67
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 0 ONE)) (* 0 ONE))
+
+  derived clause number: 68
+  rule: or_single
+  expr args: []
+  clause args: [derived 67]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE)) (* 0 ONE)))
+
+  derived clause number: 69
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 0 ONE) (+ (* 0 ONE))) (not (= (+ (* 0 ONE)) (* 0 ONE))))
+
+  derived clause number: 70
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE)) (* 0 ONE))), (or (= (* 0 ONE) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 68, derived 69]
+  backptr: nil
+  conclusion: (or (= (* 0 ONE) (+ (* 0 ONE))))
+
+  derived clause number: 71
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 0 ONE)) (* -1 (+ (* 0 ONE)))) (not (= (* 0 ONE) (+ (* 0 ONE)))))
+
+  derived clause number: 72
+  rule: resolution
+  expr args: [(not (= (* 0 ONE) (+ (* 0 ONE)))), (or (= (* -1 (* 0 ONE)) (* -1 (+ (* 0 ONE))))), (or )]
+  clause args: [derived 70, derived 71]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 0 ONE)) (* -1 (+ (* 0 ONE)))))
+
+  derived clause number: 73
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* -1 (+ (* 0 ONE))) (+ (* 0 ONE)))
+
+  derived clause number: 74
+  rule: or_single
+  expr args: []
+  clause args: [derived 73]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ (* 0 ONE))) (+ (* 0 ONE))))
+
+  derived clause number: 75
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 0 ONE)) (+ (* 0 ONE))) (not (= (* -1 (* 0 ONE)) (* -1 (+ (* 0 ONE))))) (not (= (* -1 (+ (* 0 ONE))) (+ (* 0 ONE)))))
+
+  derived clause number: 76
+  rule: resolution
+  expr args: [(not (= (* -1 (* 0 ONE)) (* -1 (+ (* 0 ONE))))), (or (= (* -1 (* 0 ONE)) (+ (* 0 ONE))) (not (= (* -1 (+ (* 0 ONE))) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 72, derived 75]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 0 ONE)) (+ (* 0 ONE))) (not (= (* -1 (+ (* 0 ONE))) (+ (* 0 ONE)))))
+
+  derived clause number: 77
+  rule: resolution
+  expr args: [(not (= (* -1 (+ (* 0 ONE))) (+ (* 0 ONE)))), (or (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 74, derived 76]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))
+
+  derived clause number: 78
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* 1 x) (+ (* 1 x)))) (not (= (* -1 y) (+ (* -1 y)))) (not (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 79
+  rule: resolution
+  expr args: [(not (= (* 1 x) (+ (* 1 x)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* -1 y) (+ (* -1 y)))) (not (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 29, derived 78]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* -1 y) (+ (* -1 y)))) (not (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 80
+  rule: resolution
+  expr args: [(not (= (* -1 y) (+ (* -1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 33, derived 79]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 81
+  rule: resolution
+  expr args: [(not (= (* 1 (+ y (* -1 x))) (+ (* 1 y) (* -1 x)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 66, derived 80]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 82
+  rule: resolution
+  expr args: [(not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 77, derived 81]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))))
+
+  derived clause number: 83
+  rule: flatten
+  expr args: [(+ (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))), (+ (+ (* 1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))
+
+  derived clause number: 84
+  rule: or_single
+  expr args: []
+  clause args: [derived 83]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))))
+
+  derived clause number: 85
+  rule: flatten
+  expr args: [(+ (* 1 x) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))), (+ (+ (* -1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))
+
+  derived clause number: 86
+  rule: or_single
+  expr args: []
+  clause args: [derived 85]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))))
+
+  derived clause number: 87
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))) (not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))))
+
+  derived clause number: 88
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))))), (or )]
+  clause args: [derived 84, derived 87]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))) (not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))))
+
+  derived clause number: 89
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 86, derived 88]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE)))))
+
+  derived clause number: 90
+  rule: flatten
+  expr args: [(+ (* 1 x) (* -1 y) (+ (* 0 ONE))), (+ (+ (* 1 y) (* -1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))
+
+  derived clause number: 91
+  rule: or_single
+  expr args: []
+  clause args: [derived 90]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE)))))
+
+  derived clause number: 92
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE)))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))) (not (= (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))))
+
+  derived clause number: 93
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE)))) (not (= (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE)))))), (or )]
+  clause args: [derived 89, derived 92]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE)))) (not (= (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))))
+
+  derived clause number: 94
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 91, derived 93]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE)))))
+
+  derived clause number: 95
+  rule: flatten
+  expr args: [(+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)), (+ (+ (* 0 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))
+
+  derived clause number: 96
+  rule: or_single
+  expr args: []
+  clause args: [derived 95]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))))
+
+  derived clause number: 97
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))))
+
+  derived clause number: 98
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))))), (or )]
+  clause args: [derived 94, derived 97]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))))
+
+  derived clause number: 99
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))), (or )]
+  clause args: [derived 96, derived 98]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))))
+
+  derived clause number: 100
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))) (not (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))))
+
+  derived clause number: 101
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))))), (or )]
+  clause args: [derived 82, derived 100]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))))
+
+  derived clause number: 102
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 1 y) (* -1 x)) (+ (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))), (or )]
+  clause args: [derived 99, derived 101]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE))))
+
+  derived clause number: 103
+  rule: consolidate
+  expr args: [(+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)), (+ (* 0 ONE)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)))
+
+  derived clause number: 104
+  rule: or_single
+  expr args: []
+  clause args: [derived 103]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x))))
+
+  derived clause number: 105
+  rule: consolidate
+  expr args: [(+ (* -1 y) (* 1 y)), (+ (* 1 x) (* -1 x)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)) (+ (* -1 y) (* 1 y)))
+
+  derived clause number: 106
+  rule: or_single
+  expr args: []
+  clause args: [derived 105]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)) (+ (* -1 y) (* 1 y))))
+
+  derived clause number: 107
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)) (+ (* -1 y) (* 1 y)))))
+
+  derived clause number: 108
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)))), (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)) (+ (* -1 y) (* 1 y))))), (or )]
+  clause args: [derived 104, derived 107]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)) (+ (* -1 y) (* 1 y)))))
+
+  derived clause number: 109
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x)) (+ (* -1 y) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y)))), (or )]
+  clause args: [derived 106, derived 108]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y))))
+
+  derived clause number: 110
+  rule: consolidate
+  expr args: [(+ ), (+ (* -1 y) (* 1 y)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* -1 y) (* 1 y)) (+ ))
+
+  derived clause number: 111
+  rule: or_single
+  expr args: []
+  clause args: [derived 110]
+  backptr: nil
+  conclusion: (or (= (+ (* -1 y) (* 1 y)) (+ )))
+
+  derived clause number: 112
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y)))) (not (= (+ (* -1 y) (* 1 y)) (+ ))))
+
+  derived clause number: 113
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ (* -1 y) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ )) (not (= (+ (* -1 y) (* 1 y)) (+ )))), (or )]
+  clause args: [derived 109, derived 112]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ )) (not (= (+ (* -1 y) (* 1 y)) (+ ))))
+
+  derived clause number: 114
+  rule: resolution
+  expr args: [(not (= (+ (* -1 y) (* 1 y)) (+ ))), (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ ))), (or )]
+  clause args: [derived 111, derived 113]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ )))
+
+  derived clause number: 115
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ ))))
+
+  derived clause number: 116
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ )))), (or )]
+  clause args: [derived 102, derived 115]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ ))))
+
+  derived clause number: 117
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 y) (* -1 x) (* 0 ONE)) (+ ))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ ))), (or )]
+  clause args: [derived 114, derived 116]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ )))
+
+  derived clause number: 118
+  rule: consolidate
+  expr args: [(+ ), (+ (* 0 ONE)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 0 ONE)) (+ ))
+
+  derived clause number: 119
+  rule: or_single
+  expr args: []
+  clause args: [derived 118]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE)) (+ )))
+
+  derived clause number: 120
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ ) (+ (* 0 ONE))) (not (= (+ (* 0 ONE)) (+ ))))
+
+  derived clause number: 121
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE)) (+ ))), (or (= (+ ) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 119, derived 120]
+  backptr: nil
+  conclusion: (or (= (+ ) (+ (* 0 ONE))))
+
+  derived clause number: 122
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 0 ONE))) (not (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ ))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 123
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ ))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 117, derived 122]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 124
+  rule: resolution
+  expr args: [(not (= (+ ) (+ (* 0 ONE)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 121, derived 123]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 0 ONE))))
+
+  derived clause number: 125
+  rule: or_single_rev
+  expr args: []
+  clause args: [derived 124]
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 1 (+ y (* -1 x))) (* -1 (* 0 ONE))) (+ (* 0 ONE)))
+
+  derived clause number: 126
+  rule: farkas
+  expr args: []
+  clause args: [derived 125]
+  backptr: nil
+  conclusion: (or (not (< x y)) (not (<= (+ y (* -1 x)) (* 0 ONE))))
+
+  derived clause number: 127
+  rule: resolution
+  expr args: [(not (< x y)), (or (not (<= (+ y (* -1 x)) (* 0 ONE)))), (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (<= (+ y (* -1 x)) (* 0 ONE))))]
+  clause args: [derived 25, derived 126]
+  backptr: nil
+  conclusion: (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (<= (+ y (* -1 x)) (* 0 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))
+
+  derived clause number: 128
+  rule: total
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (<= y x) (< x y))
+
+  derived clause number: 129
+  rule: total
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (<= (+ y (* -1 x)) (* 0 ONE)) (< (* 0 ONE) (+ y (* -1 x))))
+
+  derived clause number: 130
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 y) (+ (* 1 y))) (not (= (+ (* 1 y)) (* 1 y))))
+
+  derived clause number: 131
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y)) (* 1 y))), (or (= (* 1 y) (+ (* 1 y)))), (or )]
+  clause args: [derived 36, derived 130]
+  backptr: nil
+  conclusion: (or (= (* 1 y) (+ (* 1 y))))
+
+  derived clause number: 132
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 (* 0 ONE)) (* 1 (+ (* 0 ONE)))) (not (= (* 0 ONE) (+ (* 0 ONE)))))
+
+  derived clause number: 133
+  rule: resolution
+  expr args: [(not (= (* 0 ONE) (+ (* 0 ONE)))), (or (= (* 1 (* 0 ONE)) (* 1 (+ (* 0 ONE))))), (or )]
+  clause args: [derived 70, derived 132]
+  backptr: nil
+  conclusion: (or (= (* 1 (* 0 ONE)) (* 1 (+ (* 0 ONE)))))
+
+  derived clause number: 134
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* 1 (+ (* 0 ONE))) (+ (* 0 ONE)))
+
+  derived clause number: 135
+  rule: or_single
+  expr args: []
+  clause args: [derived 134]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ (* 0 ONE))) (+ (* 0 ONE))))
+
+  derived clause number: 136
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 (* 0 ONE)) (+ (* 0 ONE))) (not (= (* 1 (* 0 ONE)) (* 1 (+ (* 0 ONE))))) (not (= (* 1 (+ (* 0 ONE))) (+ (* 0 ONE)))))
+
+  derived clause number: 137
+  rule: resolution
+  expr args: [(not (= (* 1 (* 0 ONE)) (* 1 (+ (* 0 ONE))))), (or (= (* 1 (* 0 ONE)) (+ (* 0 ONE))) (not (= (* 1 (+ (* 0 ONE))) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 133, derived 136]
+  backptr: nil
+  conclusion: (or (= (* 1 (* 0 ONE)) (+ (* 0 ONE))) (not (= (* 1 (+ (* 0 ONE))) (+ (* 0 ONE)))))
+
+  derived clause number: 138
+  rule: resolution
+  expr args: [(not (= (* 1 (+ (* 0 ONE))) (+ (* 0 ONE)))), (or (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 135, derived 137]
+  backptr: nil
+  conclusion: (or (= (* 1 (* 0 ONE)) (+ (* 0 ONE))))
+
+  derived clause number: 139
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (+ y (* -1 x))) (* -1 (+ (* 1 y) (* -1 x)))) (not (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 140
+  rule: resolution
+  expr args: [(not (= (+ y (* -1 x)) (+ (* 1 y) (* -1 x)))), (or (= (* -1 (+ y (* -1 x))) (* -1 (+ (* 1 y) (* -1 x))))), (or )]
+  clause args: [derived 59, derived 139]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ y (* -1 x))) (* -1 (+ (* 1 y) (* -1 x)))))
+
+  derived clause number: 141
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* -1 (+ (* 1 y) (* -1 x))) (+ (* -1 y) (* 1 x)))
+
+  derived clause number: 142
+  rule: or_single
+  expr args: []
+  clause args: [derived 141]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ (* 1 y) (* -1 x))) (+ (* -1 y) (* 1 x))))
+
+  derived clause number: 143
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))) (not (= (* -1 (+ y (* -1 x))) (* -1 (+ (* 1 y) (* -1 x))))) (not (= (* -1 (+ (* 1 y) (* -1 x))) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 144
+  rule: resolution
+  expr args: [(not (= (* -1 (+ y (* -1 x))) (* -1 (+ (* 1 y) (* -1 x))))), (or (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))) (not (= (* -1 (+ (* 1 y) (* -1 x))) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 140, derived 143]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))) (not (= (* -1 (+ (* 1 y) (* -1 x))) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 145
+  rule: resolution
+  expr args: [(not (= (* -1 (+ (* 1 y) (* -1 x))) (+ (* -1 y) (* 1 x)))), (or (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x)))), (or )]
+  clause args: [derived 142, derived 144]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))))
+
+  derived clause number: 146
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* 1 y) (+ (* 1 y)))) (not (= (* -1 x) (+ (* -1 x)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 147
+  rule: resolution
+  expr args: [(not (= (* 1 y) (+ (* 1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* -1 x) (+ (* -1 x)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 131, derived 146]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* -1 x) (+ (* -1 x)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 148
+  rule: resolution
+  expr args: [(not (= (* -1 x) (+ (* -1 x)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 46, derived 147]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 149
+  rule: resolution
+  expr args: [(not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 138, derived 148]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 150
+  rule: resolution
+  expr args: [(not (= (* -1 (+ y (* -1 x))) (+ (* -1 y) (* 1 x)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 145, derived 149]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 151
+  rule: flatten
+  expr args: [(+ (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))), (+ (+ (* 1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))
+
+  derived clause number: 152
+  rule: or_single
+  expr args: []
+  clause args: [derived 151]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 153
+  rule: flatten
+  expr args: [(+ (* 1 y) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))), (+ (+ (* -1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))
+
+  derived clause number: 154
+  rule: or_single
+  expr args: []
+  clause args: [derived 153]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 155
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))) (not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))))
+
+  derived clause number: 156
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))))), (or )]
+  clause args: [derived 152, derived 155]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))) (not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))))
+
+  derived clause number: 157
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 154, derived 156]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 158
+  rule: flatten
+  expr args: [(+ (* 1 y) (* -1 x) (+ (* -1 y) (* 1 x))), (+ (+ (* 0 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))
+
+  derived clause number: 159
+  rule: or_single
+  expr args: []
+  clause args: [derived 158]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 160
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x)))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))) (not (= (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))))
+
+  derived clause number: 161
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x)))) (not (= (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x)))))), (or )]
+  clause args: [derived 157, derived 160]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x)))) (not (= (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))))
+
+  derived clause number: 162
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 159, derived 161]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x)))))
+
+  derived clause number: 163
+  rule: flatten
+  expr args: [(+ (* 1 y) (* -1 x) (* 0 ONE)), (+ (+ (* -1 y) (* 1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))
+
+  derived clause number: 164
+  rule: or_single
+  expr args: []
+  clause args: [derived 163]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))))
+
+  derived clause number: 165
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))))
+
+  derived clause number: 166
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 162, derived 165]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))))
+
+  derived clause number: 167
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))), (or )]
+  clause args: [derived 164, derived 166]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))))
+
+  derived clause number: 168
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))) (not (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))))
+
+  derived clause number: 169
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))))), (or )]
+  clause args: [derived 150, derived 168]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))))
+
+  derived clause number: 170
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 0 ONE)) (+ (* -1 y) (* 1 x))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))), (or )]
+  clause args: [derived 167, derived 169]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x))))
+
+  derived clause number: 171
+  rule: consolidate
+  expr args: [(+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)), (+ (* 0 ONE)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)))
+
+  derived clause number: 172
+  rule: or_single
+  expr args: []
+  clause args: [derived 171]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x))))
+
+  derived clause number: 173
+  rule: consolidate
+  expr args: [(+ (* 1 y) (* -1 y)), (+ (* -1 x) (* 1 x)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))
+
+  derived clause number: 174
+  rule: or_single
+  expr args: []
+  clause args: [derived 173]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y))))
+
+  derived clause number: 175
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y))) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)))) (not (= (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))))
+
+  derived clause number: 176
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)))), (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y))) (not (= (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y))))), (or )]
+  clause args: [derived 172, derived 175]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y))) (not (= (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))))
+
+  derived clause number: 177
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))), (or )]
+  clause args: [derived 174, derived 176]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y))))
+
+  derived clause number: 178
+  rule: consolidate
+  expr args: [(+ ), (+ (* 1 y) (* -1 y)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 y)) (+ ))
+
+  derived clause number: 179
+  rule: or_single
+  expr args: []
+  clause args: [derived 178]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 y)) (+ )))
+
+  derived clause number: 180
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))) (not (= (+ (* 1 y) (* -1 y)) (+ ))))
+
+  derived clause number: 181
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ (* 1 y) (* -1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ )) (not (= (+ (* 1 y) (* -1 y)) (+ )))), (or )]
+  clause args: [derived 177, derived 180]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ )) (not (= (+ (* 1 y) (* -1 y)) (+ ))))
+
+  derived clause number: 182
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 y)) (+ ))), (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ ))), (or )]
+  clause args: [derived 179, derived 181]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ )))
+
+  derived clause number: 183
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ ))))
+
+  derived clause number: 184
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ )))), (or )]
+  clause args: [derived 170, derived 183]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ ))))
+
+  derived clause number: 185
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 0 ONE) (* -1 y) (* 1 x)) (+ ))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ ))), (or )]
+  clause args: [derived 182, derived 184]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ )))
+
+  derived clause number: 186
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 0 ONE))) (not (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ ))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 187
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ ))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 185, derived 186]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 188
+  rule: resolution
+  expr args: [(not (= (+ ) (+ (* 0 ONE)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 121, derived 187]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 0 ONE))))
+
+  derived clause number: 189
+  rule: or_single_rev
+  expr args: []
+  clause args: [derived 188]
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 1 (* 0 ONE)) (* -1 (+ y (* -1 x)))) (+ (* 0 ONE)))
+
+  derived clause number: 190
+  rule: farkas
+  expr args: []
+  clause args: [derived 189]
+  backptr: nil
+  conclusion: (or (not (<= y x)) (not (< (* 0 ONE) (+ y (* -1 x)))))
+
+  derived clause number: 191
+  rule: resolution
+  expr args: [(not (< (* 0 ONE) (+ y (* -1 x)))), (or (not (<= y x))), (or (<= (+ y (* -1 x)) (* 0 ONE)))]
+  clause args: [derived 129, derived 190]
+  backptr: nil
+  conclusion: (or (<= (+ y (* -1 x)) (* 0 ONE)) (not (<= y x)))
+
+  derived clause number: 192
+  rule: not+
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (<= (+ y (* -1 x)) (* 0 ONE))))
+
+  derived clause number: 193
+  rule: resolution
+  expr args: [(not (<= (+ y (* -1 x)) (* 0 ONE))), (or (not (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or (not (<= y x)))]
+  clause args: [derived 191, derived 192]
+  backptr: nil
+  conclusion: (or (not (<= y x)) (not (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 194
+  rule: resolution
+  expr args: [(not (<= y x)), (or (not (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or (< x y))]
+  clause args: [derived 128, derived 193]
+  backptr: nil
+  conclusion: (or (< x y) (not (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 195
+  rule: =+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (< x y)) (not (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 196
+  rule: resolution
+  expr args: [(not (< x y)), (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or (not (not (<= (+ y (* -1 x)) (* 0 ONE)))))]
+  clause args: [derived 194, derived 195]
+  backptr: nil
+  conclusion: (or (not (not (<= (+ y (* -1 x)) (* 0 ONE)))) (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 197
+  rule: factoring
+  expr args: []
+  clause args: [derived 127]
+  backptr: nil
+  conclusion: (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (not (<= (+ y (* -1 x)) (* 0 ONE))))
+
+  derived clause number: 198
+  rule: factoring
+  expr args: []
+  clause args: [derived 196]
+  backptr: nil
+  conclusion: (or (not (not (<= (+ y (* -1 x)) (* 0 ONE)))) (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 199
+  rule: resolution
+  expr args: [(not (not (<= (+ y (* -1 x)) (* 0 ONE)))), (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))))]
+  clause args: [derived 197, derived 198]
+  backptr: nil
+  conclusion: (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 200
+  rule: refl
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (ControlFlow (* 0 ONE) (* 2 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 201
+  rule: refl
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= y y))
+
+  derived clause number: 202
+  rule: =+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= y y) true) (not (= y y)) (not true))
+
+  derived clause number: 203
+  rule: resolution
+  expr args: [(not (= y y)), (or (= (= y y) true) (not true)), (or )]
+  clause args: [derived 201, derived 202]
+  backptr: nil
+  conclusion: (or (= (= y y) true) (not true))
+
+  derived clause number: 204
+  rule: resolution
+  expr args: [(not true), (or (= (= y y) true)), (or )]
+  clause args: [derived 16, derived 203]
+  backptr: nil
+  conclusion: (or (= (= y y) true))
+
+  derived clause number: 205
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 ONE)) (* 1 ONE))
+
+  derived clause number: 206
+  rule: or_single
+  expr args: []
+  clause args: [derived 205]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 ONE)) (* 1 ONE)))
+
+  derived clause number: 207
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 ONE) (+ (* 1 ONE))) (not (= (+ (* 1 ONE)) (* 1 ONE))))
+
+  derived clause number: 208
+  rule: resolution
+  expr args: [(not (= (+ (* 1 ONE)) (* 1 ONE))), (or (= (* 1 ONE) (+ (* 1 ONE)))), (or )]
+  clause args: [derived 206, derived 207]
+  backptr: nil
+  conclusion: (or (= (* 1 ONE) (+ (* 1 ONE))))
+
+  derived clause number: 209
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 1 ONE)) (* -1 (+ (* 1 ONE)))) (not (= (* 1 ONE) (+ (* 1 ONE)))))
+
+  derived clause number: 210
+  rule: resolution
+  expr args: [(not (= (* 1 ONE) (+ (* 1 ONE)))), (or (= (* -1 (* 1 ONE)) (* -1 (+ (* 1 ONE))))), (or )]
+  clause args: [derived 208, derived 209]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 1 ONE)) (* -1 (+ (* 1 ONE)))))
+
+  derived clause number: 211
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* -1 (+ (* 1 ONE))) (+ (* -1 ONE)))
+
+  derived clause number: 212
+  rule: or_single
+  expr args: []
+  clause args: [derived 211]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ (* 1 ONE))) (+ (* -1 ONE))))
+
+  derived clause number: 213
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 1 ONE)) (+ (* -1 ONE))) (not (= (* -1 (* 1 ONE)) (* -1 (+ (* 1 ONE))))) (not (= (* -1 (+ (* 1 ONE))) (+ (* -1 ONE)))))
+
+  derived clause number: 214
+  rule: resolution
+  expr args: [(not (= (* -1 (* 1 ONE)) (* -1 (+ (* 1 ONE))))), (or (= (* -1 (* 1 ONE)) (+ (* -1 ONE))) (not (= (* -1 (+ (* 1 ONE))) (+ (* -1 ONE))))), (or )]
+  clause args: [derived 210, derived 213]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 1 ONE)) (+ (* -1 ONE))) (not (= (* -1 (+ (* 1 ONE))) (+ (* -1 ONE)))))
+
+  derived clause number: 215
+  rule: resolution
+  expr args: [(not (= (* -1 (+ (* 1 ONE))) (+ (* -1 ONE)))), (or (= (* -1 (* 1 ONE)) (+ (* -1 ONE)))), (or )]
+  clause args: [derived 212, derived 214]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 1 ONE)) (+ (* -1 ONE))))
+
+  derived clause number: 216
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* -1 ONE)) (* -1 (* 1 ONE))) (not (= (* -1 (* 1 ONE)) (+ (* -1 ONE)))))
+
+  derived clause number: 217
+  rule: resolution
+  expr args: [(not (= (* -1 (* 1 ONE)) (+ (* -1 ONE)))), (or (= (+ (* -1 ONE)) (* -1 (* 1 ONE)))), (or )]
+  clause args: [derived 215, derived 216]
+  backptr: nil
+  conclusion: (or (= (+ (* -1 ONE)) (* -1 (* 1 ONE))))
+
+  derived clause number: 218
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE)))) (not (= (* 0 ONE) (+ (* 0 ONE)))) (not (= (* -1 (* 1 ONE)) (+ (* -1 ONE)))))
+
+  derived clause number: 219
+  rule: resolution
+  expr args: [(not (= (* 0 ONE) (+ (* 0 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE)))) (not (= (* -1 (* 1 ONE)) (+ (* -1 ONE))))), (or )]
+  clause args: [derived 70, derived 218]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE)))) (not (= (* -1 (* 1 ONE)) (+ (* -1 ONE)))))
+
+  derived clause number: 220
+  rule: resolution
+  expr args: [(not (= (* -1 (* 1 ONE)) (+ (* -1 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE))))), (or )]
+  clause args: [derived 215, derived 219]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE)))))
+
+  derived clause number: 221
+  rule: flatten
+  expr args: [(+ (+ (* -1 ONE))), (+ (+ (* 0 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (+ (* -1 ONE))))
+
+  derived clause number: 222
+  rule: or_single
+  expr args: []
+  clause args: [derived 221]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (+ (* -1 ONE)))))
+
+  derived clause number: 223
+  rule: flatten
+  expr args: [(+ (* 0 ONE)), (+ (+ (* -1 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 0 ONE) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))
+
+  derived clause number: 224
+  rule: or_single
+  expr args: []
+  clause args: [derived 223]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))))
+
+  derived clause number: 225
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))) (not (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (+ (* -1 ONE))))) (not (= (+ (* 0 ONE) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))))
+
+  derived clause number: 226
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (+ (* -1 ONE))))), (or (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))) (not (= (+ (* 0 ONE) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))))), (or )]
+  clause args: [derived 222, derived 225]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))) (not (= (+ (* 0 ONE) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))))
+
+  derived clause number: 227
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))), (or (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))), (or )]
+  clause args: [derived 224, derived 226]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))))
+
+  derived clause number: 228
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE))) (not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE))))) (not (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))))
+
+  derived clause number: 229
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (+ (* 0 ONE)) (+ (* -1 ONE))))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE))) (not (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE))))), (or )]
+  clause args: [derived 220, derived 228]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE))) (not (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))))
+
+  derived clause number: 230
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 0 ONE)) (+ (* -1 ONE))) (+ (* 0 ONE) (* -1 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE)))), (or )]
+  clause args: [derived 227, derived 229]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE))))
+
+  derived clause number: 231
+  rule: consolidate
+  expr args: [(+ ), (+ (* 0 ONE) (* -1 ONE)), (+ (* -1 ONE))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 0 ONE) (* -1 ONE)) (+ (* -1 ONE)))
+
+  derived clause number: 232
+  rule: or_single
+  expr args: []
+  clause args: [derived 231]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 ONE)) (+ (* -1 ONE))))
+
+  derived clause number: 233
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE))) (not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE)))) (not (= (+ (* 0 ONE) (* -1 ONE)) (+ (* -1 ONE)))))
+
+  derived clause number: 234
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* 0 ONE) (* -1 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE))) (not (= (+ (* 0 ONE) (* -1 ONE)) (+ (* -1 ONE))))), (or )]
+  clause args: [derived 230, derived 233]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE))) (not (= (+ (* 0 ONE) (* -1 ONE)) (+ (* -1 ONE)))))
+
+  derived clause number: 235
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 ONE)) (+ (* -1 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE)))), (or )]
+  clause args: [derived 232, derived 234]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE))))
+
+  derived clause number: 236
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE))) (not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE)))) (not (= (+ (* -1 ONE)) (* -1 (* 1 ONE)))))
+
+  derived clause number: 237
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (+ (* -1 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE))) (not (= (+ (* -1 ONE)) (* -1 (* 1 ONE))))), (or )]
+  clause args: [derived 235, derived 236]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE))) (not (= (+ (* -1 ONE)) (* -1 (* 1 ONE)))))
+
+  derived clause number: 238
+  rule: resolution
+  expr args: [(not (= (+ (* -1 ONE)) (* -1 (* 1 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE)))), (or )]
+  clause args: [derived 217, derived 237]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE))))
+
+  derived clause number: 239
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE)))) (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE)))))
+
+  derived clause number: 240
+  rule: resolution
+  expr args: [(not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE)))) (not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE))))), (or )]
+  clause args: [derived 200, derived 239]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE)))) (not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE)))))
+
+  derived clause number: 241
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 1 ONE))) (* -1 (* 1 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))))), (or )]
+  clause args: [derived 238, derived 240]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE)))))
+
+  derived clause number: 242
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)) (not (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))))) (not (= (= y y) true)))
+
+  derived clause number: 243
+  rule: resolution
+  expr args: [(not (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))))), (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)) (not (= (= y y) true))), (or )]
+  clause args: [derived 241, derived 242]
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)) (not (= (= y y) true)))
+
+  derived clause number: 244
+  rule: resolution
+  expr args: [(not (= (= y y) true)), (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))), (or )]
+  clause args: [derived 204, derived 243]
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))
+
+  derived clause number: 245
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))) (not (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))
+
+  derived clause number: 246
+  rule: factoring
+  expr args: []
+  clause args: [derived 199]
+  backptr: nil
+  conclusion: (or (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))))
+
+  derived clause number: 247
+  rule: resolution
+  expr args: [(not (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))) (not (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))), (or )]
+  clause args: [derived 246, derived 245]
+  backptr: nil
+  conclusion: (or (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))) (not (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))
+
+  derived clause number: 248
+  rule: resolution
+  expr args: [(not (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))), (or (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))), (or )]
+  clause args: [derived 244, derived 247]
+  backptr: nil
+  conclusion: (or (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))
+
+  derived clause number: 249
+  rule: add_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 3 ONE)) (* 3 ONE))
+
+  derived clause number: 250
+  rule: or_single
+  expr args: []
+  clause args: [derived 249]
+  backptr: nil
+  conclusion: (or (= (+ (* 3 ONE)) (* 3 ONE)))
+
+  derived clause number: 251
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 3 ONE) (+ (* 3 ONE))) (not (= (+ (* 3 ONE)) (* 3 ONE))))
+
+  derived clause number: 252
+  rule: resolution
+  expr args: [(not (= (+ (* 3 ONE)) (* 3 ONE))), (or (= (* 3 ONE) (+ (* 3 ONE)))), (or )]
+  clause args: [derived 250, derived 251]
+  backptr: nil
+  conclusion: (or (= (* 3 ONE) (+ (* 3 ONE))))
+
+  derived clause number: 253
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (* -1 (+ (* 3 ONE)))) (not (= (* 3 ONE) (+ (* 3 ONE)))))
+
+  derived clause number: 254
+  rule: resolution
+  expr args: [(not (= (* 3 ONE) (+ (* 3 ONE)))), (or (= (* -1 (* 3 ONE)) (* -1 (+ (* 3 ONE))))), (or )]
+  clause args: [derived 252, derived 253]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (* -1 (+ (* 3 ONE)))))
+
+  derived clause number: 255
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* -1 (+ (* 3 ONE))) (+ (* -3 ONE)))
+
+  derived clause number: 256
+  rule: or_single
+  expr args: []
+  clause args: [derived 255]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ (* 3 ONE))) (+ (* -3 ONE))))
+
+  derived clause number: 257
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (+ (* -3 ONE))) (not (= (* -1 (* 3 ONE)) (* -1 (+ (* 3 ONE))))) (not (= (* -1 (+ (* 3 ONE))) (+ (* -3 ONE)))))
+
+  derived clause number: 258
+  rule: resolution
+  expr args: [(not (= (* -1 (* 3 ONE)) (* -1 (+ (* 3 ONE))))), (or (= (* -1 (* 3 ONE)) (+ (* -3 ONE))) (not (= (* -1 (+ (* 3 ONE))) (+ (* -3 ONE))))), (or )]
+  clause args: [derived 254, derived 257]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (+ (* -3 ONE))) (not (= (* -1 (+ (* 3 ONE))) (+ (* -3 ONE)))))
+
+  derived clause number: 259
+  rule: resolution
+  expr args: [(not (= (* -1 (+ (* 3 ONE))) (+ (* -3 ONE)))), (or (= (* -1 (* 3 ONE)) (+ (* -3 ONE)))), (or )]
+  clause args: [derived 256, derived 258]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (+ (* -3 ONE))))
+
+  derived clause number: 260
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* -3 ONE)) (* -1 (* 3 ONE))) (not (= (* -1 (* 3 ONE)) (+ (* -3 ONE)))))
+
+  derived clause number: 261
+  rule: resolution
+  expr args: [(not (= (* -1 (* 3 ONE)) (+ (* -3 ONE)))), (or (= (+ (* -3 ONE)) (* -1 (* 3 ONE)))), (or )]
+  clause args: [derived 259, derived 260]
+  backptr: nil
+  conclusion: (or (= (+ (* -3 ONE)) (* -1 (* 3 ONE))))
+
+  derived clause number: 262
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE)))) (not (= (* 0 ONE) (+ (* 0 ONE)))) (not (= (* -1 (* 3 ONE)) (+ (* -3 ONE)))))
+
+  derived clause number: 263
+  rule: resolution
+  expr args: [(not (= (* 0 ONE) (+ (* 0 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE)))) (not (= (* -1 (* 3 ONE)) (+ (* -3 ONE))))), (or )]
+  clause args: [derived 70, derived 262]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE)))) (not (= (* -1 (* 3 ONE)) (+ (* -3 ONE)))))
+
+  derived clause number: 264
+  rule: resolution
+  expr args: [(not (= (* -1 (* 3 ONE)) (+ (* -3 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE))))), (or )]
+  clause args: [derived 259, derived 263]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE)))))
+
+  derived clause number: 265
+  rule: flatten
+  expr args: [(+ (+ (* -3 ONE))), (+ (+ (* 0 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (+ (* -3 ONE))))
+
+  derived clause number: 266
+  rule: or_single
+  expr args: []
+  clause args: [derived 265]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (+ (* -3 ONE)))))
+
+  derived clause number: 267
+  rule: flatten
+  expr args: [(+ (* 0 ONE)), (+ (+ (* -3 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 0 ONE) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))
+
+  derived clause number: 268
+  rule: or_single
+  expr args: []
+  clause args: [derived 267]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))))
+
+  derived clause number: 269
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))) (not (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (+ (* -3 ONE))))) (not (= (+ (* 0 ONE) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))))
+
+  derived clause number: 270
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (+ (* -3 ONE))))), (or (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))) (not (= (+ (* 0 ONE) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))))), (or )]
+  clause args: [derived 266, derived 269]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))) (not (= (+ (* 0 ONE) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))))
+
+  derived clause number: 271
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))), (or (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))), (or )]
+  clause args: [derived 268, derived 270]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))))
+
+  derived clause number: 272
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE))) (not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE))))) (not (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))))
+
+  derived clause number: 273
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (+ (* 0 ONE)) (+ (* -3 ONE))))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE))) (not (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE))))), (or )]
+  clause args: [derived 264, derived 272]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE))) (not (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))))
+
+  derived clause number: 274
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 0 ONE)) (+ (* -3 ONE))) (+ (* 0 ONE) (* -3 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE)))), (or )]
+  clause args: [derived 271, derived 273]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE))))
+
+  derived clause number: 275
+  rule: consolidate
+  expr args: [(+ ), (+ (* 0 ONE) (* -3 ONE)), (+ (* -3 ONE))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 0 ONE) (* -3 ONE)) (+ (* -3 ONE)))
+
+  derived clause number: 276
+  rule: or_single
+  expr args: []
+  clause args: [derived 275]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -3 ONE)) (+ (* -3 ONE))))
+
+  derived clause number: 277
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE))) (not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE)))) (not (= (+ (* 0 ONE) (* -3 ONE)) (+ (* -3 ONE)))))
+
+  derived clause number: 278
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* 0 ONE) (* -3 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE))) (not (= (+ (* 0 ONE) (* -3 ONE)) (+ (* -3 ONE))))), (or )]
+  clause args: [derived 274, derived 277]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE))) (not (= (+ (* 0 ONE) (* -3 ONE)) (+ (* -3 ONE)))))
+
+  derived clause number: 279
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -3 ONE)) (+ (* -3 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE)))), (or )]
+  clause args: [derived 276, derived 278]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE))))
+
+  derived clause number: 280
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE))) (not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE)))) (not (= (+ (* -3 ONE)) (* -1 (* 3 ONE)))))
+
+  derived clause number: 281
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (+ (* -3 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE))) (not (= (+ (* -3 ONE)) (* -1 (* 3 ONE))))), (or )]
+  clause args: [derived 279, derived 280]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE))) (not (= (+ (* -3 ONE)) (* -1 (* 3 ONE)))))
+
+  derived clause number: 282
+  rule: resolution
+  expr args: [(not (= (+ (* -3 ONE)) (* -1 (* 3 ONE)))), (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE)))), (or )]
+  clause args: [derived 261, derived 281]
+  backptr: nil
+  conclusion: (or (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE))))
+
+  derived clause number: 283
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))) (not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE)))))
+
+  derived clause number: 284
+  rule: resolution
+  expr args: [(not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE))))), (or )]
+  clause args: [derived 200, derived 283]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))) (not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE)))))
+
+  derived clause number: 285
+  rule: resolution
+  expr args: [(not (= (+ (* 0 ONE) (* -1 (* 3 ONE))) (* -1 (* 3 ONE)))), (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))))), (or )]
+  clause args: [derived 282, derived 284]
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))))
+
+  derived clause number: 286
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))))) (not (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))))
+
+  derived clause number: 287
+  rule: resolution
+  expr args: [(not (= (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))))), (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE)))))), (or )]
+  clause args: [derived 285, derived 286]
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))))
+
+  derived clause number: 288
+  rule: resolution
+  expr args: [(not (= (< x y) (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))))), (or )]
+  clause args: [derived 246, derived 287]
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))))
+
+  derived clause number: 289
+  rule: nary_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))) (not (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))))) (not (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))
+
+  derived clause number: 290
+  rule: resolution
+  expr args: [(not (= (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))))), (or (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))) (not (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))), (or )]
+  clause args: [derived 288, derived 289]
+  backptr: nil
+  conclusion: (or (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))) (not (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))
+
+  derived clause number: 291
+  rule: resolution
+  expr args: [(not (= (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))), (or (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))), (or )]
+  clause args: [derived 248, derived 290]
+  backptr: nil
+  conclusion: (or (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))
+
+  derived clause number: 292
+  rule: refl
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))))
+
+  derived clause number: 293
+  rule: =+1
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE))))
+
+  derived clause number: 294
+  rule: mul_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* 1 x) x)
+
+  derived clause number: 295
+  rule: or_single
+  expr args: []
+  clause args: [derived 294]
+  backptr: nil
+  conclusion: (or (= (* 1 x) x))
+
+  derived clause number: 296
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x)) x) (not (= (+ (* 1 x)) (* 1 x))) (not (= (* 1 x) x)))
+
+  derived clause number: 297
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x)) (* 1 x))), (or (= (+ (* 1 x)) x) (not (= (* 1 x) x))), (or )]
+  clause args: [derived 27, derived 296]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x)) x) (not (= (* 1 x) x)))
+
+  derived clause number: 298
+  rule: resolution
+  expr args: [(not (= (* 1 x) x)), (or (= (+ (* 1 x)) x)), (or )]
+  clause args: [derived 295, derived 297]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x)) x))
+
+  derived clause number: 299
+  rule: symm
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= x (+ (* 1 x))) (not (= (+ (* 1 x)) x)))
+
+  derived clause number: 300
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x)) x)), (or (= x (+ (* 1 x)))), (or )]
+  clause args: [derived 298, derived 299]
+  backptr: nil
+  conclusion: (or (= x (+ (* 1 x))))
+
+  derived clause number: 301
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y)))) (not (= x (+ (* 1 x)))) (not (= (* -1 y) (+ (* -1 y)))))
+
+  derived clause number: 302
+  rule: resolution
+  expr args: [(not (= x (+ (* 1 x)))), (or (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y)))) (not (= (* -1 y) (+ (* -1 y))))), (or )]
+  clause args: [derived 300, derived 301]
+  backptr: nil
+  conclusion: (or (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y)))) (not (= (* -1 y) (+ (* -1 y)))))
+
+  derived clause number: 303
+  rule: resolution
+  expr args: [(not (= (* -1 y) (+ (* -1 y)))), (or (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y))))), (or )]
+  clause args: [derived 33, derived 302]
+  backptr: nil
+  conclusion: (or (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y)))))
+
+  derived clause number: 304
+  rule: flatten
+  expr args: [(+ (+ (* -1 y))), (+ (+ (* 1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (+ (* -1 y))))
+
+  derived clause number: 305
+  rule: or_single
+  expr args: []
+  clause args: [derived 304]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (+ (* -1 y)))))
+
+  derived clause number: 306
+  rule: flatten
+  expr args: [(+ (* 1 x)), (+ (+ (* -1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))
+
+  derived clause number: 307
+  rule: or_single
+  expr args: []
+  clause args: [derived 306]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (+ (* -1 y))) (+ (* 1 x) (* -1 y))))
+
+  derived clause number: 308
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y))) (not (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (+ (* -1 y))))) (not (= (+ (* 1 x) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 309
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (+ (* -1 y))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y))) (not (= (+ (* 1 x) (+ (* -1 y))) (+ (* 1 x) (* -1 y))))), (or )]
+  clause args: [derived 305, derived 308]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y))) (not (= (+ (* 1 x) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 310
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))), (or (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))), (or )]
+  clause args: [derived 307, derived 309]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y))))
+
+  derived clause number: 311
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y))) (not (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y))))) (not (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 312
+  rule: resolution
+  expr args: [(not (= (+ x (* -1 y)) (+ (+ (* 1 x)) (+ (* -1 y))))), (or (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y))) (not (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y))))), (or )]
+  clause args: [derived 303, derived 311]
+  backptr: nil
+  conclusion: (or (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y))) (not (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 313
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y))) (+ (* 1 x) (* -1 y)))), (or (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y)))), (or )]
+  clause args: [derived 310, derived 312]
+  backptr: nil
+  conclusion: (or (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y))))
+
+  derived clause number: 314
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 (+ x (* -1 y))) (* 1 (+ (* 1 x) (* -1 y)))) (not (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 315
+  rule: resolution
+  expr args: [(not (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y)))), (or (= (* 1 (+ x (* -1 y))) (* 1 (+ (* 1 x) (* -1 y))))), (or )]
+  clause args: [derived 313, derived 314]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ x (* -1 y))) (* 1 (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 316
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* 1 (+ (* 1 x) (* -1 y))) (+ (* 1 x) (* -1 y)))
+
+  derived clause number: 317
+  rule: or_single
+  expr args: []
+  clause args: [derived 316]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ (* 1 x) (* -1 y))) (+ (* 1 x) (* -1 y))))
+
+  derived clause number: 318
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y))) (not (= (* 1 (+ x (* -1 y))) (* 1 (+ (* 1 x) (* -1 y))))) (not (= (* 1 (+ (* 1 x) (* -1 y))) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 319
+  rule: resolution
+  expr args: [(not (= (* 1 (+ x (* -1 y))) (* 1 (+ (* 1 x) (* -1 y))))), (or (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y))) (not (= (* 1 (+ (* 1 x) (* -1 y))) (+ (* 1 x) (* -1 y))))), (or )]
+  clause args: [derived 315, derived 318]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y))) (not (= (* 1 (+ (* 1 x) (* -1 y))) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 320
+  rule: resolution
+  expr args: [(not (= (* 1 (+ (* 1 x) (* -1 y))) (+ (* 1 x) (* -1 y)))), (or (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))), (or )]
+  clause args: [derived 317, derived 319]
+  backptr: nil
+  conclusion: (or (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y))))
+
+  derived clause number: 321
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* 1 y) (+ (* 1 y)))) (not (= (* -1 x) (+ (* -1 x)))) (not (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 322
+  rule: resolution
+  expr args: [(not (= (* 1 y) (+ (* 1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* -1 x) (+ (* -1 x)))) (not (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 131, derived 321]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* -1 x) (+ (* -1 x)))) (not (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 323
+  rule: resolution
+  expr args: [(not (= (* -1 x) (+ (* -1 x)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 46, derived 322]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 324
+  rule: resolution
+  expr args: [(not (= (* 1 (+ x (* -1 y))) (+ (* 1 x) (* -1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 320, derived 323]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))))
+
+  derived clause number: 325
+  rule: resolution
+  expr args: [(not (= (* -1 (* 0 ONE)) (+ (* 0 ONE)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 77, derived 324]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))))
+
+  derived clause number: 326
+  rule: flatten
+  expr args: [(+ (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))), (+ (+ (* 1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))
+
+  derived clause number: 327
+  rule: or_single
+  expr args: []
+  clause args: [derived 326]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))))
+
+  derived clause number: 328
+  rule: flatten
+  expr args: [(+ (* 1 y) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))), (+ (+ (* -1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))
+
+  derived clause number: 329
+  rule: or_single
+  expr args: []
+  clause args: [derived 328]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))))
+
+  derived clause number: 330
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))) (not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))))
+
+  derived clause number: 331
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))))), (or )]
+  clause args: [derived 327, derived 330]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))) (not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))))
+
+  derived clause number: 332
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 329, derived 331]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE)))))
+
+  derived clause number: 333
+  rule: flatten
+  expr args: [(+ (* 1 y) (* -1 x) (+ (* 0 ONE))), (+ (+ (* 1 x) (* -1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))
+
+  derived clause number: 334
+  rule: or_single
+  expr args: []
+  clause args: [derived 333]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE)))))
+
+  derived clause number: 335
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE)))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))) (not (= (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))))
+
+  derived clause number: 336
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE)))) (not (= (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE)))))), (or )]
+  clause args: [derived 332, derived 335]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE)))) (not (= (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))))
+
+  derived clause number: 337
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 334, derived 336]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE)))))
+
+  derived clause number: 338
+  rule: flatten
+  expr args: [(+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)), (+ (+ (* 0 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))
+
+  derived clause number: 339
+  rule: or_single
+  expr args: []
+  clause args: [derived 338]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))))
+
+  derived clause number: 340
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))))
+
+  derived clause number: 341
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))))), (or )]
+  clause args: [derived 337, derived 340]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))))
+
+  derived clause number: 342
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))), (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))), (or )]
+  clause args: [derived 339, derived 341]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))))
+
+  derived clause number: 343
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))) (not (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))))
+
+  derived clause number: 344
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))))), (or )]
+  clause args: [derived 325, derived 343]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))) (not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))))
+
+  derived clause number: 345
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 y)) (+ (* -1 x)) (+ (* 1 x) (* -1 y)) (+ (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))), (or )]
+  clause args: [derived 342, derived 344]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE))))
+
+  derived clause number: 346
+  rule: consolidate
+  expr args: [(+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)), (+ (* 0 ONE)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)))
+
+  derived clause number: 347
+  rule: or_single
+  expr args: []
+  clause args: [derived 346]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y))))
+
+  derived clause number: 348
+  rule: consolidate
+  expr args: [(+ (* 1 y) (* -1 y)), (+ (* -1 x) (* 1 x)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)) (+ (* 1 y) (* -1 y)))
+
+  derived clause number: 349
+  rule: or_single
+  expr args: []
+  clause args: [derived 348]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)) (+ (* 1 y) (* -1 y))))
+
+  derived clause number: 350
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)) (+ (* 1 y) (* -1 y)))))
+
+  derived clause number: 351
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)) (+ (* 1 y) (* -1 y))))), (or )]
+  clause args: [derived 347, derived 350]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)) (+ (* 1 y) (* -1 y)))))
+
+  derived clause number: 352
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y)) (+ (* 1 y) (* -1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y)))), (or )]
+  clause args: [derived 349, derived 351]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y))))
+
+  derived clause number: 353
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y)))) (not (= (+ (* 1 y) (* -1 y)) (+ ))))
+
+  derived clause number: 354
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ (* 1 y) (* -1 y)))), (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ )) (not (= (+ (* 1 y) (* -1 y)) (+ )))), (or )]
+  clause args: [derived 352, derived 353]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ )) (not (= (+ (* 1 y) (* -1 y)) (+ ))))
+
+  derived clause number: 355
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 y)) (+ ))), (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ ))), (or )]
+  clause args: [derived 179, derived 354]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ )))
+
+  derived clause number: 356
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ ))))
+
+  derived clause number: 357
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ )))), (or )]
+  clause args: [derived 345, derived 356]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ )) (not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ ))))
+
+  derived clause number: 358
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 x) (* -1 y) (* 0 ONE)) (+ ))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ ))), (or )]
+  clause args: [derived 355, derived 357]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ )))
+
+  derived clause number: 359
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 0 ONE))) (not (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ ))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 360
+  rule: resolution
+  expr args: [(not (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ ))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 358, derived 359]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 361
+  rule: resolution
+  expr args: [(not (= (+ ) (+ (* 0 ONE)))), (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 121, derived 360]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 0 ONE))))
+
+  derived clause number: 362
+  rule: or_single_rev
+  expr args: []
+  clause args: [derived 361]
+  backptr: nil
+  conclusion: (= (+ (* 1 y) (* -1 x) (* 1 (+ x (* -1 y))) (* -1 (* 0 ONE))) (+ (* 0 ONE)))
+
+  derived clause number: 363
+  rule: farkas
+  expr args: []
+  clause args: [derived 362]
+  backptr: nil
+  conclusion: (or (not (< y x)) (not (<= (+ x (* -1 y)) (* 0 ONE))))
+
+  derived clause number: 364
+  rule: resolution
+  expr args: [(not (< y x)), (or (not (<= (+ x (* -1 y)) (* 0 ONE)))), (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (<= (+ x (* -1 y)) (* 0 ONE))))]
+  clause args: [derived 293, derived 363]
+  backptr: nil
+  conclusion: (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (<= (+ x (* -1 y)) (* 0 ONE))) (not (<= (+ x (* -1 y)) (* 0 ONE))))
+
+  derived clause number: 365
+  rule: total
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (<= x y) (< y x))
+
+  derived clause number: 366
+  rule: total
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (<= (+ x (* -1 y)) (* 0 ONE)) (< (* 0 ONE) (+ x (* -1 y))))
+
+  derived clause number: 367
+  rule: mul_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (+ x (* -1 y))) (* -1 (+ (* 1 x) (* -1 y)))) (not (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 368
+  rule: resolution
+  expr args: [(not (= (+ x (* -1 y)) (+ (* 1 x) (* -1 y)))), (or (= (* -1 (+ x (* -1 y))) (* -1 (+ (* 1 x) (* -1 y))))), (or )]
+  clause args: [derived 313, derived 367]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ x (* -1 y))) (* -1 (+ (* 1 x) (* -1 y)))))
+
+  derived clause number: 369
+  rule: multiply
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (* -1 (+ (* 1 x) (* -1 y))) (+ (* -1 x) (* 1 y)))
+
+  derived clause number: 370
+  rule: or_single
+  expr args: []
+  clause args: [derived 369]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ (* 1 x) (* -1 y))) (+ (* -1 x) (* 1 y))))
+
+  derived clause number: 371
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))) (not (= (* -1 (+ x (* -1 y))) (* -1 (+ (* 1 x) (* -1 y))))) (not (= (* -1 (+ (* 1 x) (* -1 y))) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 372
+  rule: resolution
+  expr args: [(not (= (* -1 (+ x (* -1 y))) (* -1 (+ (* 1 x) (* -1 y))))), (or (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))) (not (= (* -1 (+ (* 1 x) (* -1 y))) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 368, derived 371]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))) (not (= (* -1 (+ (* 1 x) (* -1 y))) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 373
+  rule: resolution
+  expr args: [(not (= (* -1 (+ (* 1 x) (* -1 y))) (+ (* -1 x) (* 1 y)))), (or (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y)))), (or )]
+  clause args: [derived 370, derived 372]
+  backptr: nil
+  conclusion: (or (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))))
+
+  derived clause number: 374
+  rule: sum_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* 1 x) (+ (* 1 x)))) (not (= (* -1 y) (+ (* -1 y)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 375
+  rule: resolution
+  expr args: [(not (= (* 1 x) (+ (* 1 x)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* -1 y) (+ (* -1 y)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 29, derived 374]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* -1 y) (+ (* -1 y)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 376
+  rule: resolution
+  expr args: [(not (= (* -1 y) (+ (* -1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 33, derived 375]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 377
+  rule: resolution
+  expr args: [(not (= (* 1 (* 0 ONE)) (+ (* 0 ONE)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 138, derived 376]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 378
+  rule: resolution
+  expr args: [(not (= (* -1 (+ x (* -1 y))) (+ (* -1 x) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 373, derived 377]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 379
+  rule: flatten
+  expr args: [(+ (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))), (+ (+ (* 1 x)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))
+
+  derived clause number: 380
+  rule: or_single
+  expr args: []
+  clause args: [derived 379]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 381
+  rule: flatten
+  expr args: [(+ (* 1 x) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))), (+ (+ (* -1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))
+
+  derived clause number: 382
+  rule: or_single
+  expr args: []
+  clause args: [derived 381]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 383
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))) (not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))))
+
+  derived clause number: 384
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))))), (or )]
+  clause args: [derived 380, derived 383]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))) (not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))))
+
+  derived clause number: 385
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 382, derived 384]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 386
+  rule: flatten
+  expr args: [(+ (* 1 x) (* -1 y) (+ (* -1 x) (* 1 y))), (+ (+ (* 0 ONE)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))
+
+  derived clause number: 387
+  rule: or_single
+  expr args: []
+  clause args: [derived 386]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 388
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y)))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))) (not (= (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))))
+
+  derived clause number: 389
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y)))) (not (= (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y)))))), (or )]
+  clause args: [derived 385, derived 388]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y)))) (not (= (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))))
+
+  derived clause number: 390
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 387, derived 389]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y)))))
+
+  derived clause number: 391
+  rule: flatten
+  expr args: [(+ (* 1 x) (* -1 y) (* 0 ONE)), (+ (+ (* -1 x) (* 1 y)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))
+
+  derived clause number: 392
+  rule: or_single
+  expr args: []
+  clause args: [derived 391]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))))
+
+  derived clause number: 393
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))))
+
+  derived clause number: 394
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 390, derived 393]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))))
+
+  derived clause number: 395
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))), (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))), (or )]
+  clause args: [derived 392, derived 394]
+  backptr: nil
+  conclusion: (or (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))))
+
+  derived clause number: 396
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))))
+
+  derived clause number: 397
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))))), (or )]
+  clause args: [derived 378, derived 396]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))) (not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))))
+
+  derived clause number: 398
+  rule: resolution
+  expr args: [(not (= (+ (+ (* 1 x)) (+ (* -1 y)) (+ (* 0 ONE)) (+ (* -1 x) (* 1 y))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))), (or )]
+  clause args: [derived 395, derived 397]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y))))
+
+  derived clause number: 399
+  rule: consolidate
+  expr args: [(+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)), (+ (* 0 ONE)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)))
+
+  derived clause number: 400
+  rule: or_single
+  expr args: []
+  clause args: [derived 399]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y))))
+
+  derived clause number: 401
+  rule: consolidate
+  expr args: [(+ (* -1 y) (* 1 y)), (+ (* 1 x) (* -1 x)), (+ )]
+  clause args: []
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))
+
+  derived clause number: 402
+  rule: or_single
+  expr args: []
+  clause args: [derived 401]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y))))
+
+  derived clause number: 403
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)))) (not (= (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))))
+
+  derived clause number: 404
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y))))), (or )]
+  clause args: [derived 400, derived 403]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y))) (not (= (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))))
+
+  derived clause number: 405
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))), (or )]
+  clause args: [derived 402, derived 404]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y))))
+
+  derived clause number: 406
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))) (not (= (+ (* -1 y) (* 1 y)) (+ ))))
+
+  derived clause number: 407
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ (* -1 y) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ )) (not (= (+ (* -1 y) (* 1 y)) (+ )))), (or )]
+  clause args: [derived 405, derived 406]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ )) (not (= (+ (* -1 y) (* 1 y)) (+ ))))
+
+  derived clause number: 408
+  rule: resolution
+  expr args: [(not (= (+ (* -1 y) (* 1 y)) (+ ))), (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ ))), (or )]
+  clause args: [derived 111, derived 407]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ )))
+
+  derived clause number: 409
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ ))))
+
+  derived clause number: 410
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ )))), (or )]
+  clause args: [derived 398, derived 409]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ )) (not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ ))))
+
+  derived clause number: 411
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 0 ONE) (* -1 x) (* 1 y)) (+ ))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ ))), (or )]
+  clause args: [derived 408, derived 410]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ )))
+
+  derived clause number: 412
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 0 ONE))) (not (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ ))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 413
+  rule: resolution
+  expr args: [(not (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ ))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE))))), (or )]
+  clause args: [derived 411, derived 412]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 0 ONE))) (not (= (+ ) (+ (* 0 ONE)))))
+
+  derived clause number: 414
+  rule: resolution
+  expr args: [(not (= (+ ) (+ (* 0 ONE)))), (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 0 ONE)))), (or )]
+  clause args: [derived 121, derived 413]
+  backptr: nil
+  conclusion: (or (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 0 ONE))))
+
+  derived clause number: 415
+  rule: or_single_rev
+  expr args: []
+  clause args: [derived 414]
+  backptr: nil
+  conclusion: (= (+ (* 1 x) (* -1 y) (* 1 (* 0 ONE)) (* -1 (+ x (* -1 y)))) (+ (* 0 ONE)))
+
+  derived clause number: 416
+  rule: farkas
+  expr args: []
+  clause args: [derived 415]
+  backptr: nil
+  conclusion: (or (not (<= x y)) (not (< (* 0 ONE) (+ x (* -1 y)))))
+
+  derived clause number: 417
+  rule: resolution
+  expr args: [(not (< (* 0 ONE) (+ x (* -1 y)))), (or (not (<= x y))), (or (<= (+ x (* -1 y)) (* 0 ONE)))]
+  clause args: [derived 366, derived 416]
+  backptr: nil
+  conclusion: (or (<= (+ x (* -1 y)) (* 0 ONE)) (not (<= x y)))
+
+  derived clause number: 418
+  rule: not+
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (<= (+ x (* -1 y)) (* 0 ONE))))
+
+  derived clause number: 419
+  rule: resolution
+  expr args: [(not (<= (+ x (* -1 y)) (* 0 ONE))), (or (not (not (<= (+ x (* -1 y)) (* 0 ONE))))), (or (not (<= x y)))]
+  clause args: [derived 417, derived 418]
+  backptr: nil
+  conclusion: (or (not (<= x y)) (not (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 420
+  rule: resolution
+  expr args: [(not (<= x y)), (or (not (not (<= (+ x (* -1 y)) (* 0 ONE))))), (or (< y x))]
+  clause args: [derived 365, derived 419]
+  backptr: nil
+  conclusion: (or (< y x) (not (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 421
+  rule: =+2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (< y x)) (not (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 422
+  rule: resolution
+  expr args: [(not (< y x)), (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (not (<= (+ x (* -1 y)) (* 0 ONE))))), (or (not (not (<= (+ x (* -1 y)) (* 0 ONE)))))]
+  clause args: [derived 420, derived 421]
+  backptr: nil
+  conclusion: (or (not (not (<= (+ x (* -1 y)) (* 0 ONE)))) (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 423
+  rule: factoring
+  expr args: []
+  clause args: [derived 364]
+  backptr: nil
+  conclusion: (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (not (<= (+ x (* -1 y)) (* 0 ONE))))
+
+  derived clause number: 424
+  rule: factoring
+  expr args: []
+  clause args: [derived 422]
+  backptr: nil
+  conclusion: (or (not (not (<= (+ x (* -1 y)) (* 0 ONE)))) (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 425
+  rule: resolution
+  expr args: [(not (not (<= (+ x (* -1 y)) (* 0 ONE)))), (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE))))), (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))))]
+  clause args: [derived 423, derived 424]
+  backptr: nil
+  conclusion: (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))) (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 426
+  rule: nary_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))) (not (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE))))) (not (= (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))))
+
+  derived clause number: 427
+  rule: factoring
+  expr args: []
+  clause args: [derived 425]
+  backptr: nil
+  conclusion: (or (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE)))))
+
+  derived clause number: 428
+  rule: resolution
+  expr args: [(not (= (< y x) (not (<= (+ x (* -1 y)) (* 0 ONE))))), (or (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))) (not (= (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))))), (or )]
+  clause args: [derived 427, derived 426]
+  backptr: nil
+  conclusion: (or (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))) (not (= (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))))
+
+  derived clause number: 429
+  rule: resolution
+  expr args: [(not (= (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))), (or (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))))), (or )]
+  clause args: [derived 292, derived 428]
+  backptr: nil
+  conclusion: (or (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE)))))
+
+  derived clause number: 430
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))) (not (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))))) (not (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))
+
+  derived clause number: 431
+  rule: resolution
+  expr args: [(not (= (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))))), (or (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))) (not (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))), (or )]
+  clause args: [derived 429, derived 430]
+  backptr: nil
+  conclusion: (or (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))) (not (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))
+
+  derived clause number: 432
+  rule: resolution
+  expr args: [(not (= (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))), (or (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))), (or )]
+  clause args: [derived 291, derived 431]
+  backptr: nil
+  conclusion: (or (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))
+
+  derived clause number: 433
+  rule: refl
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE))))
+
+  derived clause number: 434
+  rule: binop_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))) (not (= (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)))) (not (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 435
+  rule: resolution
+  expr args: [(not (= (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)))), (or (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))) (not (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))), (or )]
+  clause args: [derived 433, derived 434]
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))) (not (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 436
+  rule: resolution
+  expr args: [(not (= (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))), (or (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))), (or )]
+  clause args: [derived 432, derived 435]
+  backptr: nil
+  conclusion: (or (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 437
+  rule: not_cong
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))) (not (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))))
+
+  derived clause number: 438
+  rule: resolution
+  expr args: [(not (= (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))), (or (= (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))), (or )]
+  clause args: [derived 436, derived 437]
+  backptr: nil
+  conclusion: (or (= (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))))
+
+  derived clause number: 439
+  rule: =-2
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (= (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))) (not (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 440
+  rule: resolution
+  expr args: [(not (= (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))), (or (not (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))), (or )]
+  clause args: [derived 438, derived 439]
+  backptr: nil
+  conclusion: (or (not (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 441
+  rule: resolution
+  expr args: [(not (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))), (or (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))), (or (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))))]
+  clause args: [derived 24, derived 440]
+  backptr: nil
+  conclusion: (or (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y)))))) (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 442
+  rule: resolution
+  expr args: [(not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (< y x) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 3 ONE)))) (< x y)) (=> (< x y) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (+ (* 0 ONE) (* -1 (* 1 ONE)))) (= y y))))))), (or ), (or (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))]
+  clause args: [derived 441, derived 0]
+  backptr: nil
+  conclusion: (or (not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))))
+
+  derived clause number: 443
+  rule: resolution
+  expr args: [(not (=> (= (ControlFlow (* 0 ONE) (* 0 ONE)) (* 4 ONE)) (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))), (or ), (or (not (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))]
+  clause args: [derived 23, derived 442]
+  backptr: nil
+  conclusion: (or (not (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))))
+
+  derived clause number: 444
+  rule: resolution
+  expr args: [(not (=> (and (not (<= (+ x (* -1 y)) (* 0 ONE))) (= (ControlFlow (* 0 ONE) (* 4 ONE)) (* 2 ONE))) (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))), (or ), (or (not (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))]
+  clause args: [derived 22, derived 443]
+  backptr: nil
+  conclusion: (or (not (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))))
+
+  derived clause number: 445
+  rule: resolution
+  expr args: [(not (and (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))) (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true)))), (or ), (or (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))]
+  clause args: [derived 21, derived 444]
+  backptr: nil
+  conclusion: (or (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))) (not (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))))
+
+  derived clause number: 446
+  rule: resolution
+  expr args: [(not (=> (not (<= (+ y (* -1 x)) (* 0 ONE))) (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 1 ONE))) true))), (or (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE)))))), (or )]
+  clause args: [derived 20, derived 445]
+  backptr: nil
+  conclusion: (or (not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))))
+
+  derived clause number: 447
+  rule: resolution
+  expr args: [(not (=> (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE))) (not (<= (+ y (* -1 x)) (* 0 ONE))))), (or ), (or (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))]
+  clause args: [derived 15, derived 446]
+  backptr: nil
+  conclusion: (or (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE))))
+
+  derived clause number: 448
+  rule: resolution
+  expr args: [(not (= (ControlFlow (* 0 ONE) (* 2 ONE)) (* -1 (* 3 ONE)))), (or ), (or (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))]
+  clause args: [derived 5, derived 1]
+  backptr: nil
+  conclusion: (or (not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))))
+
+  derived clause number: 449
+  rule: resolution
+  expr args: [(not (= (* -1 (* 3 ONE)) (ControlFlow (* 0 ONE) (* 2 ONE)))), (or ), (or )]
+  clause args: [derived 447, derived 448]
+  backptr: nil
+  conclusion: (or )
+
+  derived clause number: 450
+  rule: or_nil
+  expr args: []
+  clause args: [derived 449]
+  backptr: nil
+  conclusion: false
+

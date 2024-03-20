@@ -1,0 +1,13 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_snapshots_Snapshots14.v1.bpl.mod.smt2:30:10: Logical context not inconsistent!")
+unsat
+(! (let ((.cse18 (ControlFlow 0 2))) (let ((.cse1 (= .cse18 (- 1))) (.cse0 (= (- 1) .cse18))) (let ((.cse21 (= .cse1 .cse0))) (let-proof ((.cse22 (res .cse0 (res .cse1 (=+1 .cse21) (symm (- 1) .cse18)) (res .cse1 (symm .cse18 (- 1)) (=+2 .cse21))))) (res .cse0 (! (res .cse1 (let ((.cse2 (and F .cse1))) (res .cse2 (let ((.cse3 (=> .cse2 false))) (res .cse3 (=>+ 0 .cse3) (let ((.cse19 (= (ControlFlow 0 3) 2))) (let ((.cse4 (=> .cse19 .cse3))) (res .cse4 (=>+ 1 .cse4) (let ((.cse20 (= (ControlFlow 0 0) 3))) (let ((.cse5 (=> .cse20 .cse4))) (res .cse5 (=>+ 1 .cse5) (let ((.cse14 (- 0 1))) (let ((.cse13 (= .cse18 .cse14))) (let ((.cse12 (and F .cse13))) (let ((.cse11 (=> .cse12 false))) (let ((.cse10 (=> .cse19 .cse11))) (let ((.cse6 (=> .cse20 .cse10))) (let ((.cse8 (not .cse6))) (res .cse6 (let ((.cse7 (not .cse5))) (res .cse7 (res .cse8 (not+ .cse8) (let ((.cse9 (= .cse8 .cse7))) (res .cse9 (res (= .cse6 .cse5) (res (= .cse10 .cse4) (res (= .cse11 .cse3) (res (= false false) (refl false) (res (= .cse12 .cse2) (res (= .cse13 .cse1) (res (= .cse14 (- 1)) (let ((.cse15 (* (- 1) 1))) (res (= .cse15 (- 1)) (poly* .cse15 (- 1)) (res (= 0 0) (refl 0) (let ((.cse16 (+ 0 .cse15)) (.cse17 (+ 0 (- 1)))) (res (= .cse16 .cse17) (cong (+ 0 .cse15) (+ 0 (- 1))) (res (= .cse14 .cse16) (-def 0 1) (res (= .cse17 (- 1)) (poly+ .cse17 (- 1)) (trans .cse14 .cse16 .cse17 (- 1))))))))) (res (= .cse18 .cse18) (refl .cse18) (cong (= .cse18 .cse14) (= .cse18 (- 1))))) (res (= F F) (refl F) (cong (and F .cse13) (and F .cse1)))) (cong (=> .cse12 false) (=> .cse2 false)))) (res (= .cse19 .cse19) (refl .cse19) (cong (=> .cse19 .cse11) (=> .cse19 .cse3)))) (res (= .cse20 .cse20) (refl .cse20) (cong (=> .cse20 .cse10) (=> .cse20 .cse4)))) (cong (not .cse6) (not .cse5))) (=-2 .cse9)))) (not- .cse7))) (res .cse8 (assume .cse8) (not- .cse8)))))))))))))))))) (and- 1 .cse2))) (res .cse21 .cse22 (=-2 .cse21))) :proves (+ .cse0) :input) (! (let ((.cse24 (not .cse1))) (res .cse1 (let ((.cse23 (not .cse0))) (res .cse23 (res .cse24 (not+ .cse24) (let ((.cse25 (= .cse24 .cse23))) (res .cse25 (res .cse21 .cse22 (cong (not .cse1) (not .cse0))) (=-2 .cse25)))) (not- .cse23))) (res .cse24 (assume .cse24) (not- .cse24)))) :proves (- .cse0) :input)))))) :proves () :rup)
+unsupported

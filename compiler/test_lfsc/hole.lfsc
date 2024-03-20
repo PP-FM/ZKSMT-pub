@@ -1,0 +1,1020 @@
+unsat
+; WARNING: adding trust step for THEORY_REWRITE
+(define cvc.a1 (var 0 Bool))
+(define cvc.a5 (var 1 Bool))
+(define cvc.a9 (var 2 Bool))
+(define cvc.a13 (var 3 Bool))
+(define cvc.a17 (var 4 Bool))
+(define cvc.a2 (var 5 Bool))
+(define cvc.a6 (var 6 Bool))
+(define cvc.a20 (var 7 Bool))
+(define cvc.a7 (var 8 Bool))
+(define cvc.a16 (var 9 Bool))
+(define cvc.a3 (var 10 Bool))
+(define cvc.a12 (var 11 Bool))
+(define cvc.a8 (var 12 Bool))
+(define cvc.a4 (var 13 Bool))
+(define cvc.a19 (var 14 Bool))
+(define cvc.a15 (var 15 Bool))
+(define cvc.a11 (var 16 Bool))
+(define cvc.a18 (var 17 Bool))
+(define cvc.a14 (var 18 Bool))
+(define cvc.a10 (var 19 Bool))
+(check
+(@ t1 (or (not cvc.a20) false)
+(@ t2 (not cvc.a16)
+(@ t3 (or t2 t1)
+(@ t4 (not cvc.a12)
+(@ t5 (or t4 t1)
+(@ t6 (and t5 (and t3 true))
+(@ t7 (or t2 false)
+(@ t8 (or t4 t7)
+(@ t9 (not cvc.a8)
+(@ t10 (or t9 t1)
+(@ t11 (or t9 t7)
+(@ t12 (or t4 false)
+(@ t13 (or t9 t12)
+(@ t14 (not cvc.a4)
+(@ t15 (or t14 t1)
+(@ t16 (or t14 t7)
+(@ t17 (or t14 t12)
+(@ t18 (or t9 false)
+(@ t19 (or t14 t18)
+(@ t20 (not cvc.a19)
+(@ t21 (or t20 false)
+(@ t22 (not cvc.a15)
+(@ t23 (or t22 t21)
+(@ t24 (not cvc.a11)
+(@ t25 (or t24 t21)
+(@ t26 (or t22 false)
+(@ t27 (or t24 t26)
+(@ t28 (not cvc.a7)
+(@ t29 (or t28 t21)
+(@ t30 (or t28 t26)
+(@ t31 (or t24 false)
+(@ t32 (or t28 t31)
+(@ t33 (not cvc.a3)
+(@ t34 (or t33 t21)
+(@ t35 (or t33 t26)
+(@ t36 (or t33 t31)
+(@ t37 (or t28 false)
+(@ t38 (or t33 t37)
+(@ t39 (not cvc.a18)
+(@ t40 (or t39 false)
+(@ t41 (not cvc.a14)
+(@ t42 (or t41 t40)
+(@ t43 (not cvc.a10)
+(@ t44 (or t43 t40)
+(@ t45 (or t41 false)
+(@ t46 (or t43 t45)
+(@ t47 (not cvc.a6)
+(@ t48 (or t47 t40)
+(@ t49 (or t47 t45)
+(@ t50 (or t43 false)
+(@ t51 (or t47 t50)
+(@ t52 (not cvc.a2)
+(@ t53 (or t52 t40)
+(@ t54 (or t52 t45)
+(@ t55 (or t52 t50)
+(@ t56 (or t47 false)
+(@ t57 (or t52 t56)
+(@ t58 (not cvc.a17)
+(@ t59 (or t58 false)
+(@ t60 (not cvc.a13)
+(@ t61 (or t60 t59)
+(@ t62 (not cvc.a9)
+(@ t63 (or t62 t59)
+(@ t64 (or t60 false)
+(@ t65 (or t62 t64)
+(@ t66 (not cvc.a5)
+(@ t67 (or t66 t59)
+(@ t68 (or t66 t64)
+(@ t69 (or t62 false)
+(@ t70 (or t66 t69)
+(@ t71 (not cvc.a1)
+(@ t72 (or t71 t59)
+(@ t73 (or t71 t64)
+(@ t74 (or t71 t69)
+(@ t75 (or t66 false)
+(@ t76 (or t71 t75)
+(@ t77 (or t20 t1)
+(@ t78 (or t39 t1)
+(@ t79 (or t39 t21)
+(@ t80 (or t58 t1)
+(@ t81 (or t58 t21)
+(@ t82 (or t58 t40)
+(@ t83 (or t22 t7)
+(@ t84 (or t41 t7)
+(@ t85 (or t41 t26)
+(@ t86 (or t60 t7)
+(@ t87 (or t60 t26)
+(@ t88 (or t60 t45)
+(@ t89 (or t24 t12)
+(@ t90 (or t43 t12)
+(@ t91 (or t43 t31)
+(@ t92 (or t62 t12)
+(@ t93 (or t62 t31)
+(@ t94 (or t62 t50)
+(@ t95 (or t28 t18)
+(@ t96 (or t47 t18)
+(@ t97 (or t47 t37)
+(@ t98 (or t66 t18)
+(@ t99 (or t66 t37)
+(@ t100 (or t66 t56)
+(@ t101 (or t14 false)
+(@ t102 (or t33 t101)
+(@ t103 (or t52 t101)
+(@ t104 (or t33 false)
+(@ t105 (or t52 t104)
+(@ t106 (or t71 t101)
+(@ t107 (or t71 t104)
+(@ t108 (or t52 false)
+(@ t109 (or t71 t108)
+(@ t110 (or cvc.a19 (or cvc.a20 false))
+(@ t111 (or cvc.a17 (or (or cvc.a18 (or t110 false)) false))
+(@ t112 (or cvc.a15 (or cvc.a16 false))
+(@ t113 (or cvc.a13 (or (or cvc.a14 (or t112 false)) false))
+(@ t114 (or cvc.a11 (or cvc.a12 false))
+(@ t115 (or cvc.a9 (or (or cvc.a10 (or t114 false)) false))
+(@ t116 (or cvc.a7 (or cvc.a8 false))
+(@ t117 (or cvc.a5 (or (or cvc.a6 (or t116 false)) false))
+(@ t118 (or cvc.a3 (or cvc.a4 false))
+(@ t119 (or cvc.a1 (or (or cvc.a2 (or t118 false)) false))
+(@ t120 (and t119 (and (and t117 (and (and t115 (and (and t113 (and (and t111 (and (and t109 (and (and t107 (and (and t106 (and (and t105 (and (and t103 (and (and t102 (and (and t100 (and (and t99 (and (and t98 (and (and t97 (and (and t96 (and (and t95 (and (and t94 (and (and t93 (and (and t92 (and (and t91 (and (and t90 (and (and t89 (and (and t88 (and (and t87 (and (and t86 (and (and t85 (and (and t84 (and (and t83 (and (and t82 (and (and t81 (and (and t80 (and (and t79 (and (and t78 (and (and t77 (and (and t76 (and (and t74 (and (and t73 (and (and t72 (and (and t70 (and (and t68 (and (and t67 (and (and t65 (and (and t63 (and (and t61 (and (and t57 (and (and t55 (and (and t54 (and (and t53 (and (and t51 (and (and t49 (and (and t48 (and (and t46 (and (and t44 (and (and t42 (and (and t38 (and (and t36 (and (and t35 (and (and t34 (and (and t32 (and (and t30 (and (and t29 (and (and t27 (and (and t25 (and (and t23 (and (and t19 (and (and t17 (and (and t16 (and (and t15 (and (and t13 (and (and t11 (and (and t10 (and (and t8 (and t6 true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true)) true))
+(@ t121 (and t109 (and t107 (and t106 (and t105 (and t103 (and t102 (and t100 (and t99 (and t98 (and t97 (and t96 (and t95 (and t94 (and t93 (and t92 (and t91 (and t90 (and t89 (and t88 (and t87 (and t86 (and t85 (and t84 (and t83 (and t82 (and t81 (and t80 (and t79 (and t78 (and t77 (and t76 (and t74 (and t73 (and t72 (and t70 (and t68 (and t67 (and t65 (and t63 (and t61 (and t57 (and t55 (and t54 (and t53 (and t51 (and t49 (and t48 (and t46 (and t44 (and t42 (and t38 (and t36 (and t35 (and t34 (and t32 (and t30 (and t29 (and t27 (and t25 (and t23 (and t19 (and t17 (and t16 (and t15 (and t13 (and t11 (and t10 (and t8 t6))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+(@ t122 (or cvc.a1 (or cvc.a2 t118))
+(@ t123 (or cvc.a5 (or cvc.a6 t116))
+(@ t124 (or cvc.a9 (or cvc.a10 t114))
+(@ t125 (or cvc.a13 (or cvc.a14 t112))
+(@ t126 (or cvc.a17 (or cvc.a18 t110))
+(@ t127 (or cvc.a1 (or cvc.a2 (or cvc.a5 (or cvc.a6 t31))))
+(@ t128 (or cvc.a1 (or cvc.a2 (or cvc.a13 (or cvc.a14 t31))))
+(@ t129 (or cvc.a7 (or cvc.a15 (or cvc.a17 (or cvc.a19 t50))))
+(@ t130 (or cvc.a10 (or cvc.a11 (or cvc.a14 (or cvc.a15 t75))))
+(@ t131 (or cvc.a5 (or cvc.a7 (or cvc.a17 (or cvc.a19 t7))))
+(@ t132 (or cvc.a11 false)
+(@ t133 (or cvc.a1 t132)
+(@ t134 (or cvc.a19 false)
+(@ t135 (or cvc.a1 (or cvc.a13 (or cvc.a14 false)))
+(# a0 (holds t120)
+(: (holds false)
+
+(plet _  _ 
+
+(refl f_and)
+(\ p1
+
+(plet _  _ 
+
+(eq_resolve _  _  a0
+(trans _  _  _ 
+(trust (= t120 (and t119 (and t117 (and t115 (and t113 (and t111 t121))))))) ; from THEORY_REWRITE
+
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(trust (= t119 t122)) ; from THEORY_REWRITE
+)
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(trust (= t117 t123)) ; from THEORY_REWRITE
+)
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(trust (= t115 t124)) ; from THEORY_REWRITE
+)
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(trust (= t113 t125)) ; from THEORY_REWRITE
+)
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(trust (= t111 t126)) ; from THEORY_REWRITE
+)
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t109))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t107))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t106))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t105))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t103))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t102))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t100))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t99))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t98))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t97))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t96))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t95))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t94))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t93))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t92))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t91))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t90))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t89))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t88))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t87))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t86))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t85))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t84))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t83))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t82))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t81))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t80))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t79))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t78))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t77))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t76))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t74))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t73))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t72))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t70))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t68))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t67))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t65))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t63))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t61))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t57))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t55))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t54))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t53))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t51))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t49))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t48))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t46))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t44))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t42))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t38))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t36))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t35))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t34))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t32))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t30))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t29))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t27))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t25))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t23))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t19))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t17))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t16))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t15))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t13))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t11))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t10))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t8))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t5))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t3))
+(refl true))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+(\ p2
+
+(plet _  _ 
+
+(and_elim _  _  69 p2)
+(\ p3
+
+(plet _  _ 
+
+(and_elim _  _  71 p2)
+(\ p4
+
+(plet _  _ 
+
+(and_elim _  _  50 p2)
+(\ p5
+
+(plet _  _ 
+
+(and_elim _  _  47 p2)
+(\ p6
+
+(plet _  _ 
+
+(and_elim _  _  52 p2)
+(\ p7
+
+(plet _  _ 
+
+(and_elim _  _  56 p2)
+(\ p8
+
+(plet _  _ 
+
+(and_elim _  _  59 p2)
+(\ p9
+
+(plet _  _ 
+
+(and_elim _  _  0 p2)
+(\ p10
+
+(plet _  _ 
+
+(and_elim _  _  1 p2)
+(\ p11
+
+(plet _  _ 
+
+(and_elim _  _  65 p2)
+(\ p12
+
+(plet _  _ 
+
+(reordering _  t127
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p12 p11 ff cvc.a8) p10 ff cvc.a4) p9 tt cvc.a7) p8 tt cvc.a3)))
+(\ p13
+
+(plet _  _ 
+
+(and_elim _  _  2 p2)
+(\ p14
+
+(plet _  _ 
+
+(and_elim _  _  66 p2)
+(\ p15
+
+(plet _  _ 
+
+(and_elim _  _  55 p2)
+(\ p16
+
+(plet _  _ 
+
+(and_elim _  _  60 p2)
+(\ p17
+
+(plet _  _ 
+
+(and_elim _  _  3 p2)
+(\ p18
+
+(plet _  _ 
+
+(and_elim _  _  67 p2)
+(\ p19
+
+(plet _  _ 
+
+(and_elim _  _  72 p2)
+(\ p20
+
+(plet _  _ 
+
+(and_elim _  _  46 p2)
+(\ p21
+
+(plet _  _ 
+
+(and_elim _  _  45 p2)
+(\ p22
+
+(plet _  _ 
+
+(and_elim _  _  70 p2)
+(\ p23
+
+(plet _  _ 
+
+(and_elim _  _  62 p2)
+(\ p24
+
+(plet _  _ 
+
+(reordering _  t128
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p19 p18 ff cvc.a16) p10 ff cvc.a4) p24 tt cvc.a15) p8 tt cvc.a3)))
+(\ p25
+
+(plet _  _ 
+
+(and_elim _  _  49 p2)
+(\ p26
+
+(plet _  _ 
+
+(and_elim _  _  57 p2)
+(\ p27
+
+(plet _  _ 
+
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p26 p14 ff cvc.a10) p11 ff cvc.a6) p20 tt cvc.a12) p23 tt cvc.a8)) p18 ff cvc.a16) p27 tt cvc.a15) p10 ff cvc.a3)
+(reordering _  (or cvc.a5 (or cvc.a7 (or cvc.a9 (or cvc.a11 t101))))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p26 p14 ff cvc.a10) p11 ff cvc.a6) p15 tt cvc.a12) p12 tt cvc.a8))) tt cvc.a4)) p25 tt cvc.a11))
+(reordering _  (or cvc.a5 (or cvc.a7 (or cvc.a9 (or cvc.a13 (or cvc.a14 t108)))))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p24 p18 ff cvc.a15) p14 ff cvc.a11) p23 tt cvc.a16) p3 tt cvc.a12)) p11 ff cvc.a8) p21 tt cvc.a10) p22 tt cvc.a6))) tt cvc.a2))
+(reordering _  (or cvc.a1 (or cvc.a9 (or cvc.a13 (or cvc.a14 t37))))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p21 p14 ff cvc.a10) p10 ff cvc.a2) p20 tt cvc.a12) p19 tt cvc.a4)) p18 ff cvc.a16) p17 tt cvc.a15) p9 tt cvc.a11) p16 tt cvc.a3))) tt cvc.a7))
+(reordering _  (or cvc.a1 (or cvc.a5 (or cvc.a9 t45)))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p16 p11 ff cvc.a7) p10 ff cvc.a3) p3 tt cvc.a8) p15 tt cvc.a4)) p14 ff cvc.a12) p13 tt cvc.a11) p7 tt cvc.a10)) p6 tt cvc.a2) p5 tt cvc.a6))) tt cvc.a14))
+(and_elim _  _  41 p2) tt cvc.a5)
+(and_elim _  _  44 p2) tt cvc.a13)
+(and_elim _  _  43 p2) tt cvc.a9))
+(\ p28
+
+(plet _  _ 
+
+(and_elim _  _  53 p2)
+(\ p29
+
+(plet _  _ 
+
+(and_elim _  _  4 p2)
+(\ p30
+
+(plet _  _ 
+
+(and_elim _  _  74 p2)
+(\ p31
+
+(plet _  _ 
+
+(and_elim _  _  40 p2)
+(\ p32
+
+(plet _  _ 
+
+(reordering _  t129
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p32 p18 ff cvc.a13) p11 ff cvc.a5) p31 tt cvc.a16) p4 tt cvc.a8)) p30 ff cvc.a20) p29 tt cvc.a18) p7 tt cvc.a14) p26 tt cvc.a6)))
+(\ p33
+
+(plet _  _ 
+
+(and_elim _  _  39 p2)
+(\ p34
+
+(plet _  _ 
+
+(reordering _  t130
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p20 p18 ff cvc.a16) p14 ff cvc.a12) p32 tt cvc.a13) p34 tt cvc.a9)))
+(\ p35
+
+(plet _  _ 
+
+(and_elim _  _  51 p2)
+(\ p36
+
+(plet _  _ 
+
+(reordering _  t131
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p36 p30 ff cvc.a18) p11 ff cvc.a6) p31 tt cvc.a20) p23 tt cvc.a8)))
+(\ p37
+
+(plet _  _ 
+
+(and_elim _  _  42 p2)
+(\ p38
+
+(plet _  _ 
+
+(and_elim _  _  73 p2)
+(\ p39
+
+(plet _  _ 
+
+(and_elim _  _  54 p2)
+(\ p40
+
+(plet _  _ 
+
+(and_elim _  _  48 p2)
+(\ p41
+
+(plet _  _ 
+
+(and_elim _  _  64 p2)
+(\ p42
+
+(plet _  _ 
+
+(and_elim _  _  61 p2)
+(\ p43
+
+(plet _  _ 
+
+(and_elim _  _  68 p2)
+(\ p44
+
+(plet _  _ 
+
+(reordering _  t133
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p32 p18 ff cvc.a13) p11 ff cvc.a5) p42 tt cvc.a15) p43 tt cvc.a7)) p30 ff cvc.a19) p29 tt cvc.a18) p7 tt cvc.a14) p26 tt cvc.a6)) p14 ff cvc.a10)
+(reordering _  (or cvc.a8 (or cvc.a16 (or cvc.a17 (or cvc.a20 t69))))
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p43 p30 ff cvc.a19) p11 ff cvc.a7) p40 tt cvc.a18) p5 tt cvc.a6)) p18 ff cvc.a14)
+(reordering _  (or cvc.a5 (or cvc.a8 (or cvc.a17 (or cvc.a20 t26))))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p36 p30 ff cvc.a18) p11 ff cvc.a6) p42 tt cvc.a19) p17 tt cvc.a7))) tt cvc.a15) p38 tt cvc.a13)) p34 tt cvc.a5))) tt cvc.a9) p15 tt cvc.a12)) p19 tt cvc.a16) p44 tt cvc.a20) p12 tt cvc.a8)) p28 tt cvc.a17)
+(reordering _  (or cvc.a1 (or cvc.a4 t132))
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p38 p18 ff cvc.a13) p14 ff cvc.a9) p31 tt cvc.a16) p39 tt cvc.a12)) p30 ff cvc.a20) p41 tt cvc.a18) p6 tt cvc.a14) p21 tt cvc.a10)) p10 ff cvc.a2) p43 tt cvc.a19) p17 tt cvc.a15) p16 tt cvc.a3) p28 tt cvc.a17))
+(reordering _  (or cvc.a1 (or cvc.a4 (or cvc.a7 t132)))
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p18 p42 tt cvc.a15) p38 tt cvc.a13) p30 ff cvc.a19) p14 ff cvc.a9) p4 tt cvc.a20) p23 tt cvc.a16) p3 tt cvc.a12)) p11 ff cvc.a8)
+(reordering _  (or cvc.a10 (or cvc.a11 (or cvc.a14 (or cvc.a17 (or cvc.a18 t75)))))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p30 p39 tt cvc.a20) p42 tt cvc.a19) p14 ff cvc.a12) p35 ff cvc.a15) p34 tt cvc.a9))) tt cvc.a5)) p21 tt cvc.a10) p6 tt cvc.a14) p41 tt cvc.a18) p22 tt cvc.a6)) p10 ff cvc.a2)
+(reordering _  (or cvc.a7 (or cvc.a11 (or cvc.a17 t104)))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p34 p14 ff cvc.a9) p11 ff cvc.a5) p39 tt cvc.a12) p4 tt cvc.a8)) p30 ff cvc.a20) p40 tt cvc.a18) p5 tt cvc.a6))
+(reordering _  (or cvc.a7 (or cvc.a11 (or cvc.a14 (or cvc.a15 (or cvc.a17 t134)))))
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p36 p30 ff cvc.a18) p11 ff cvc.a6) p39 tt cvc.a20) p3 tt cvc.a8)) p14 ff cvc.a12) p38 tt cvc.a9) p18 ff cvc.a13) p37 tt cvc.a16)) p35 tt cvc.a5)) p33 tt cvc.a10))) ff cvc.a14) p33 tt cvc.a10)) p27 tt cvc.a15)
+(and_elim _  _  58 p2) tt cvc.a19))) tt cvc.a3)) p28 tt cvc.a17))) ff cvc.a7))) ff cvc.a4)))
+(\ p45
+
+(plet _  _ 
+
+(and_elim _  _  63 p2)
+(\ p46
+
+(plet _  _ 
+
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p44 p30 ff cvc.a20) p10 ff cvc.a4) p40 tt cvc.a18) p6 tt cvc.a2) p8 tt cvc.a3) p46 tt cvc.a19) p28 tt cvc.a17)) p45 ff cvc.a11))
+(\ p47
+
+(plet _  _ 
+
+(reordering _  t135
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p30 p31 tt cvc.a20) p41 tt cvc.a18) p18 ff cvc.a16) p25 ff cvc.a2) p24 tt cvc.a15) p46 tt cvc.a19) p28 tt cvc.a17)) p45 ff cvc.a11)))
+(\ p48
+
+(plet _  _ 
+
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p13 p36 tt cvc.a6) p41 tt cvc.a2)) p30 ff cvc.a18)
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p22 p11 ff cvc.a6) p10 ff cvc.a2) p4 tt cvc.a8) p44 tt cvc.a4) p8 tt cvc.a3) p32 tt cvc.a5) p48 ff cvc.a13) p47 tt cvc.a14) p9 tt cvc.a7)) p45 ff cvc.a11)) tt cvc.a20) p32 tt cvc.a5) p48 ff cvc.a13) p47 tt cvc.a14) p46 tt cvc.a19) p28 tt cvc.a17)) p45 ff cvc.a11))
+(\ p49
+
+(plet _  _ 
+
+(resolution _  _  _ 
+(and_elim _  _  36 p2) p49 ff cvc.a1)
+(\ p50
+
+(plet _  _ 
+
+(resolution _  _  _ 
+(and_elim _  _  38 p2) p49 ff cvc.a1)
+(\ p51
+
+(plet _  _ 
+
+(resolution _  _  _ 
+(and_elim _  _  35 p2) p49 ff cvc.a1)
+(\ p52
+
+(plet _  _ 
+
+(resolution _  _  _ 
+(and_elim _  _  37 p2) p49 ff cvc.a1)
+(\ p53
+
+(plet _  _ 
+
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p26 p14 ff cvc.a10) p50 tt cvc.a9) p11 ff cvc.a6) p52 tt cvc.a5) p20 tt cvc.a12) p23 tt cvc.a8)) p18 ff cvc.a16) p53 tt cvc.a13) p42 tt cvc.a15) p46 tt cvc.a11) p43 tt cvc.a7)) p30 ff cvc.a19) p51 tt cvc.a17)
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p26 p14 ff cvc.a10) p50 tt cvc.a9) p11 ff cvc.a6) p52 tt cvc.a5) p24 tt cvc.a11) p17 tt cvc.a7)) p18 ff cvc.a15) p53 tt cvc.a13) p31 tt cvc.a16) p39 tt cvc.a12) p4 tt cvc.a8)) tt cvc.a20)
+(factoring _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p20 p18 ff cvc.a16) p53 tt cvc.a13) p14 ff cvc.a12) p50 tt cvc.a9) p17 tt cvc.a15) p9 tt cvc.a11))
+(reordering _  (or cvc.a6 (or cvc.a7 (or cvc.a10 (or cvc.a14 t134))))
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p14 p50 tt cvc.a9) p24 tt cvc.a11) p3 tt cvc.a12) p18 ff cvc.a15) p53 tt cvc.a13) p11 ff cvc.a8) p52 tt cvc.a5) p37 tt cvc.a16) p52 tt cvc.a5) p51 tt cvc.a17))) ff cvc.a7) p36 tt cvc.a6)
+(and_elim _  _  32 p2) tt cvc.a19)) p29 tt cvc.a10)) tt cvc.a18))
+(\ p54
+
+(plet _  _ 
+
+(resolution _  _  _  p7 p54 ff cvc.a14)
+(\ p55
+
+(plet _  _ 
+
+(resolution _  _  _  p40 p54 ff cvc.a14)
+(\ p56
+
+(plet _  _ 
+
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p11 p52 tt cvc.a5)
+(resolution _  _  _  p5 p54 ff cvc.a14) tt cvc.a6)
+(factoring _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p46 p30 ff cvc.a19) p51 tt cvc.a17) p56 tt cvc.a18) p14 ff cvc.a11) p55 tt cvc.a10) p50 tt cvc.a9) p4 tt cvc.a20) p3 tt cvc.a12)) tt cvc.a8)
+(\ p57
+
+
+(resolution _  _  _ 
+(resolution _  _  _  p39
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p30 p51 tt cvc.a17) p56 tt cvc.a18)
+(resolution _  _  _  p43 p57 ff cvc.a7) tt cvc.a19) ff cvc.a20)
+(resolution _  _  _ 
+(resolution _  _  _ 
+(resolution _  _  _  p14 p50 tt cvc.a9) p55 tt cvc.a10)
+(resolution _  _  _  p9 p57 ff cvc.a7) tt cvc.a11) ff cvc.a12)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+

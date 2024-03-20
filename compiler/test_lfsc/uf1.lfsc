@@ -1,0 +1,161 @@
+unsat
+; WARNING: adding trust step for EVALUATE
+; WARNING: adding trust step for THEORY_REWRITE
+(declare cvc.U sort)
+(define cvc.c (var 0 cvc.U))
+(define cvc.f (var 1 (arrow cvc.U cvc.U)))
+(define cvc.a (var 2 cvc.U))
+(define cvc.p (var 3 (arrow cvc.U Bool)))
+(define cvc.b (var 4 cvc.U))
+(check
+(@ t1 (= cvc.b cvc.c)
+(@ t2 (and t1 (and (or (not (= (apply cvc.f cvc.a) (apply cvc.f cvc.b))) (or (and (apply cvc.p cvc.a) (and (not (apply cvc.p cvc.b)) true)) false)) true))
+(@ t3 (= cvc.a cvc.c)
+(@ t4 (and t3 (and t2 true))
+(@ t5 (= f_or f_or)
+(@ t6 (= f_and f_and)
+(@ t7 (= cvc.c cvc.c)
+(@ t8 (= t4 (and t3 t2))
+(@ t9 (apply cvc.f cvc.c)
+(@ t10 (apply cvc.p cvc.c)
+(@ t11 (and t10 (and (not t10) true))
+(# a0 (holds t4)
+(: (holds false)
+
+(plet _  _ 
+
+(refl f_or)
+(\ p1
+
+(plet _  _ 
+
+(refl f_and)
+(\ p2
+
+(plet _  _ 
+
+(cong _  _  _  _  p2
+(trust (= t7 true)) ; from THEORY_REWRITE
+)
+(\ p3
+
+(plet _  _ 
+
+(trust t8) ; from THEORY_REWRITE
+
+(\ p4
+
+(plet _  _ 
+
+(and_intro2 _  _ 
+(and_elim _  _  1
+(eq_resolve _  _  a0 p4))
+(and_intro1 _ 
+(and_elim _  _  0
+(eq_resolve _  _  a0 p4))))
+(\ p5
+
+(plet _  _ 
+
+(and_elim _  _  0 p5)
+(\ p6
+
+(plet _  _ 
+
+(refl f_and)
+(\ p7
+
+(plet _  _ 
+
+(and_elim _  _  1 p5)
+(\ p8
+
+(plet _  _ 
+
+(refl f_or)
+(\ p9
+
+(plet _  _ 
+
+(refl f_and)
+(\ p10
+
+(plet _  _ 
+
+(refl cvc.c)
+(\ p11
+
+(plet _  _ 
+
+(eq_resolve _  _  a0
+(trans _  _  _  p4
+(trans _  _  _ 
+(cong _  _  _  _ 
+(cong _  _  _  _  p10
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_=) p8) p11))
+(cong _  _  _  _ 
+(cong _  _  _  _  p10
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_=) p6) p11))
+(cong _  _  _  _ 
+(cong _  _  _  _  p10
+(cong _  _  _  _ 
+(cong _  _  _  _  p9
+(cong _  _  _  _ 
+(refl f_not)
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_=)
+(cong _  _  _  _ 
+(refl cvc.f) p8))
+(cong _  _  _  _ 
+(refl cvc.f) p6))))
+(cong _  _  _  _ 
+(cong _  _  _  _  p9
+(cong _  _  _  _ 
+(cong _  _  _  _  p7
+(cong _  _  _  _ 
+(refl cvc.p) p8))
+(cong _  _  _  _ 
+(cong _  _  _  _  p7
+(cong _  _  _  _ 
+(refl f_not)
+(cong _  _  _  _ 
+(refl cvc.p) p6)))
+(refl true))))
+(refl false))))
+(refl true))))
+(trans _  _  _ 
+(cong _  _  _  _  p3
+(cong _  _  _  _  p3
+(cong _  _  _  _ 
+(cong _  _  _  _  p2
+(trans _  _  _ 
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(trans _  _  _ 
+(cong _  _  _  _ 
+(refl f_not)
+(trust (= (= t9 t9) true)) ; from THEORY_REWRITE
+)
+(trust (= (not true) false)) ; from EVALUATE
+))
+(cong _  _  _  _ 
+(cong _  _  _  _  p1
+(refl t11))
+(refl false)))
+(trust (= (or false (or t11 false)) t11)) ; from THEORY_REWRITE
+))
+(refl true))))
+(trust (= (and true (and true (and t11 true))) t11)) ; from THEORY_REWRITE
+))))
+(\ p12
+
+
+(resolution _  _  _ 
+(and_elim _  _  1 p12)
+(and_elim _  _  0 p12) ff t10)))))))))))))))))))))))))))))))))))))))
+

@@ -1,0 +1,23 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (res true true+ (let ((.cse0 (=> (= (ControlFlow 0 0) 1) true))) (res .cse0 (=>+ 1 .cse0) (let ((.cse1 (not .cse0))) (res .cse1 (assume .cse1) (not- .cse1)))))) :proves () :input)
+unsupported
+success
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+unsat
+(! (res true true+ (let ((.cse0 (=> (= (ControlFlow 0 0) 2) true))) (res .cse0 (=>+ 1 .cse0) (let ((.cse1 (not .cse0))) (res .cse1 (assume .cse1) (not- .cse1)))))) :proves () :input)
+unsupported

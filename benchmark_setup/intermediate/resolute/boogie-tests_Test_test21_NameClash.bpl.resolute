@@ -1,0 +1,12 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_test21_NameClash.bpl.mod.smt2:29:1: Quantifier in quantifier-free logic")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_test21_NameClash.bpl.mod.smt2:31:10: Logical context not inconsistent!")
+unsupported

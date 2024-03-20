@@ -1,0 +1,2 @@
+unsat
+(! (let ((.cse2 (f z x)) (.cse3 (f z y))) (let ((.cse0 (= .cse2 .cse3))) (res .cse0 (let ((.cse1 (= x y))) (res .cse1 (! (assume .cse1) :proves (+ .cse1) :input) (! (res (= z z) (refl z) (cong (f z x) (f z y))) :proves (+ .cse0 - .cse1) :cong (.cse2 .cse3)))) (! (let ((.cse4 (not .cse0))) (res .cse4 (assume .cse4) (not- .cse4))) :proves (- .cse0) :input)))) :proves () :rup)

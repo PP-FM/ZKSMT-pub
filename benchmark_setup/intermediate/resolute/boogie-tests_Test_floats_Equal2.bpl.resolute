@@ -1,0 +1,12 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal2.bpl.mod.smt2:21:102: Undeclared function symbol (bv0)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_Equal2.bpl.mod.smt2:26:10: Logical context not inconsistent!")
+unsupported

@@ -1,0 +1,466 @@
+vars: cvc.c cvc.f cvc.a cvc.p cvc.b
+premises:
+  a0: (and (= cvc.a cvc.c) (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))))
+steps:
+  derived clause number: 0
+  rule: refl
+  expr args: [(and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))) (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))))
+
+  derived clause number: 1
+  rule: and_flatten
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (and (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))) (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))))
+
+  derived clause number: 2
+  rule: trans
+  expr args: []
+  clause args: [derived 1, derived 0]
+  backptr: nil
+  conclusion: (= (and (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))) (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))))
+
+  derived clause number: 3
+  rule: and_cons_equiv
+  expr args: [(= cvc.a cvc.c)]
+  clause args: [derived 2]
+  backptr: nil
+  conclusion: (= (and (= cvc.a cvc.c) (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))) (and (= cvc.a cvc.c) (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))))
+
+  derived clause number: 4
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a0, derived 3]
+  backptr: nil
+  conclusion: (and (= cvc.a cvc.c) (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))
+
+  derived clause number: 5
+  rule: and_elim
+  expr args: [1]
+  clause args: [derived 4]
+  backptr: nil
+  conclusion: (= cvc.b cvc.c)
+
+  derived clause number: 6
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a0, derived 3]
+  backptr: nil
+  conclusion: (and (= cvc.a cvc.c) (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))
+
+  derived clause number: 7
+  rule: and_elim
+  expr args: [0]
+  clause args: [derived 6]
+  backptr: nil
+  conclusion: (= cvc.a cvc.c)
+
+  derived clause number: 8
+  rule: and_intro1
+  expr args: []
+  clause args: [derived 7]
+  backptr: nil
+  conclusion: (and (= cvc.a cvc.c))
+
+  derived clause number: 9
+  rule: and_intro2
+  expr args: []
+  clause args: [derived 5, derived 8]
+  backptr: nil
+  conclusion: (and (= cvc.b cvc.c) (= cvc.a cvc.c))
+
+  derived clause number: 10
+  rule: and_elim
+  expr args: [0]
+  clause args: [derived 9]
+  backptr: nil
+  conclusion: (= cvc.b cvc.c)
+
+  derived clause number: 11
+  rule: and_elim
+  expr args: [1]
+  clause args: [derived 9]
+  backptr: nil
+  conclusion: (= cvc.a cvc.c)
+
+  derived clause number: 12
+  rule: refl
+  expr args: [cvc.c]
+  clause args: []
+  backptr: nil
+  conclusion: (= cvc.c cvc.c)
+
+  derived clause number: 13
+  rule: =_est
+  expr args: []
+  clause args: [derived 11, derived 12]
+  backptr: nil
+  conclusion: (= (= cvc.a cvc.c) (= cvc.c cvc.c))
+
+  derived clause number: 14
+  rule: =_est
+  expr args: []
+  clause args: [derived 10, derived 12]
+  backptr: nil
+  conclusion: (= (= cvc.b cvc.c) (= cvc.c cvc.c))
+
+  derived clause number: 15
+  rule: refl
+  expr args: [cvc.f]
+  clause args: []
+  backptr: nil
+  conclusion: (= cvc.f cvc.f)
+
+  derived clause number: 16
+  rule: cong
+  expr args: []
+  clause args: [derived 15, derived 11]
+  backptr: nil
+  conclusion: (= (cvc.f cvc.a) (cvc.f cvc.c))
+
+  derived clause number: 17
+  rule: refl
+  expr args: [cvc.f]
+  clause args: []
+  backptr: nil
+  conclusion: (= cvc.f cvc.f)
+
+  derived clause number: 18
+  rule: cong
+  expr args: []
+  clause args: [derived 17, derived 10]
+  backptr: nil
+  conclusion: (= (cvc.f cvc.b) (cvc.f cvc.c))
+
+  derived clause number: 19
+  rule: =_est
+  expr args: []
+  clause args: [derived 16, derived 18]
+  backptr: nil
+  conclusion: (= (= (cvc.f cvc.a) (cvc.f cvc.b)) (= (cvc.f cvc.c) (cvc.f cvc.c)))
+
+  derived clause number: 20
+  rule: not_est
+  expr args: []
+  clause args: [derived 19]
+  backptr: nil
+  conclusion: (= (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (not (= (cvc.f cvc.c) (cvc.f cvc.c))))
+
+  derived clause number: 21
+  rule: refl
+  expr args: [cvc.p]
+  clause args: []
+  backptr: nil
+  conclusion: (= cvc.p cvc.p)
+
+  derived clause number: 22
+  rule: cong
+  expr args: []
+  clause args: [derived 21, derived 11]
+  backptr: nil
+  conclusion: (= (cvc.p cvc.a) (cvc.p cvc.c))
+
+  derived clause number: 23
+  rule: refl
+  expr args: [cvc.p]
+  clause args: []
+  backptr: nil
+  conclusion: (= cvc.p cvc.p)
+
+  derived clause number: 24
+  rule: cong
+  expr args: []
+  clause args: [derived 23, derived 10]
+  backptr: nil
+  conclusion: (= (cvc.p cvc.b) (cvc.p cvc.c))
+
+  derived clause number: 25
+  rule: not_est
+  expr args: []
+  clause args: [derived 24]
+  backptr: nil
+  conclusion: (= (not (cvc.p cvc.b)) (not (cvc.p cvc.c)))
+
+  derived clause number: 26
+  rule: refl
+  expr args: [true]
+  clause args: []
+  backptr: nil
+  conclusion: (= true true)
+
+  derived clause number: 27
+  rule: and_est
+  expr args: []
+  clause args: [derived 25, derived 26]
+  backptr: nil
+  conclusion: (= (and (not (cvc.p cvc.b))) (and (not (cvc.p cvc.c))))
+
+  derived clause number: 28
+  rule: and_est
+  expr args: []
+  clause args: [derived 22, derived 27]
+  backptr: nil
+  conclusion: (= (and (cvc.p cvc.a) (not (cvc.p cvc.b))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 29
+  rule: refl
+  expr args: [false]
+  clause args: []
+  backptr: nil
+  conclusion: (= false false)
+
+  derived clause number: 30
+  rule: or_est
+  expr args: []
+  clause args: [derived 28, derived 29]
+  backptr: nil
+  conclusion: (= (or (and (cvc.p cvc.a) (not (cvc.p cvc.b)))) (or (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 31
+  rule: or_est
+  expr args: []
+  clause args: [derived 20, derived 30]
+  backptr: nil
+  conclusion: (= (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))) (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 32
+  rule: refl
+  expr args: [true]
+  clause args: []
+  backptr: nil
+  conclusion: (= true true)
+
+  derived clause number: 33
+  rule: and_est
+  expr args: []
+  clause args: [derived 31, derived 32]
+  backptr: nil
+  conclusion: (= (and (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))) (and (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))))
+
+  derived clause number: 34
+  rule: and_est
+  expr args: []
+  clause args: [derived 14, derived 33]
+  backptr: nil
+  conclusion: (= (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))) (and (= cvc.c cvc.c) (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))))
+
+  derived clause number: 35
+  rule: and_est
+  expr args: []
+  clause args: [derived 13, derived 34]
+  backptr: nil
+  conclusion: (= (and (= cvc.a cvc.c) (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))) (and (= cvc.c cvc.c) (= cvc.c cvc.c) (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))))
+
+  derived clause number: 36
+  rule: refl_equiv
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (= cvc.c cvc.c) true)
+
+  derived clause number: 37
+  rule: refl_equiv
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (= cvc.c cvc.c) true)
+
+  derived clause number: 38
+  rule: refl_equiv
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (= (cvc.f cvc.c) (cvc.f cvc.c)) true)
+
+  derived clause number: 39
+  rule: not_est
+  expr args: []
+  clause args: [derived 38]
+  backptr: nil
+  conclusion: (= (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (not true))
+
+  derived clause number: 40
+  rule: eval_true
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (not true) false)
+
+  derived clause number: 41
+  rule: trans
+  expr args: []
+  clause args: [derived 39, derived 40]
+  backptr: nil
+  conclusion: (= (not (= (cvc.f cvc.c) (cvc.f cvc.c))) false)
+
+  derived clause number: 42
+  rule: refl
+  expr args: [(and (cvc.p cvc.c) (not (cvc.p cvc.c)))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (and (cvc.p cvc.c) (not (cvc.p cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 43
+  rule: refl
+  expr args: [false]
+  clause args: []
+  backptr: nil
+  conclusion: (= false false)
+
+  derived clause number: 44
+  rule: or_est
+  expr args: []
+  clause args: [derived 42, derived 43]
+  backptr: nil
+  conclusion: (= (or (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (or (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 45
+  rule: or_est
+  expr args: []
+  clause args: [derived 41, derived 44]
+  backptr: nil
+  conclusion: (= (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (or false (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 46
+  rule: or_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (or (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 47
+  rule: or_cons_false
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (or false (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (or (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 48
+  rule: trans
+  expr args: []
+  clause args: [derived 46, derived 47]
+  backptr: nil
+  conclusion: (= (or false (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 49
+  rule: trans
+  expr args: []
+  clause args: [derived 45, derived 48]
+  backptr: nil
+  conclusion: (= (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 50
+  rule: refl
+  expr args: [true]
+  clause args: []
+  backptr: nil
+  conclusion: (= true true)
+
+  derived clause number: 51
+  rule: and_est
+  expr args: []
+  clause args: [derived 49, derived 50]
+  backptr: nil
+  conclusion: (= (and (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))) (and (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 52
+  rule: and_est
+  expr args: []
+  clause args: [derived 37, derived 51]
+  backptr: nil
+  conclusion: (= (and (= cvc.c cvc.c) (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))) (and true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 53
+  rule: and_est
+  expr args: []
+  clause args: [derived 36, derived 52]
+  backptr: nil
+  conclusion: (= (and (= cvc.c cvc.c) (= cvc.c cvc.c) (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))) (and true true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 54
+  rule: and_single
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (and (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 55
+  rule: and_cons_true
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (and true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 56
+  rule: trans
+  expr args: []
+  clause args: [derived 54, derived 55]
+  backptr: nil
+  conclusion: (= (and true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 57
+  rule: and_cons_true
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (= (and true true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))))
+
+  derived clause number: 58
+  rule: trans
+  expr args: []
+  clause args: [derived 56, derived 57]
+  backptr: nil
+  conclusion: (= (and true true (and (cvc.p cvc.c) (not (cvc.p cvc.c)))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 59
+  rule: trans
+  expr args: []
+  clause args: [derived 53, derived 58]
+  backptr: nil
+  conclusion: (= (and (= cvc.c cvc.c) (= cvc.c cvc.c) (or (not (= (cvc.f cvc.c) (cvc.f cvc.c))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 60
+  rule: trans
+  expr args: []
+  clause args: [derived 35, derived 59]
+  backptr: nil
+  conclusion: (= (and (= cvc.a cvc.c) (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b))))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 61
+  rule: trans
+  expr args: []
+  clause args: [derived 3, derived 60]
+  backptr: nil
+  conclusion: (= (and (= cvc.a cvc.c) (and (= cvc.b cvc.c) (or (not (= (cvc.f cvc.a) (cvc.f cvc.b))) (and (cvc.p cvc.a) (not (cvc.p cvc.b)))))) (and (cvc.p cvc.c) (not (cvc.p cvc.c))))
+
+  derived clause number: 62
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a0, derived 61]
+  backptr: nil
+  conclusion: (and (cvc.p cvc.c) (not (cvc.p cvc.c)))
+
+  derived clause number: 63
+  rule: and_elim
+  expr args: [1]
+  clause args: [derived 62]
+  backptr: nil
+  conclusion: (not (cvc.p cvc.c))
+
+  derived clause number: 64
+  rule: and_elim
+  expr args: [0]
+  clause args: [derived 62]
+  backptr: nil
+  conclusion: (cvc.p cvc.c)
+
+  derived clause number: 65
+  rule: resolution
+  expr args: [ff, (cvc.p cvc.c)]
+  clause args: [derived 63, derived 64]
+  backptr: nil
+  conclusion: false
+

@@ -1,0 +1,12 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_bitvectors_bv1.bpl.mod.smt2:21:105: No bitvector logic")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_bitvectors_bv1.bpl.mod.smt2:26:10: Logical context not inconsistent!")
+unsupported

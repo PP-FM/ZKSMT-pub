@@ -1,0 +1,3 @@
+unsat
+(! (res false (assume false) false-) :proves () :input)
+

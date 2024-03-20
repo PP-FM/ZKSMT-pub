@@ -1,0 +1,81 @@
+vars: cvc.a cvc.c cvc.p cvc.b
+premises:
+  a0: (and (or (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c))) (not (cvc.p cvc.b)))
+steps:
+  derived clause number: 0
+  rule: and_elim
+  expr args: [0]
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (or (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c)))
+
+  derived clause number: 1
+  rule: cnf_or_pos
+  expr args: [(or (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c)))]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (or (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c)))) (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c)))
+
+  derived clause number: 2
+  rule: cnf_and_pos
+  expr args: [(and (cvc.p cvc.a) (cvc.p cvc.b)), 1]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (cvc.p cvc.a) (cvc.p cvc.b))) (cvc.p cvc.b))
+
+  derived clause number: 3
+  rule: and_elim
+  expr args: [1]
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (not (cvc.p cvc.b))
+
+  derived clause number: 4
+  rule: resolution
+  expr args: [tt, (cvc.p cvc.b)]
+  clause args: [derived 2, derived 3]
+  backptr: nil
+  conclusion: (not (and (cvc.p cvc.a) (cvc.p cvc.b)))
+
+  derived clause number: 5
+  rule: resolution
+  expr args: [tt, (and (cvc.p cvc.a) (cvc.p cvc.b))]
+  clause args: [derived 1, derived 4]
+  backptr: nil
+  conclusion: (or (not (or (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c)))) (and (cvc.p cvc.b) (cvc.p cvc.c)))
+
+  derived clause number: 6
+  rule: cnf_and_pos
+  expr args: [(and (cvc.p cvc.b) (cvc.p cvc.c)), 0]
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (cvc.p cvc.b) (cvc.p cvc.c))) (cvc.p cvc.b))
+
+  derived clause number: 7
+  rule: and_elim
+  expr args: [1]
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (not (cvc.p cvc.b))
+
+  derived clause number: 8
+  rule: resolution
+  expr args: [tt, (cvc.p cvc.b)]
+  clause args: [derived 6, derived 7]
+  backptr: nil
+  conclusion: (not (and (cvc.p cvc.b) (cvc.p cvc.c)))
+
+  derived clause number: 9
+  rule: resolution
+  expr args: [tt, (and (cvc.p cvc.b) (cvc.p cvc.c))]
+  clause args: [derived 5, derived 8]
+  backptr: nil
+  conclusion: (not (or (and (cvc.p cvc.a) (cvc.p cvc.b)) (and (cvc.p cvc.b) (cvc.p cvc.c))))
+
+  derived clause number: 10
+  rule: contra
+  expr args: []
+  clause args: [derived 0, derived 9]
+  backptr: nil
+  conclusion: false
+

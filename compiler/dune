@@ -1,0 +1,7 @@
+(ocamllex lexer resolute_lexer)
+(menhir (modules parser resolute_parser))
+
+(executable
+  (flags (:standard -g))
+  (preprocess (pps ppx_deriving.show))
+  (name driver))

@@ -1,0 +1,16 @@
+unsat
+(define cvc.a (var 0 Bool))
+(define cvc.b (var 1 Bool))
+(check
+(# a0 (holds (=> cvc.a cvc.b))
+(# a1 (holds (not (or (not cvc.a) (or cvc.b false))))
+(: (holds false)
+
+(contra _  a0
+(resolution _  _  _ 
+(resolution _  _  _ 
+(cnf_implies_pos cvc.a cvc.b)
+(not_not_elim _ 
+(not_or_elim _  _  0 a1)) ff cvc.a)
+(not_or_elim _  _  1 a1) tt cvc.b))))))
+

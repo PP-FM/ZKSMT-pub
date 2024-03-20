@@ -1,0 +1,17 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundoffError.bpl.mod.smt2:18:23: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundoffError.bpl.mod.smt2:19:23: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundoffError.bpl.mod.smt2:20:23: Undeclared sort ((_ FloatingPoint [8, 24]) 0)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundoffError.bpl.mod.smt2:26:86: Undeclared function symbol (time@1)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundoffError.bpl.mod.smt2:32:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_floats_RoundoffError.bpl.mod.smt2:35:10: Logical context not inconsistent!")
+unsupported

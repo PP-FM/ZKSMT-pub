@@ -1,0 +1,15 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_sequences_intseq.bpl.mod.smt2:17:21: Undeclared sort (Seq 1)")
+(error "intermediate/mod_smt2/boogie-tests_Test_sequences_intseq.bpl.mod.smt2:18:21: Undeclared sort (Seq 1)")
+(error "intermediate/mod_smt2/boogie-tests_Test_sequences_intseq.bpl.mod.smt2:19:21: Undeclared sort (Seq 1)")
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_sequences_intseq.bpl.mod.smt2:24:58: Undeclared function symbol (s@0)")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_sequences_intseq.bpl.mod.smt2:29:10: Logical context not inconsistent!")
+unsupported

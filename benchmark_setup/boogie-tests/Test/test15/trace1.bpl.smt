@@ -1,0 +1,30 @@
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(declare-fun g@0 () Int)
+(declare-fun g () Int)
+(set-info :boogie-vc-id main)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 4) (let ((anon0$1_correct  (=> (= (ControlFlow 0 2) (- 0 1)) (= g@0 2))))
+(let ((inline$foo$0$anon0_correct  (=> (and (= g@0 (+ g 1)) (= (ControlFlow 0 3) 2)) anon0$1_correct)))
+(let ((anon0_correct  (=> (and (= g 0) (= (ControlFlow 0 4) 3)) inline$foo$0$anon0_correct)))
+anon0_correct))))
+))
+(check-sat)
+(assert (not (= (ControlFlow 0 2) (- 1))))
+(check-sat)
+(pop 1)
+; Invalid
+(get-info :rlimit)

@@ -1,0 +1,32 @@
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(declare-sort |T@[Int]Bool| 0)
+(declare-sort |T@[Int]Int| 0)
+(declare-sort |T@[Int]finite_map| 0)
+(declare-datatypes ((T@finite_map 0)) (((finite_map (|dom#finite_map| |T@[Int]Bool|) (|map#finite_map| |T@[Int]Int|) ) ) ))
+(declare-datatypes ((T@partition 0)) (((partition (|owners#partition| |T@[Int]Int|) (|vars#partition| |T@[Int]finite_map|) ) ) ))
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(declare-fun |Select__T@[Int]Bool_| (|T@[Int]Bool| Int) Bool)
+(declare-fun arr () T@finite_map)
+(set-info :boogie-vc-id P)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 3) (let ((anon0_correct  (=> (= (ControlFlow 0 2) (- 0 1)) (|Select__T@[Int]Bool_| (|dom#finite_map| arr) 0))))
+(let ((PreconditionGeneratedEntry_correct  (=> (and (|Select__T@[Int]Bool_| (|dom#finite_map| arr) 0) (= (ControlFlow 0 3) 2)) anon0_correct)))
+PreconditionGeneratedEntry_correct)))
+))
+(check-sat)
+(pop 1)
+; Valid
+(get-info :rlimit)

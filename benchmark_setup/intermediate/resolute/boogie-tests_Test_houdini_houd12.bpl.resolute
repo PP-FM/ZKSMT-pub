@@ -1,0 +1,19 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_houdini_houd12.bpl.mod.smt2:43:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_houdini_houd12.bpl.mod.smt2:46:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_houdini_houd12.bpl.mod.smt2:49:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_houdini_houd12.bpl.mod.smt2:52:10: Logical context not inconsistent!")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_houdini_houd12.bpl.mod.smt2:55:10: Logical context not inconsistent!")
+unsupported

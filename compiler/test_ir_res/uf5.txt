@@ -1,0 +1,214 @@
+vars: a b c d e f
+premises:
+  a0: (and (= a b) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))
+steps:
+  derived clause number: 0
+  rule: or_single
+  expr args: []
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (or (and (= a b) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))))
+
+  derived clause number: 1
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= a b) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))) (= a b))
+
+  derived clause number: 2
+  rule: resolution
+  expr args: [(not (and (= a b) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))), (or (= a b)), (or )]
+  clause args: [derived 0, derived 1]
+  backptr: nil
+  conclusion: (or (= a b))
+
+  derived clause number: 3
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= a b) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))
+
+  derived clause number: 4
+  rule: resolution
+  expr args: [(not (and (= a b) (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))), (or (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))), (or )]
+  clause args: [derived 0, derived 3]
+  backptr: nil
+  conclusion: (or (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))))
+
+  derived clause number: 5
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))
+
+  derived clause number: 6
+  rule: resolution
+  expr args: [(not (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))), (or (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))), (or )]
+  clause args: [derived 4, derived 5]
+  backptr: nil
+  conclusion: (or (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))
+
+  derived clause number: 7
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))) (and (= c e) (and (= e f) (not (= a f)))))
+
+  derived clause number: 8
+  rule: resolution
+  expr args: [(not (and (= c d) (and (= c e) (and (= e f) (not (= a f)))))), (or (and (= c e) (and (= e f) (not (= a f))))), (or )]
+  clause args: [derived 6, derived 7]
+  backptr: nil
+  conclusion: (or (and (= c e) (and (= e f) (not (= a f)))))
+
+  derived clause number: 9
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= c e) (and (= e f) (not (= a f))))) (and (= e f) (not (= a f))))
+
+  derived clause number: 10
+  rule: resolution
+  expr args: [(not (and (= c e) (and (= e f) (not (= a f))))), (or (and (= e f) (not (= a f)))), (or )]
+  clause args: [derived 8, derived 9]
+  backptr: nil
+  conclusion: (or (and (= e f) (not (= a f))))
+
+  derived clause number: 11
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= e f) (not (= a f)))) (= e f))
+
+  derived clause number: 12
+  rule: resolution
+  expr args: [(not (and (= e f) (not (= a f)))), (or (= e f)), (or )]
+  clause args: [derived 10, derived 11]
+  backptr: nil
+  conclusion: (or (= e f))
+
+  derived clause number: 13
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= c e) (and (= e f) (not (= a f))))) (= c e))
+
+  derived clause number: 14
+  rule: resolution
+  expr args: [(not (and (= c e) (and (= e f) (not (= a f))))), (or (= c e)), (or )]
+  clause args: [derived 8, derived 13]
+  backptr: nil
+  conclusion: (or (= c e))
+
+  derived clause number: 15
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))) (= b c))
+
+  derived clause number: 16
+  rule: resolution
+  expr args: [(not (and (= b c) (and (= c d) (and (= c e) (and (= e f) (not (= a f))))))), (or (= b c)), (or )]
+  clause args: [derived 4, derived 15]
+  backptr: nil
+  conclusion: (or (= b c))
+
+  derived clause number: 17
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= a c) (not (= a b)) (not (= b c)))
+
+  derived clause number: 18
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= a e) (not (= a c)) (not (= c e)))
+
+  derived clause number: 19
+  rule: resolution
+  expr args: [(not (= a c)), (or (= a e) (not (= c e))), (or (not (= a b)) (not (= b c)))]
+  clause args: [derived 17, derived 18]
+  backptr: nil
+  conclusion: (or (not (= a b)) (not (= b c)) (= a e) (not (= c e)))
+
+  derived clause number: 20
+  rule: trans
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (= a f) (not (= a e)) (not (= e f)))
+
+  derived clause number: 21
+  rule: resolution
+  expr args: [(not (= a e)), (or (= a f) (not (= e f))), (or (not (= a b)) (not (= b c)) (not (= c e)))]
+  clause args: [derived 19, derived 20]
+  backptr: nil
+  conclusion: (or (not (= a b)) (not (= b c)) (not (= c e)) (= a f) (not (= e f)))
+
+  derived clause number: 22
+  rule: and-
+  expr args: []
+  clause args: []
+  backptr: nil
+  conclusion: (or (not (and (= e f) (not (= a f)))) (not (= a f)))
+
+  derived clause number: 23
+  rule: resolution
+  expr args: [(not (and (= e f) (not (= a f)))), (or (not (= a f))), (or )]
+  clause args: [derived 10, derived 22]
+  backptr: nil
+  conclusion: (or (not (= a f)))
+
+  derived clause number: 24
+  rule: resolution
+  expr args: [(not (= a f)), (or ), (or (not (= a b)) (not (= b c)) (not (= c e)) (not (= e f)))]
+  clause args: [derived 21, derived 23]
+  backptr: nil
+  conclusion: (or (not (= a b)) (not (= b c)) (not (= c e)) (not (= e f)))
+
+  derived clause number: 25
+  rule: resolution
+  expr args: [(not (= b c)), (or (not (= a b)) (not (= c e)) (not (= e f))), (or )]
+  clause args: [derived 16, derived 24]
+  backptr: nil
+  conclusion: (or (not (= a b)) (not (= c e)) (not (= e f)))
+
+  derived clause number: 26
+  rule: resolution
+  expr args: [(not (= c e)), (or (not (= a b)) (not (= e f))), (or )]
+  clause args: [derived 14, derived 25]
+  backptr: nil
+  conclusion: (or (not (= a b)) (not (= e f)))
+
+  derived clause number: 27
+  rule: resolution
+  expr args: [(not (= e f)), (or (not (= a b))), (or )]
+  clause args: [derived 12, derived 26]
+  backptr: nil
+  conclusion: (or (not (= a b)))
+
+  derived clause number: 28
+  rule: resolution
+  expr args: [(not (= a b)), (or ), (or )]
+  clause args: [derived 2, derived 27]
+  backptr: nil
+  conclusion: (or )
+
+  derived clause number: 29
+  rule: or_nil
+  expr args: []
+  clause args: [derived 28]
+  backptr: nil
+  conclusion: false
+

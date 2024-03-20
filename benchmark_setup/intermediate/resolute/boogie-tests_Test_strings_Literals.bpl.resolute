@@ -1,0 +1,12 @@
+success
+success
+success
+unsupported
+unsupported
+unsupported
+unsupported
+unsupported
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_Literals.bpl.mod.smt2:21:113: Logic does not allow strings")
+sat
+(error "intermediate/mod_smt2/boogie-tests_Test_strings_Literals.bpl.mod.smt2:26:10: Logical context not inconsistent!")
+unsupported

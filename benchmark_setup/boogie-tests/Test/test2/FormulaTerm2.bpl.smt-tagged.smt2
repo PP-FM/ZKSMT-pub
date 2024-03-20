@@ -1,0 +1,136 @@
+(set-logic QF_LIA)
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(declare-fun f (Bool) Int)
+(declare-fun A () Int)
+(declare-fun B () Int)
+(assert (= (f (< A B)) 5))
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(declare-fun a () Int)
+(declare-fun b () Int)
+(declare-fun t@0 () Bool)
+(set-info :boogie-vc-id P)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 3) (let ((start_correct  (=> (= a b) (=> (and (= t@0 (= a b)) (= (ControlFlow 0 2) (- 0 1))) t@0))))
+(let ((PreconditionGeneratedEntry_correct  (=> (= (ControlFlow 0 3) 2) start_correct)))
+PreconditionGeneratedEntry_correct)))
+))
+(check-sat)
+(pop 1)
+; Valid
+(get-info :rlimit)
+(reset)
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(declare-fun f (Bool) Int)
+(declare-fun A () Int)
+(declare-fun B () Int)
+(assert (= (f (< A B)) 5))
+; Valid
+
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(set-info :boogie-vc-id Q)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 3) (let ((start_correct  (=> (and (< A B) (= (ControlFlow 0 2) (- 0 1))) (= (f true) 5))))
+(let ((PreconditionGeneratedEntry_correct  (=> (= (ControlFlow 0 3) 2) start_correct)))
+PreconditionGeneratedEntry_correct)))
+))
+(check-sat)
+(pop 1)
+; Valid
+(get-info :rlimit)
+(reset)
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(declare-fun f (Bool) Int)
+(declare-fun A () Int)
+(declare-fun B () Int)
+(assert (= (f (< A B)) 5))
+; Valid
+
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(declare-fun a () Int)
+(declare-fun b () Int)
+(declare-fun t@0 () Bool)
+(set-info :boogie-vc-id PX)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 3) (let ((start_correct  (=> (= a b) (=> (and (= t@0 (= a b)) (= (ControlFlow 0 2) (- 0 1))) (not t@0)))))
+(let ((PreconditionGeneratedEntry_correct  (=> (= (ControlFlow 0 3) 2) start_correct)))
+PreconditionGeneratedEntry_correct)))
+))
+(check-sat)
+(assert (not (= (ControlFlow 0 2) (- 1))))
+(check-sat)
+(pop 1)
+; Invalid
+(get-info :rlimit)
+(reset)
+(set-option :print-success false)
+(set-info :smt-lib-version 2.6)
+(set-option :smt.mbqi false)
+(set-option :model.compact false)
+(set-option :model.v2 true)
+(set-option :pp.bv_literals false)
+; done setting options
+
+
+(declare-fun tickleBool (Bool) Bool)
+(assert (and (tickleBool true) (tickleBool false)))
+(declare-fun f (Bool) Int)
+(declare-fun A () Int)
+(declare-fun B () Int)
+(assert (= (f (< A B)) 5))
+; Invalid
+
+(push 1)
+(declare-fun ControlFlow (Int Int) Int)
+(set-info :boogie-vc-id QX)
+(set-option :timeout 0)
+(set-option :rlimit 0)
+(assert (not
+ (=> (= (ControlFlow 0 0) 3) (let ((start_correct  (=> (and (< A B) (= (ControlFlow 0 2) (- 0 1))) (< (f true) 2))))
+(let ((PreconditionGeneratedEntry_correct  (=> (= (ControlFlow 0 3) 2) start_correct)))
+PreconditionGeneratedEntry_correct)))
+))
+(check-sat)
+(assert (not (= (ControlFlow 0 2) (- 1))))
+(check-sat)
+(pop 1)
+; Invalid
+(get-info :rlimit)

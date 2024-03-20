@@ -1,0 +1,64 @@
+unsat
+; WARNING: adding trust step for THEORY_REWRITE
+(declare cvc.U sort)
+(define cvc.c (var 0 Bool))
+(define cvc.b (var 1 (arrow Bool (arrow Bool cvc.U))))
+(define cvc.a (var 2 cvc.U))
+(check
+(@ t1 (apply cvc.b true)
+(@ t2 (apply t1 true)
+(@ t3 (= cvc.c true)
+(@ t4 (= t3 cvc.c)
+(# a0 (holds (not (= t2 cvc.a)))
+(# a1 (holds t3)
+(# a2 (holds (= (apply t1 cvc.c) cvc.a))
+(: (holds false)
+
+(plet _  _ 
+
+(trust t4) ; from THEORY_REWRITE
+
+(\ p1
+
+(plet _  _ 
+
+(eq_resolve _  _  a1
+(trust t4) ; from THEORY_REWRITE
+)
+(\ p2
+
+
+(eq_resolve _  _ 
+(neg_symm _  _  a0)
+(trans _  _  _ 
+(cong _  _  _  _ 
+(refl f_not)
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_=)
+(and_elim _  _  0
+(and_intro2 _  _ 
+(eq_resolve _  _ 
+(symm _  _  a2)
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl f_=)
+(refl cvc.a))
+(cong _  _  _  _ 
+(cong _  _  _  _ 
+(refl cvc.b)
+(refl true))
+(eq_resolve _  _  p2
+(symm _  _  p1)))))
+(and_intro1 _ 
+(eq_resolve _  _  p2
+(symm _  _  p1))))))
+(refl t2)))
+(trans _  _  _ 
+(cong _  _  _  _ 
+(refl f_not)
+(trust (= (= t2 t2) true)) ; from THEORY_REWRITE
+)
+(trust (= (not true) false)) ; from THEORY_REWRITE
+))))))))))))))))
+

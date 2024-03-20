@@ -1,0 +1,27 @@
+vars: cvc.c cvc.a cvc.b
+premises:
+  a0: (ite cvc.c cvc.a cvc.b)
+  a1: (not cvc.a)
+  a2: cvc.c
+steps:
+  derived clause number: 0
+  rule: ite_elim1
+  expr args: []
+  clause args: [premise a0]
+  backptr: nil
+  conclusion: (or (not cvc.c) cvc.a)
+
+  derived clause number: 1
+  rule: resolution
+  expr args: [ff, cvc.c]
+  clause args: [derived 0, premise a2]
+  backptr: nil
+  conclusion: cvc.a
+
+  derived clause number: 2
+  rule: contra
+  expr args: []
+  clause args: [derived 1, premise a1]
+  backptr: nil
+  conclusion: false
+

@@ -1,0 +1,111 @@
+vars: cvc.c cvc.a cvc.b
+premises:
+  a0: (ite cvc.c cvc.a cvc.b)
+  a1: (not cvc.a)
+  a2: (not cvc.b)
+steps:
+  derived clause number: 0
+  rule: equiv_not_false
+  expr args: [(= (= cvc.b false) (not cvc.b))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (= cvc.b false) (not cvc.b))
+
+  derived clause number: 1
+  rule: symm
+  expr args: []
+  clause args: [derived 0]
+  backptr: nil
+  conclusion: (= (not cvc.b) (= cvc.b false))
+
+  derived clause number: 2
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a2, derived 1]
+  backptr: nil
+  conclusion: (= cvc.b false)
+
+  derived clause number: 3
+  rule: equiv_not_false
+  expr args: [(= (= cvc.a false) (not cvc.a))]
+  clause args: []
+  backptr: nil
+  conclusion: (= (= cvc.a false) (not cvc.a))
+
+  derived clause number: 4
+  rule: symm
+  expr args: []
+  clause args: [derived 3]
+  backptr: nil
+  conclusion: (= (not cvc.a) (= cvc.a false))
+
+  derived clause number: 5
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a1, derived 4]
+  backptr: nil
+  conclusion: (= cvc.a false)
+
+  derived clause number: 6
+  rule: and_intro1
+  expr args: []
+  clause args: [derived 5]
+  backptr: nil
+  conclusion: (and (= cvc.a false))
+
+  derived clause number: 7
+  rule: and_intro2
+  expr args: []
+  clause args: [derived 2, derived 6]
+  backptr: nil
+  conclusion: (and (= cvc.b false) (= cvc.a false))
+
+  derived clause number: 8
+  rule: refl
+  expr args: [cvc.c]
+  clause args: []
+  backptr: nil
+  conclusion: (= cvc.c cvc.c)
+
+  derived clause number: 9
+  rule: and_elim
+  expr args: [1]
+  clause args: [derived 7]
+  backptr: nil
+  conclusion: (= cvc.a false)
+
+  derived clause number: 10
+  rule: and_elim
+  expr args: [0]
+  clause args: [derived 7]
+  backptr: nil
+  conclusion: (= cvc.b false)
+
+  derived clause number: 11
+  rule: ite_est
+  expr args: []
+  clause args: [derived 8, derived 9, derived 10]
+  backptr: nil
+  conclusion: (= (ite cvc.c cvc.a cvc.b) (ite cvc.c false false))
+
+  derived clause number: 12
+  rule: ite_match
+  expr args: [(= (ite cvc.c false false) false)]
+  clause args: []
+  backptr: nil
+  conclusion: (= (ite cvc.c false false) false)
+
+  derived clause number: 13
+  rule: trans
+  expr args: []
+  clause args: [derived 11, derived 12]
+  backptr: nil
+  conclusion: (= (ite cvc.c cvc.a cvc.b) false)
+
+  derived clause number: 14
+  rule: eq_resolve
+  expr args: []
+  clause args: [premise a0, derived 13]
+  backptr: nil
+  conclusion: false
+
